@@ -4,7 +4,7 @@ const ReferFriend = () => {
   return (
     <div
       className=" bg-bgRefer flex items-center justify-center
-    flex-col w-full rounded h-56 m-3
+    flex-col w-56 rounded h-72 m-3
     "
     >
       <p className=" my-2"> Refer and earn reward</p>

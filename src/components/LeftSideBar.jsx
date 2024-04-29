@@ -16,7 +16,7 @@ const myArray = [
   {
     name: "Home",
     image: home,
-    route: "/dashboard",
+    route: "/",
   },
   {
     name: "My Cover",
@@ -54,23 +54,33 @@ const LeftSideBar = () => {
     navigate(myArray[index].route);
   };
   return (
-    <div className=" flex items-start justify-center flex-col relative ">
-      <div className=" cursor-pointer p-5 my-2 w-full sticky overflow-auto">
-        <img src={navbarlogo} alt="" />
+    <div className=" flex flex-col fixed top-0 left-0 bottom-0 bg-white w-[290px] max-h-screen h-screen overflow-y-auto">
+      <div
+        className=" cursor-pointer fixed h-[50px] w-[290px] top-0 left-0
+        flex items-center justify-start ml-6 mt-5
+        "
+        onClick={() => navigate("/")}
+      >
+        <img src={navbarlogo} alt="" className="" />
       </div>
-      {myArray.map((item, index) => (
-        <div
-          className={` flex items-center justify-start p-5 my-1 hover:bg-menuIcon cursor-pointer w-full hover:border-e-2 hover:border-green-500 ${
-            activeItem === index ? "bg-menuIcon" : ""
-          }`}
-          key={index}
-          onClick={() => handleClick(index)}
-        >
-          <img src={item.image} alt={item.name} className=" mx-4" />
-          <span>{item.name}</span>
-        </div>
-      ))}
-      <ReferFriend />
+      <div className=" mt-[60px]">
+        {myArray.map((item, index) => (
+          <div
+            className={` flex items-center justify-start p-5 my-1 hover:bg-menuIcon cursor-pointer w-full hover:border-e-2 hover:border-green-500 ${
+              activeItem === index ? "bg-menuIcon" : ""
+            }`}
+            key={index}
+            onClick={() => handleClick(index)}
+          >
+            <img src={item.image} alt={item.name} className=" mx-4" />
+            <span>{item.name}</span>
+          </div>
+        ))}
+      </div>
+
+      <div className=" flex items-center justify-center w-full flex-col">
+        <ReferFriend />
+      </div>
     </div>
   );
 };

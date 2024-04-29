@@ -8,9 +8,9 @@ import More from "../components/pages/More";
 
 const MainContent = () => {
   return (
-    <div className=" mx-auto bg-#fafbfd h-screen w-full">
+    <div className=" bg-#fafbfd min-h-screen w-full">
       <Routes>
-        <Route exact path="/dashboard" element={<Dashboard />} />
+        <Route exact path="/" element={<Dashboard />} />
         <Route exact path="/dashboard/cover" element={<Cover />} />
         <Route exact path="/dashboard/plans" element={<Plans />} />
         <Route exact path="/dashboard/wallet" element={<Wallet />} />
