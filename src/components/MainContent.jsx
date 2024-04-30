@@ -11,7 +11,7 @@ const MainContent = () => {
     <div className=" bg-#fafbfd min-h-screen w-full">
       <Routes>
         <Route exact path="/" element={<Dashboard />} />
-        <Route exact path="/dashboard/cover" element={<Cover />} />
+        <Route exact path="/dashboard/mycover" element={<Cover />} />
         <Route exact path="/dashboard/plans" element={<Plans />} />
         <Route exact path="/dashboard/wallet" element={<Wallet />} />
         <Route exact path="/dashboard/claim" element={<Claim />} />

@@ -10,7 +10,7 @@ const App = () => {
         <div className="  hidden md:block">
           <LeftSideBar />
         </div>
-        <div className=" md:ml-[300px] w-full">
+        <div className=" md:ml-[300px] w-full flex flex-col ">
           <MainContent />
         </div>
       </div>
