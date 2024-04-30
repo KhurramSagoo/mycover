@@ -42,7 +42,7 @@ const Header = () => {
           </div>
         ))}
       </div>
-      <div className=" mt-8 bg-menuIcon">
+      <div className=" mx-auto bg-menuIcon ">
         <Center />
       </div>
     </div>
