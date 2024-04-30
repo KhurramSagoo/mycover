@@ -25,24 +25,26 @@ const data = [
 
 const Header = () => {
   return (
-    <div className="container mx-auto p-7  bg-menuIcon flex items-start justify-start flex-col w-[800px] shadow">
-      <p className=" text-lg my-2 justify-start flex items-center flex-row">
+    <div className=" bg-white mx-auto xl:py-5  flex items-start justify-start flex-col w-full  max-w-[1000px] shadow-md">
+      <p className=" text-2xl font-semibold p-5 justify-start flex items-center flex-col">
         We&#39;ve got you covered
       </p>
-      <div className=" flex items-start justify-between rounded flex-col sm:flex-row flex-wrap w-full cursor-pointer">
+      <div className=" w-full flex item-center justify-around">
         {data.map((item, index) => (
-          <div
-            key={index}
-            className=" bg-white flex items-center justify-around    "
-          >
-            <img src={item.image} alt="" className=" w-36" />
+          <div key={index} className=" ">
+            <img
+              src={item.image}
+              alt=""
+              className=" sm:w-48 sm:h-40 w-[76px] h-[64px] sm:object-cover object-none  rounded-lg bg-white cursor-pointer "
+            />
 
             {/* <p>{item.title}</p> */}
           </div>
         ))}
       </div>
-
-      <Center />
+      <div className=" mt-8 bg-menuIcon">
+        <Center />
+      </div>
     </div>
   );
 };
