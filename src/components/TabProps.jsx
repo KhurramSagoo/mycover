@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import DrawerSheet from '../components/utils/DrawerSheet'
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@radix-ui/react-tabs";
 
 const TabProps = ({ tabs, images }) => {
@@ -50,6 +51,13 @@ const TabProps = ({ tabs, images }) => {
                         <span className="text-gray-500 text-wrap text-center">
                             {tab.detail}
                         </span>
+                        {/* Add your sheet rendering logic here */}
+                        {tab.value === activeTab && (
+                            <div>
+                                {/* Render your sheet content here */}
+                                <DrawerSheet tabs={tabs} handle={handleTabClick()} />
+                            </div>
+                        )}
                     </TabsContent>
                 ))}
             </Tabs>
