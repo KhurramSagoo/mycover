@@ -8,11 +8,11 @@ const App = () => {
     <BrowserRouter>
       <div className=" flex">
         <div className="  hidden md:block">
-          <LeftSideBar />
+          {/* <LeftSideBar /> */}
         </div>
-        <div className=" md:ml-[300px] w-full flex flex-col ">
-          <MainContent />
-        </div>
+        {/* <div className=" md:ml-[300px] w-full flex flex-col "> */}
+        <MainContent />
+        {/* </div> */}
       </div>
       <MobileFooter />
     </BrowserRouter>

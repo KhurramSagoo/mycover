@@ -5,12 +5,13 @@ import Plans from "../components/pages/Plans";
 import Wallet from "../components/pages/Wallet";
 import Claim from "../components/pages/Claim";
 import More from "../components/pages/More";
+import Business from "./DefaultPages/Business/Business";
 
 const MainContent = () => {
   return (
     <div className=" bg-#fafbfd min-h-screen w-full">
       <Routes>
-        <Route exact path="/" element={<Dashboard />} />
+        <Route exact path="/" element={<Business />} />
         <Route exact path="/dashboard/mycover" element={<Cover />} />
         <Route exact path="/dashboard/plans" element={<Plans />} />
         <Route exact path="/dashboard/wallet" element={<Wallet />} />
