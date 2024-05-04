@@ -23,7 +23,7 @@ const TopNav = () => {
     };
 
     return (
-        <div className='w-full flex items-center px-5 justify-between my-2 md:h-[80px] h-[50px] shadow-md'>
+        <div className='w-full flex items-center px-5 justify-between my-0 md:h-[80px] h-[50px] shadow-md bg-white'>
             <div className='flex items-center justify-center'>
 
 

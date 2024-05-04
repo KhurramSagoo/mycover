@@ -22,7 +22,7 @@ const BusinessMiddlePart = () => {
     },
     ]
     return (
-        <div className=' flex items-center justify-center flex-col flex-wrap px-5 w-full lg:h-[400px] md:h-[500px] h-[900px]'>
+        <div className=' flex items-center justify-center flex-col flex-wrap px-5 w-full lg:h-[400px] md:h-[500px] h-auto md:flex-row'>
 
             <div className=' flex items-center justify-center flex-col p-5'>
 
@@ -35,7 +35,7 @@ const BusinessMiddlePart = () => {
 
                 </p>
             </div>
-            <div className=' flex items-center justify-center flex-wrap sm:flex-row'>
+            <div className=' flex items-center justify-center flex-wrap sm:flex-row w-full'>
                 {
                     cardData.map((item, index) => (
                         <div key={index}
