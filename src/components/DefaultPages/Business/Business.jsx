@@ -9,6 +9,7 @@ import SmartBusinessTabs from './SmartBusinessTabs'
 import EasyWayBusinessInsurance from './EasyWayBusinessInsurance'
 import BusinessMultiAimation from './BusinessMultiAimation'
 import BusinessAccrodion from './BusinessAccrodion'
+import BusinessFooter from './BusinessFooter'
 
 const Business = () => {
     return (
@@ -28,9 +29,10 @@ const Business = () => {
                 <br />
             </div>
             <BusinessAccrodion />
-            <div className=' h-28 w-full'>
+            <BusinessFooter />
+            {/* <div className=' h-28 w-full'>
                 <br />
-            </div>
+            </div> */}
         </div>
     )
 }

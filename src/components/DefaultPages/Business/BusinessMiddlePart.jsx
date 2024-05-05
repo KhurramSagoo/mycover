@@ -35,7 +35,7 @@ const BusinessMiddlePart = () => {
 
                 </p>
             </div>
-            <div className=' flex items-center justify-center flex-wrap sm:flex-row w-full bg-blue-400 lg:justify-around'>
+            <div className=' flex items-center justify-center flex-wrap sm:flex-row w-full lg:justify-around'>
                 {
                     cardData.map((item, index) => (
                         <div key={index}

@@ -21,23 +21,7 @@ const BusinessAccrodion = () => {
                 {/* right side accordion */}
                 <div className=' px-4 w-full ' >
                     <AccordionComponent />
-
                 </div>
-
-            </div>
-
-            <div className=' bg-blue-300 h-screen'>
-                <motion.button className=' px-5 py-2 bg-blue-900 rounded-lg m-5 text-white
-                '
-                    initial={{ opacity: 0, y: 100 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{
-                        duration: 3, ease: "easeInOut", delay: 2,
-                        repeat: Infinity
-                    }}
-
-                >click me</motion.button>
-
             </div>
         </div>
     )
