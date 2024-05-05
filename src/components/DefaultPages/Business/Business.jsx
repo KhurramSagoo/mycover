@@ -7,6 +7,8 @@ import BusinessOneStopTab from './BusinessOneStopTab'
 import BusinessProtection from './BusinessProtection'
 import SmartBusinessTabs from './SmartBusinessTabs'
 import EasyWayBusinessInsurance from './EasyWayBusinessInsurance'
+import BusinessMultiAimation from './BusinessMultiAimation'
+import BusinessAccrodion from './BusinessAccrodion'
 
 const Business = () => {
     return (
@@ -20,7 +22,15 @@ const Business = () => {
             <BusinessOneStopTab />
             <BusinessProtection />
             <SmartBusinessTabs />
+            <BusinessMultiAimation />
             <EasyWayBusinessInsurance />
+            <div className=' h-28 w-full'>
+                <br />
+            </div>
+            <BusinessAccrodion />
+            <div className=' h-28 w-full'>
+                <br />
+            </div>
         </div>
     )
 }

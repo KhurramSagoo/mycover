@@ -18,6 +18,7 @@ module.exports = {
     },
     extend: {
       colors: {
+        accord: "#e6f4f2",
         businessInsuranceBg: "#101828",
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
@@ -72,6 +73,20 @@ module.exports = {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
       },
+    },
+    keyframes: {
+      "accordion-down": {
+        from: { height: "0" },
+        to: { height: "var(--radix-accordion-content-height)" },
+      },
+      "accordion-up": {
+        from: { height: "var(--radix-accordion-content-height)" },
+        to: { height: "0" },
+      },
+    },
+    animation: {
+      "accordion-down": "accordion-down 0.2s ease-out",
+      "accordion-up": "accordion-up 0.2s ease-out",
     },
   },
   plugins: [require("tailwindcss-animate")],
