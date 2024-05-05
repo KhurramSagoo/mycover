@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import logo from '../../assets/navbar-logo.svg';
 import arrowDown from '../../assets/arrow-down.svg';
 import menu from '../../assets/hamburger.svg';
@@ -17,13 +17,27 @@ import {
 
 const TopNav = () => {
     const [isOpen, setIsOpen] = useState(false);
+    const [scrollY, setScrollY] = useState(0);
+
 
     const toggleMenu = () => {
         setIsOpen(!isOpen);
     };
 
+    useEffect(() => {
+        const handleScroll = () => {
+            setScrollY(window.scrollY);
+        };
+
+        window.addEventListener('scroll', handleScroll);
+
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        };
+    }, []);
+
     return (
-        <div className='w-full flex items-center px-5 justify-between my-0 md:h-[80px] h-[50px] shadow-md bg-white'>
+        <div className='w-full flex items-center px-5 justify-between my-0 md:h-[80px] h-[50px] shadow-md ' style={{ backdropFilter: `blur(${scrollY > 0 ? 10 : 0}px)` }}>
             <div className='flex items-center justify-center'>
 
 

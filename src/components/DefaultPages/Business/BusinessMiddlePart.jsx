@@ -35,14 +35,14 @@ const BusinessMiddlePart = () => {
 
                 </p>
             </div>
-            <div className=' flex items-center justify-center flex-wrap sm:flex-row w-full'>
+            <div className=' flex items-center justify-center flex-wrap sm:flex-row w-full bg-blue-400 lg:justify-around'>
                 {
                     cardData.map((item, index) => (
                         <div key={index}
                             className=' w-72 flex items-center justify-center flex-col flex-wrap p-5'
                         >
                             <span>{item.image}</span>
-                            <p className=' text-xl text-[#094063] font-medium text-center'>{item.title}</p>
+                            <p className=' text-xl sm:text-xl  text-[#094063] font-bold text-center'>{item.title}</p>
                             <p className=' text-sm  text-gray-600 text-center'>{item.detail}</p>
 
 
