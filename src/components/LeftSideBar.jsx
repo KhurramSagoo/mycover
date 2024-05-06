@@ -21,27 +21,27 @@ const myArray = [
   {
     name: "My Cover",
     image: mycover,
-    route: "/dashboard/mycover",
+    route: "/protected/mycover",
   },
   {
     name: "Plans",
     image: plans,
-    route: "/dashboard/plans",
+    route: "/protected/plans",
   },
   {
     name: "Wallet",
     image: wallet,
-    route: "/dashboard/wallet",
+    route: "/protected/wallet",
   },
   {
     name: "Claim",
     image: claim,
-    route: "/dashboard/claim",
+    route: "/protected/claim",
   },
   {
     name: "More",
     image: more,
-    route: "/dashboard/more",
+    route: "/protected/more",
   },
 ];
 
@@ -66,9 +66,8 @@ const LeftSideBar = () => {
       <div className=" mt-[60px]">
         {myArray.map((item, index) => (
           <div
-            className={` flex items-center justify-start p-5 my-1 hover:bg-menuIcon cursor-pointer w-full hover:border-e-2 hover:border-green-500 ${
-              activeItem === index ? "bg-menuIcon" : ""
-            }`}
+            className={` flex items-center justify-start p-5 my-1 hover:bg-menuIcon cursor-pointer w-full hover:border-e-2 hover:border-green-500 ${activeItem === index ? "bg-menuIcon" : ""
+              }`}
             key={index}
             onClick={() => handleClick(index)}
           >

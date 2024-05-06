@@ -15,7 +15,7 @@ const BusinessHero = () => {
 
     return (
         <div>
-            <p className=' flex items-start justify-start lg-mx-20 mx-10 py-5 text-[1.5rem]
+            <p className=' flex items-start justify-start lg-mx-20 lg:px-20 mx-10 py-5 text-[1.5rem]
              font-medium
             '>Brands covered by us:</p>
             <AnimatePresence>
@@ -34,8 +34,6 @@ const BusinessHero = () => {
                         >
                             <img src={item} alt="" className=' lg:w-52 lg:mx-5 sm:w-36 w-24 mx-2 my-2' />
                         </motion.div>
-
-
                     ))}
 
                 </div>
