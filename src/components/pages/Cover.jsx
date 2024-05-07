@@ -31,7 +31,7 @@ const Cover = () => {
       >
         <span className=" text-xl font-medium text-blue-900">My Cover</span>
       </div>
-      <div>
+      <div className=" w-full">
         <TabProps tabs={tabs} />
       </div>
     </div>

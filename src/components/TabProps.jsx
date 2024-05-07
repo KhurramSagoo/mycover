@@ -11,7 +11,7 @@ const TabProps = ({ tabs, images }) => {
 
     return (
         <div className="w-full flex items-center justify-center">
-            <Tabs defaultValue={tabs[0].value} className="w-[500px]">
+            <Tabs defaultValue={tabs[0].value} className="w-[800px]">
                 <TabsList className="flex items-center justify-center border-b-4">
                     {tabs.map((tab) => (
                         <TabsTrigger
