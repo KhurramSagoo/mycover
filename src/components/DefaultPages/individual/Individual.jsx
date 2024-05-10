@@ -1,6 +1,8 @@
 import TopNav from '@/components/others/TopNav'
 import HeroSection from './HeroSection'
 import IndividualCarousel from './IndividualCarousel'
+import IndividualPaperless from './IndividualPaperless'
+import InsuranceTabs from './InsuranceTabs'
 
 const Individual = () => {
     return (
@@ -13,6 +15,8 @@ const Individual = () => {
                 <HeroSection />
             </div>
             <IndividualCarousel />
+            <IndividualPaperless />
+            <InsuranceTabs />
 
         </div>
 
