@@ -24,9 +24,7 @@ const Button = ({ children, active, onClick }) => {
         <motion.button
             onClick={onClick}
             className={`focus:outline-none px-4 h-9 py-2 rounded-full ${active ? 'bg-[#7a5af8]' : 'bg-[#e6e4f9]'}
-        text-white transition-colors duration-300`}
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
+        text-gray-800 transition-colors duration-300`}
         >
             {children}
         </motion.button>
@@ -59,6 +57,13 @@ const TopNav = () => {
             window.removeEventListener('scroll', handleScroll);
         };
     }, []);
+
+    useEffect(() => {
+        if (activeButton === 'Individual') {
+            navigate('/individual');
+        }
+    }, [activeButton, navigate]);
+
 
     return (
         <>

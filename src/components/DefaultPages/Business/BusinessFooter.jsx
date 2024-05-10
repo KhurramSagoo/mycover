@@ -3,9 +3,11 @@ import fb from '../../../assets/business/businessFooter/social-facebook.svg'
 import twitter from '../../../assets/business/businessFooter/social-twitter.svg'
 import insta from '../../../assets/business/businessFooter/social-instagram.svg'
 import linkedIn from '../../../assets/business/businessFooter/social-linkedIn.svg'
+import { Link, useNavigate } from 'react-router-dom';
 
 
 const BusinessFooter = () => {
+    const navigate = useNavigate()
     return (
         <div className=' lg:py-12 = bg-[#101828] w-full'>
 
@@ -30,10 +32,18 @@ const BusinessFooter = () => {
                         >+234 9070008899</a>
                     </div>
                     <div className=' lg:pt-4 w-full flex items-start justify-start'>
-                        <img src={fb} alt="" className=' pr-4' />
-                        <img src={insta} alt="" className=' pr-4' />
-                        <img src={linkedIn} alt="" className=' pr-4' />
-                        <img src={twitter} alt="" className=' pr-4' />
+                        <a href="https://www.facebook.com" target='_blank'>
+                            <img src={fb} alt="" className='  pr-4' />
+                        </a>
+                        <a href="https://www.instagram.com" target='_blank'>
+                            <img src={insta} alt="" className=' pr-4' />
+                        </a>
+                        <a href="https://www.linkedin.com" target='_blank'>
+                            <img src={linkedIn} alt="" className=' pr-4' />
+                        </a>
+                        <a href="https://www.twitter.com" target='_blank'>
+                            <img src={twitter} alt="" className=' pr-4' />
+                        </a>
 
                     </div>
                 </div>

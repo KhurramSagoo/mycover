@@ -1,23 +1,23 @@
 import AccordionComponent from '@/components/AccordionComponent'
 import { motion } from 'framer-motion';
 
-const BusinessAccrodion = () => {
+const IndividualAccordion = () => {
     const accordData = [
         {
-            title: "Are You An Insurance Company?",
-            detail: "No, MyCovergenius is Africa's first and leading insurtech platform. We are focused on expanding insurance adoption in Africa by creating unique and relevant products for anyone."
+            title: "How long before my plan becomes active?",
+            detail: "With MyCoverGenius, skip the process of bulky paper forms & boring office processes. Get covered right from your device and receive your insurance policy instantly."
         },
         {
-            title: "What Kinds Of Plans Can I Get?",
-            detail: "Every plan to suit your business needs. Our plans cover health, vehicles, gadgets, office space, travel and logistics. You can also create unique plans with us, if you don't find what you need."
+            title: "Can I buy it for multiple people?",
+            detail: "Yes. MyCoverGenius allows you to get insurance for several people all at once, including your family."
         },
         {
-            title: "How Do I Get Covered?",
-            detail: "It's as easy as having a conversation. Choose a plan that suits your business, tell us a bit about your business, complete payment and get an insurance certificate immediately. No paperwork is involved."
+            title: "Who needs insurance?",
+            detail: "Everyone, With MyCoverGenius, the uncertainty of possible financial loss is reduced! Our Insurance plans help you pay for medical emergencies, unforeseen damages caused to property like cars and gadgets! Transfer all your risks to us so you can have peace of mind."
         },
         {
-            title: "Can I Get A Unique Plan For My Business?",
-            detail: "Certainly! That's what we do at mycovergenius. We create tailor-made insurance plans to suit your specific business needs."
+            title: "Is MyCoverGenius available in my state?",
+            detail: "Yes! We are available in all 36 states in Nigeria, no matter where you are, We are set to provide you with premium insurance that protects you."
         },
     ];
     return (
@@ -51,4 +51,4 @@ const BusinessAccrodion = () => {
     )
 }
 
-export default BusinessAccrodion
+export default IndividualAccordion

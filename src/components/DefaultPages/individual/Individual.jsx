@@ -3,6 +3,8 @@ import HeroSection from './HeroSection'
 import IndividualCarousel from './IndividualCarousel'
 import IndividualPaperless from './IndividualPaperless'
 import InsuranceTabs from './InsuranceTabs'
+import IndividualAccordion from './IndividualAccordion'
+import BusinessFooter from '../Business/BusinessFooter'
 
 const Individual = () => {
     return (
@@ -17,6 +19,8 @@ const Individual = () => {
             <IndividualCarousel />
             <IndividualPaperless />
             <InsuranceTabs />
+            <IndividualAccordion />
+            <BusinessFooter />
 
         </div>
 
