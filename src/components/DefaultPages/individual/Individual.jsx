@@ -5,6 +5,8 @@ import IndividualPaperless from './IndividualPaperless'
 import InsuranceTabs from './InsuranceTabs'
 import IndividualAccordion from './IndividualAccordion'
 import BusinessFooter from '../Business/BusinessFooter'
+import IndividualInsuranceClick from './IndividualInsuranceClick'
+import Collage from './collage/Collage'
 
 const Individual = () => {
     return (
@@ -19,7 +21,13 @@ const Individual = () => {
             <IndividualCarousel />
             <IndividualPaperless />
             <InsuranceTabs />
+            <IndividualInsuranceClick />
             <IndividualAccordion />
+            <div className=' relative h-52'>
+                <div className=' absolute -bottom-20  right-0 left-0'>
+                    <Collage />
+                </div>
+            </div>
             <BusinessFooter />
 
         </div>

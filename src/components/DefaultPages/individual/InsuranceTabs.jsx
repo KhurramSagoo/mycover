@@ -56,28 +56,6 @@ const InsuranceTabs = () => {
                         { path: "" }
                     ]
                 },
-                // {
-                //     icon: heart,
-                //     title: "Flexicare Mini 1",
-                //     detail: [
-                //         {
-                //             one: "Annual medical coverage of up to ₦1,000,000"
-                //         }, {
-                //             two: "Annual medical coverage of up to ₦1,000,000"
-                //         }, {
-                //             three: "Admission & Feeding in General wards"
-                //         }, {
-                //             four: "Up to ₦100,000 for Major & Minor surgeries"
-                //         }, {
-                //             five: "Up to ₦100,000 in Childbirth, Antenatal Care & CS"
-                //         }
-                //     ],
-                //     buttonText: { text: "Purchase", path: "" }, more: [
-                //         { text: "Learn More" },
-                //         { path: "" }
-                //     ]
-                // },
-
             ]
         },
         {
@@ -190,7 +168,7 @@ const InsuranceTabs = () => {
     ];
 
     return (
-        <div className='w-full p-5 h-screen my-5'>
+        <div className='w-full p-5 min-h-screen my-5'>
             <div className='w-full flex items-center justify-center flex-col'>
                 <p className='text-secondary text-xl md:text-2xl lg:text-5xl font-bold my-2 md:my-4 text-center text-wrap'>All Your Insurance Needs Met!</p>
                 <p className='text-sm font-normal text-gray-500 text-center text-wrap break-words mx-auto my-1 md:my-4 md:text-base max-w-[700px]'>From your car, to your health, and to that overdue vacation, we’ve curated just the best protection that works. When it comes to your peace of mind, we have you covered.</p>
