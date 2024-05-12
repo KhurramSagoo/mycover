@@ -21,12 +21,12 @@ const myArray = [
   {
     name: "My Cover",
     image: mycover,
-    route: "/dashboard/mycover",
+    route: "/protected/mycover",
   },
   {
     name: "Plans",
     image: plans,
-    route: "/dashboard/plans",
+    route: "/protected/plans",
   },
   //   {
   //     name: "Wallet",
@@ -41,7 +41,7 @@ const myArray = [
   {
     name: "More",
     image: more,
-    route: "/dashboard/more",
+    route: "/protected/more",
   },
 ];
 
@@ -67,9 +67,8 @@ const MobileFooter = () => {
       </div> */}
       {myArray.map((item, index) => (
         <div
-          className={` flex items-center flex-col justify-start p-5 my-1 hover:bg-menuIcon cursor-pointer w-full hover:border-t-2 hover:border-green-500 ${
-            activeItem === index ? "bg-menuIcon" : ""
-          }`}
+          className={` flex items-center flex-col justify-start p-5 my-1 hover:bg-menuIcon cursor-pointer w-full hover:border-t-2 hover:border-green-500 ${activeItem === index ? "bg-menuIcon" : ""
+            }`}
           key={index}
           onClick={() => handleClick(index)}
         >

@@ -53,8 +53,8 @@ const IndividualInsuranceClick = () => {
 
             <div className='flex items-center justify-center w-full flex-col md:flex-row'>
                 {/* left portion  */}
-                <div className='lg:w-1/2 w-full h-[500px] md:h-screen flex items-center justify-center'>
-                    {selectedText !== null && <img src={textData[selectedText].image} alt="" className=' w-72' />}
+                <div className='lg:w-1/2 w-full h-[300px] sm:h-[400px] md:h-screen flex items-center justify-center'>
+                    {selectedText !== null && <img src={textData[selectedText].image} alt="" className=' md:w-72 w-40 sm:w-52' />}
                 </div>
 
                 {/* right portion */}
@@ -72,8 +72,8 @@ const IndividualInsuranceClick = () => {
                                         }
                                     </div>
                                     <div className=' flex items-start justify-start flex-col ml-5 px-2 w-[90%]'>
-                                        <p className={`text-xl my-2 font-bold ${selectedText === index ? 'text-slate-900' : 'text-gray-400'}`}>{text.title}</p>
-                                        <p className={`text-md font-medium ${selectedText === index ? 'text-slate-900' : 'text-gray-400'}`}>{text.detail}</p>
+                                        <p className={`md:text-xl text-md md:my-2 my-0 font-bold ${selectedText === index ? 'text-slate-900' : 'text-gray-400'}`}>{text.title}</p>
+                                        <p className={`md:text-md text-xs font-medium ${selectedText === index ? 'text-slate-900' : 'text-gray-400'}`}>{text.detail}</p>
                                     </div>
                                 </div>
                             </div>

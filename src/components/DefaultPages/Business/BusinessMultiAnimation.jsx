@@ -1,12 +1,12 @@
 import React from 'react'
 
-const BusinessMultiAimation = () => {
+const BusinessMultiAnimation = () => {
     return (
-        <div className=' md:py-16 py-12 lg:h-[400px]'>
+        <div className=' md:py-16 py-12 lg:h-[400px] p-5'>
             <div className=' lg:px-12 lg:pt-4 px-2 pt-2 flex items-center justify-center md:flex-row flex-col '>
                 <div className=' lg:w-3/5 md:w-1/2 px-4 mb-6  flex items-start justify-start '>
 
-                    BusinessMultiAimation
+                    Brands Animation
                 </div>
                 <div className=' lg-w-2/5 md:w-1/2 lg:ml-6 lg:px-6 px-2 md-h-[300px]
                 h-[260px]
@@ -21,4 +21,4 @@ const BusinessMultiAimation = () => {
     )
 }
 
-export default BusinessMultiAimation
+export default BusinessMultiAnimation

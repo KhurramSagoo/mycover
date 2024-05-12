@@ -82,7 +82,7 @@ const BusinessFooter = () => {
 
 
             </section>
-            <div className=' w-full text-wrap text-center mx-auto text-white text-sm font-medium'>Copyright © 2024 MyCoverGenius Ltd. All rights reserved.</div>
+            <div className=' w-full text-wrap text-center mx-auto text-white text-sm font-medium p-5'>Copyright © 2024 MyCoverGenius Ltd. All rights reserved.</div>
 
         </div>
     )

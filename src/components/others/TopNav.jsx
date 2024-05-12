@@ -23,7 +23,7 @@ const Button = ({ children, active, onClick }) => {
     return (
         <motion.button
             onClick={onClick}
-            className={`focus:outline-none px-4 h-9 py-2 rounded-full ${active ? 'bg-[#7a5af8]' : 'bg-[#e6e4f9]'}
+            className={`focus:outline-none px-4 h-9 py-2 rounded-full ${active ? 'bg-[#7a5af8] text-white' : 'bg-[#e6e4f9]'}
         text-gray-800 transition-colors duration-300`}
         >
             {children}
