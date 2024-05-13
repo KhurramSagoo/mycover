@@ -8,10 +8,15 @@ import Wallet from "./../components/pages/Wallet";
 import Claim from "./../components/pages/Claim";
 import More from "./../components/pages/More";
 import Layout from "./Layout";
+import Login from "@/components/DefaultPages/Login";
+import OnBoarding from "@/components/DefaultPages/OnBoarding";
 
 export const ROOT = "/"
 export const BUSINESS = "/business"
 export const INDIVIDUAL = "/individual"
+export const LOGIN = "/login"
+export const ONBOARDING = "/onboarding"
+
 
 export const PROTECTED = "/protected"
 export const DASHBOARD = "/protected/dashboard"
@@ -25,6 +30,8 @@ export const MORE = "/protected/more"
 export const router = createBrowserRouter([
     { path: ROOT, element: <Business /> },
     { path: INDIVIDUAL, element: <Individual /> },
+    { path: LOGIN, element: <Login /> },
+    { path: ONBOARDING, element: <OnBoarding /> },
     {
         path: PROTECTED, element: <Layout />,
         children: [

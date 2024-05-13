@@ -18,6 +18,7 @@ module.exports = {
     },
     extend: {
       colors: {
+        loginBg: "#3baa90",
         accord: "#e6f4f2",
         businessInsuranceBg: "#101828",
         border: "hsl(var(--border))",

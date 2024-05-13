@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import iphone from './insuranceTabs/iphone12.png';
 import iphone2 from './insuranceTabs/iphone12-2.png';
 import iphone3 from './insuranceTabs/iphone12-3.png';

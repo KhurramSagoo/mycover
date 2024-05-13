@@ -8,6 +8,10 @@ import DrawerSheet from '../DrawerSheet';
 import { motion } from 'framer-motion';
 import { useNavigate } from 'react-router-dom';
 
+// icons
+import BusinessCenterIcon from '@mui/icons-material/BusinessCenter';
+import EastIcon from '@mui/icons-material/East';
+import PersonIcon from '@mui/icons-material/Person';
 
 
 import {
@@ -18,6 +22,8 @@ import {
     SheetTitle,
     SheetTrigger,
 } from "@/components/ui/sheet"
+import Btn from '../utils/Btn';
+import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, DialogTrigger } from '../ui/dialog';
 
 const Button = ({ children, active, onClick }) => {
     return (
@@ -39,7 +45,7 @@ const TopNav = () => {
     const [activeButton, setActiveButton] = useState('Business');
     const [isOpen, setIsOpen] = useState(false);
     const [scrollY, setScrollY] = useState(0);
-
+    const [showDialog, setShowDialog] = useState(false);
 
 
     const toggleMenu = () => {
@@ -63,6 +69,10 @@ const TopNav = () => {
             navigate('/individual');
         }
     }, [activeButton, navigate]);
+
+    const loginHandle = () => {
+        setShowDialog(true);
+    }
 
 
     return (
@@ -100,13 +110,64 @@ const TopNav = () => {
                     </div>
                     {isOpen && <DrawerSheet onClose={toggleMenu} />}
                 </div>
-                <div>
-                    <button className='px-5 py-2 rounded-xl bg-[#4fbfa3] text-white border cursor-pointer'
+                <div className=' flex items-center justify-center'>
+
+                    <Dialog>
+                        <DialogTrigger>                    <Btn title="Login" handle={loginHandle} />
+                        </DialogTrigger>
+                        <DialogContent className=" transition-all ease-in-out">
+                            <DialogHeader>
+                                <DialogTitle>
+                                    <div className=' text-center flex flex-col items-center justify-center'>
+
+                                        <p className=' text-primary my-3 text-xl font-bold '>Log in to an Account</p>
+                                        <p className=' my-2 text-base text-gray-500 '>Select the account type</p>
+                                    </div>
+                                </DialogTitle>
+                                <DialogDescription>
+                                    <div className=' flex flex-col items-center justify-around cursor-pointer'>
+                                        <div className=' flex items-center justify-around w-full my-5 border rounded-lg p-5 hover:border-primary hover:text-primary '>
+                                            <div className=' rounded-full w-12 h-12 bg-slate-200 flex items-center justify-center hover:bg-green-50 hover:text-primary'>
+                                                <BusinessCenterIcon />
+                                            </div>
+                                            <div className=' flex items-start justify-start flex-col ml-5'>
+                                                <p className=' text-gray-600  text-base font-medium'>Log in as a business account</p>
+                                                <p className=' text-xs text-gray-500 '>Login to your Business account</p>
+                                            </div>
+                                            <div className=' '>
+                                                <EastIcon />
+                                            </div>
+                                        </div>
+                                        <div className=' flex items-center justify-around w-full my-5 border rounded-lg p-5 hover:border-primary hover:text-primary '
+                                            onClick={() => navigate("/login")}
+                                        >
+                                            <div className=' rounded-full w-12 h-12 bg-slate-200 flex items-center justify-center hover:bg-green-50 hover:text-primary'>
+                                                <PersonIcon />
+                                            </div>
+                                            <div className=' flex items-start justify-start flex-col ml-5'>
+                                                <p className=' text-gray-600  text-base font-medium'>Log in to  personal account</p>
+                                                <p className=' text-xs text-gray-500 '>Login to your Individual account</p>
+                                            </div>
+                                            <div className=' '>
+                                                <EastIcon />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </DialogDescription>
+                            </DialogHeader>
+                        </DialogContent>
+                    </Dialog>
+
+
+
+
+                    <Btn title="Get Covered" handle={() => { }} />
+                    <button className='px-5 py-2 rounded-full bg-[#4fbfa3] text-white border cursor-pointer'
                         onClick={() => navigate("/protected/dashboard")}
                     >Dashboard</button>
                 </div>
 
-            </div>
+            </div >
             <div className='flex ml-20 mt-8 items-center justify-center rounded-full bg-[#e6e4f9] w-[180px] '>
                 <Button active={activeButton === 'Business'}
                     onClick={() => {
@@ -125,6 +186,7 @@ const TopNav = () => {
                     Individual
                 </Button>
             </div>
+
         </>
     )
 }
