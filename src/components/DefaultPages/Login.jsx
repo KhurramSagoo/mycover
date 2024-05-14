@@ -1,7 +1,7 @@
 import logo from '../../assets/login/mycover-logo-white.svg'
 import lines from '../../assets/login/cap-lines.svg'
 import { ArrowLeft } from '@mui/icons-material'
-import { useNavigate, useHistory } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 import { useForm } from "react-hook-form"
 
 
@@ -12,7 +12,6 @@ const Login = () => {
     const onSubmit = (data) => console.log(data)
 
     const navigate = useNavigate()
-    const history = useHistory()
     return (
         <div className=' w-full flex items-start justify-start h-screen'>
 
@@ -39,8 +38,7 @@ const Login = () => {
             {/* right */}
             <div className=' md:w-2/3 w-full p-2 md:px-5'>
                 <div className=' bg-[#e6f4f2] flex items-center justify-center w-28 rounded-xl px-2 py-2 ml-5 h32 text-gray-600 cursor-pointer '
-                    onClick={() => history.goBack()}
-                // onClick={() => navigate("/")}
+                    onClick={() => navigate("/")}
                 >
                     <ArrowLeft /> <p className=' text-sm text-gray-600 font-medium'>Go Back</p>
 

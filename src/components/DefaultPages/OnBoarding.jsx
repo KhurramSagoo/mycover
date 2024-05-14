@@ -1,7 +1,7 @@
 import { ArrowLeft } from "@mui/icons-material"
 import { useState } from "react";
 import { useForm } from "react-hook-form";
-import { useNavigate, useHistory } from "react-router-dom"
+import { useNavigate } from "react-router-dom"
 
 const tabData = [
     {
@@ -51,7 +51,6 @@ const OnBoarding = () => {
     const [activeTab, setActiveTab] = useState(0);
     const [selectedCards, setSelectedCards] = useState(0);
     const navigate = useNavigate();
-    const history = useHistory()
 
     const handleBack = () => {
         console.log("clicked")
@@ -69,7 +68,7 @@ const OnBoarding = () => {
 
     return (
         <div className="p-5 h-screen">
-            <div className='bg-[#e6f4f2] flex items-center justify-center w-28 rounded-xl px-2 py-2 h32 text-gray-600 cursor-pointer' onClick={() => history.goBack()}>
+            <div className='bg-[#e6f4f2] flex items-center justify-center w-28 rounded-xl px-2 py-2 h32 text-gray-600 cursor-pointer' onClick={() => navigate(-1)}>
                 <ArrowLeft /> <button className='text-sm text-gray-600 font-medium'>Go Back</button>
             </div>
             <div>
