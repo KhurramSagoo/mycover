@@ -13,7 +13,7 @@ const Login = () => {
 
     const navigate = useNavigate()
     return (
-        <div className=' w-full flex items-start justify-start h-screen'>
+        <div className=' w-full flex items-start justify-start md:h-screen h-auto'>
 
             {/* left side bar */}
             <div className='hidden md:flex items-start justify-start bg-loginBg md:w-1/3  h-screen relative'>
@@ -47,7 +47,7 @@ const Login = () => {
                 {/* heading */}
                 <div className='md:mt-16 md:px-4 md:py-8 px-2 py-6'>
                     <div className=' w-full flex items-center justify-center flex-col'>
-                        <p className=' text-secondary text-4xl font-bold'>Hey, Welcome Back 😊 </p>
+                        <p className=' text-secondary text-4xl font-bold text-center  break-words'>Hey, Welcome Back 😊 </p>
                         <p className=' text-sm py-4 text-gray-500'>Seeing you always delight us. Please log in</p>
                     </div>
 
@@ -57,7 +57,7 @@ const Login = () => {
                 <div className='flex items-center justify-center w-full mt-2 px-12  flex-col'>
                     <form onSubmit={handleSubmit(onSubmit)}>
 
-                        <div className=' flex items-start justify-center flex-col  w-[500px] py-5'>
+                        <div className=' flex items-start justify-center flex-col  min-w-[300px] sm:w-full py-5'>
 
                             <label htmlFor="email" className=' text-gray-500'>Email Address</label>
                             <input type="email" placeholder='Enter your email Address' className=' border outline-primary rounded-md py-2 w-full my-2 px-2 '
@@ -72,7 +72,7 @@ const Login = () => {
                             {errors.email && <p className="text-red-500">{errors.email.message}</p>}
                             {isValid && <p className="text-red-500">khurrm</p>}
                         </div>
-                        <div className=' flex items-start justify-center flex-col  w-[500px] py-5'>
+                        <div className=' flex items-start justify-center flex-col  min-w-[300px] sm:w-full py-5'>
 
                             <label htmlFor="password" className=' text-gray-500'>Password</label>
                             <input type="password"
