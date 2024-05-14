@@ -7,7 +7,7 @@ import { useForm } from "react-hook-form"
 
 
 
-const Login = () => {
+const RegisterPersonal = () => {
     const { register, handleSubmit, formState: { errors, isValid } } = useForm()
     const onSubmit = (data) => console.log(data)
 
@@ -24,7 +24,7 @@ const Login = () => {
                     </div>
 
                     <div className=' w-full flex items-start justify-start md:pr-8 pr-0  text-white'>
-                        <p className=' lg:text-3xl md:text-2xl font-medium break-words pl-0 '>Get ready to enjoy insurance that truly covers you</p>
+                        <p className=' lg:text-3xl md:text-2xl font-medium break-words pl-0 '>Welcome To MyCoverGenius! 😊</p>
                     </div>
                     <div className='w-full absolute bottom-0 right-0 left-0 '>
                         <img src={lines} alt="" className=' opacity-50  object-contain' />
@@ -125,4 +125,4 @@ const Login = () => {
     )
 }
 
-export default Login
+export default RegisterPersonal
