@@ -30,7 +30,7 @@ const IndividualPaperless = () => {
         <div className=' bg-[#f3faf8]  h-full lg:p-16 md:p-12 p-4'>
 
             {/* uppers section */}
-            <div className=' '>
+            <div className=' py-4 sm:py-6 '>
                 <p className=' md:text-[48px]  text-secondary text-2xl font-bold text-center'>Skip The Hassle & Paper Work!
 
                 </p>
@@ -41,7 +41,7 @@ const IndividualPaperless = () => {
             </div>
 
             {/* lower section */}
-            <div className=' mt-14 pt-12 flex items-start lg:justify-between  md:justify-between justify-center w-full flex-col sm:flex-row flex-wrap '>
+            <div className='  mt-14 pt-12 flex items-start lg:justify-between  md:justify-between justify-start w-full flex-col sm:flex-row flex-wrap '>
                 {
                     cardData.map((item, index) => (
                         <div key={index}
@@ -54,7 +54,7 @@ const IndividualPaperless = () => {
                         >
                             <div className=' flex items-end justify-center'>
 
-                                <img src={item.image} alt={item.title} />
+                                <img src={item.image} alt={item.title} className=' w-16' />
                                 <img src={item.dot && item.dot
                                 }
                                     className='hidden md:flex '

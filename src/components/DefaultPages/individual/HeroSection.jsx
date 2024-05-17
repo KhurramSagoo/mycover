@@ -3,7 +3,7 @@ import mobile from './mobile-app.png'
 
 const HeroSection = () => {
     return (
-        <div className=' lg:mx-16 mx-2 flex items-center justify-center xl:flex-row flex-col'>
+        <div className=' lg:mx-8 mx-2 flex items-center justify-center xl:flex-row flex-col'>
             {/* left portion */}
             <div className=' lg:ps-4 lg:pe-16  lg:py-12 lg:w-3/5 mx-6 py-2'>
                 <p className=" lg:text-[60px] 

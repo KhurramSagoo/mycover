@@ -6,6 +6,11 @@
   font-family: "Montserrat", sans-serif;
 }
 
+/* styles.css */
+.carousel-indicators {
+  display: none !important;
+}
+
 @layer base {
   :root {
     --background: 0 0% 100%;

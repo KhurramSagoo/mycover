@@ -31,7 +31,7 @@ const SmartBusinessTabs = () => {
     ];
 
     return (
-        <div className='py-[120px] px-4 bg-[#f8fcfb] w-full h-auto lg:px-16'>
+        <div className='lg:py-[120px] md:py-[100px] sm:py-[80px] py-[50px]  px-4 bg-[#f8fcfb] w-full h-auto lg:px-16'>
             <div className='my-4 px-4 flex items-start justify-start flex-col flex-wrap md:items-start w-full md:w-1/2'>
                 <p className='my-4 text-secondary md:text-2xl lg:text-4xl  text-[22px] font-extrabold text-wrap'>
                     Smart business insure with MyCovergenius
@@ -42,11 +42,12 @@ const SmartBusinessTabs = () => {
             </div>
 
             {/* buttons tabs */}
-            <div className='flex flex-wrap justify-center items-center w-full'>
+            <div className='flex justify-center items-center flex-nowrap w-full overflow-x-auto'>
                 {tabData.map((tab, index) => (
+
                     <button
                         key={index}
-                        className={`md:text-secondary font-medium lg:w-1/4 rounded lg:rounded-none text-gray-400 md:py-5 px-5 py-1 m-1 md:m-0 ${activeTab === index ? ' bg-primary  md:text-primary md:border-b-0  lg:bg-[#f8fcfb] md:bg-gray-100 md:border-2 border-gray-200  text-white' : ' bg-gray-200 border md:bg-white'}`}
+                        className={`md:text-secondary text-xs font-medium lg:w-1/4  rounded lg:rounded-none text-gray-400 md:py-5 px-0 py-0 m-1 md:m-0 ${activeTab === index ? ' bg-primary  md:text-primary md:border-b-0  lg:bg-[#f8fcfb] md:bg-gray-100 md:border-2 border-gray-100  text-white' : ' bg-gray-200 border md:bg-white'}`}
                         onClick={() => setActiveTab(index)}
                     >
                         {tab.title}
