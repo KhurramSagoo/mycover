@@ -28,12 +28,12 @@ const BusinessAccrodion = () => {
 
                 {/* left side */}
                 <div className=' mb-6 sm:pb-6 w-full flex items-center justify-center sm:items-start flex-col sm:px-8 '>
-                    <p className=' text-2xl md:text-5xl lg:text-7xl  text-secondary flex items-center justify-start font-extrabold mb-6 md:my-6'> What would you like to
+                    <p className=' text-2xl  md:text-5xl  text-secondary flex items-center justify-start font-extrabold mb-6 md:my-6'> What would you like to know
                         <br />
                     </p>
-                    <span className=' text-primary  text-2xl md:text-5xl lg:text-7xl font-extrabold '>
+                    <span className=' text-primary  text-2xl md:text-5xl lg:text-5xl font-extrabold '>
 
-                        know
+
                     </span>
                     <div className=' flex items-center  w-full justify-start md:my-6'>
                         <button className=' bg-primary py-3 px-9  text-white rounded-md '>Lets talk</button>

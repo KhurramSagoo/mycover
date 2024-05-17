@@ -32,17 +32,17 @@ const BusinessOneStopTab = () => {
   ];
 
   return (
-    <div className='w-full mx-auto flex items-center justify-center flex-col lg:flex-row md:px-16 sm:px-8 px-2'>
-      <div className='w-full lg:w-1/2'>
-        <header className='flex md:items-start md:justify-start items-center justify-center flex-col w-full  p-5'>
-          <p className='text-xl text-green-500 font-medium'>One-stop Solution</p>
-          <p className='text-5xl  font-extrabold text-wrap  text-secondary'>The one-stop insurance tool for your business</p>
-          <p className='text-xl font-medium text-gray-500'>We empower you with data via a web interface for managing plans and staff needed to drive better business decisions.</p>
+    <div className='w-full mx-auto flex items-center justify-center flex-col lg:flex-row md:px-8 sm:px-4 px-0 my-10'>
+      <div className='w-full lg:w-1/2 '>
+        <header className='flex md:items-start md:justify-start items-start justify-center flex-col w-full  p-5  space-y-3'>
+          <p className='md:text-xl text-sm text-green-500 font-medium'>One-stop Solution</p>
+          <p className='md:text-5xl text-xl  font-extrabold text-wrap  text-secondary'>The one-stop insurance tool for your business</p>
+          <p className='md:text-xl text-sm font-medium text-black'>We empower you with data via a web interface for managing plans and staff needed to drive better business decisions.</p>
         </header>
 
         {/* tabs */}
-        <div className='flex md:flex-col font-medium items-center justify-center p-5 w-full
-        flex-row
+        <div className='flex md:flex-col font-medium items-center justify-center md:px-8 sm:px-4 px-4 my-10 w-full rounded-lg
+        flex-row 
       
 
         
@@ -59,10 +59,10 @@ const BusinessOneStopTab = () => {
           ))}
         </div>
       </div>
-      <div className='w-full lg:w-1/2  lg:mt-10 p-5 h-full min-h-[400px] ' >
+      <div className='w-full lg:w-1/2 md:px-8 sm:px-4 px-0 my-10 h-full min-h-[400px] ' >
         {/* Render tab image */}
         {tabData.map((tab, index) => (
-          <div key={index} className={`${activeTab === index ? 'block' : 'hidden'} flex items-baseline justify-center flex-col`}>
+          <div key={index} className={`${activeTab === index ? 'block' : 'hidden'} flex items-baseline justify-center flex-col bg-[#f8fcfb] p-5 `}>
             <li className=' text-primary text-xl font-normal px-2'>{tab.title}</li>
             <img src={tab.image} alt={tab.title} />
           </div>

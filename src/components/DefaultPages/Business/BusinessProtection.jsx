@@ -58,10 +58,10 @@ const BusinessProtection = () => {
     ];
 
     return (
-        <div className='w-full p-5 h-screen my-5'>
-            <div className='w-full flex items-center justify-center flex-col'>
-                <p className='text-center my-2 md:my-4 text-wrap text-primary text-sm'>We are product driven</p>
-                <p className='text-secondary text-xl font-extrabold my-2 md:my-4text-center text-wrap'>All the protection your business needs in one place</p>
+        <div className='w-full p-5 h-screen my-16'>
+            <div className=' flex items-center justify-center flex-col lg:mx-72 md:mx-32 '>
+                <p className='text-center my-2 md:my-4 text-wrap text-primary md:text-xl text-sm'>We are product driven</p>
+                <p className='text-secondary md:text-5xl text-xl  font-extrabold my-2 md:my-4 text-center text-wrap leading-relaxed'>All the protection your business needs in one place</p>
                 <p className='text-sm font-normal text-gray-500 text-center text-wrap my-1 md:my-4 md:text-xl'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate sunt voluptatum earum commodi qui? Architecto.</p>
             </div>
 
@@ -70,7 +70,7 @@ const BusinessProtection = () => {
                 {tabData.map((tab, index) => (
                     <button
                         key={index}
-                        className={`bg-gray-200 text-gray-500 rounded-lg px-5 py-1 m-2 ${activeTab === index ? ' bg-primary text-white' : ''}`}
+                        className={`bg-gray-200 text-gray-500 rounded-lg px-3 py-1 m-2 ${activeTab === index ? ' bg-primary text-white' : ''}`}
                         onClick={() => setActiveTab(index)}
                     >
                         {tab.head}
@@ -87,7 +87,7 @@ const BusinessProtection = () => {
                                 className='
                             shadow  flex items-start justify-start flex-col
                             border border-gray-200
-                            rounded w-[300px] h-auto
+                            rounded md:w-[400px] w-full h-auto
                             p-6
                             m-2
                             sm:m-5
@@ -101,7 +101,7 @@ const BusinessProtection = () => {
                                 '>
 
                                     <img
-                                        className=' w-[24px]'
+                                        className=' w-[24px] mr-3'
                                         src={card.icon} alt={tabData[activeTab].head} />
                                     <p className='text-lg text-secondary font-semibold'>{card.title}</p>
                                 </div>

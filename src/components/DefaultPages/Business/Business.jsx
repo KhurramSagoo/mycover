@@ -12,7 +12,7 @@ import BusinessFooter from './BusinessFooter'
 
 const Business = () => {
     return (
-        <div className=' h-[1200px] w-full '>
+        <div className='   w-full '>
             <div className=' fixed top-0 right-0 left-0'>
                 <TopNav />
             </div>

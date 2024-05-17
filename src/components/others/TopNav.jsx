@@ -29,7 +29,7 @@ const Button = ({ children, active, onClick }) => {
     return (
         <motion.button
             onClick={onClick}
-            className={`focus:outline-none px-4 h-9 py-2 rounded-full ${active ? 'bg-[#7a5af8] text-white' : 'bg-[#e6e4f9]'}
+            className={`focus:outline-none text-sm px-4 h-8 py-2 rounded-full ${active ? 'bg-[#7a5af8] text-white font-medium' : 'bg-[#e6e4f9]'}
         text-gray-800 transition-colors duration-300`}
         >
             {children}
@@ -78,7 +78,7 @@ const TopNav = () => {
     return (
         <>
 
-            <div className='w-full lg:px-20 flex items-center px-5 justify-between my-0 md:h-[80px] h-[50px] shadow-md ' style={{ backdropFilter: `blur(${scrollY > 0 ? 10 : 0}px)` }}>
+            <div className='w-full lg:px-12 flex items-center px-5 justify-between my-0 md:h-[100px] h-[80px] shadow-md ' style={{ backdropFilter: `blur(${scrollY > 0 ? 10 : 0}px)` }}>
                 <div className='flex items-center justify-center'>
                     <Sheet>
                         <SheetTrigger>
@@ -97,7 +97,7 @@ const TopNav = () => {
                             </SheetHeader>
                         </SheetContent>
                     </Sheet>
-                    <img src={logo} alt="" />
+                    <img src={logo} alt="" className=' w-36' />
                 </div>
                 <div className={`md:flex hidden items-center justify-center ${isOpen ? 'flex' : 'hidden'}`}>
                     <div className='flex items-center justify-center mx-1'>
@@ -161,14 +161,15 @@ const TopNav = () => {
 
 
 
-                    <Btn title="Get Covered" handle={() => { }} />
-                    <button className='px-5 py-2 rounded-full bg-[#4fbfa3] text-white border cursor-pointer'
+                    {/* <Btn title="Get Covered" handle={() => { }} /> */}
+                    {/* <button className="mx-1 py-2 cursor-pointer md:px-5 px-2 text-white bg-primary rounded-full"> Get Covered</button> */}
+                    <button className='md:px-5 px-4 py-2 rounded-full bg-[#4fbfa3] text-white border cursor-pointer'
                         onClick={() => navigate("/protected/dashboard")}
                     >Dashboard</button>
                 </div>
 
             </div >
-            <div className='flex ml-20 mt-8 items-center justify-center rounded-full bg-[#e6e4f9] w-[180px] '>
+            <div className='flex ml-20 mt-3 items-center justify-center rounded-full bg-[#e6e4f9] w-[180px] '>
                 <Button active={activeButton === 'Business'}
                     onClick={() => {
                         setActiveButton('Business');

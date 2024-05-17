@@ -5,7 +5,7 @@ import peace from '../../../assets/business/smartBusinessTabs/peace-of-mind.png'
 import claim from '../../../assets/business/smartBusinessTabs/instant-claim.png';
 
 const SmartBusinessTabs = () => {
-    const [activeTab, setActiveTab] = useState(0); // State to keep track of active tab
+    const [activeTab, setActiveTab] = useState(0);
 
     const tabData = [
         {
@@ -31,12 +31,12 @@ const SmartBusinessTabs = () => {
     ];
 
     return (
-        <div className='py-[120px] px-4 bg-[#f8fcfb] w-full lg:min-h-[970px] lg:px-16'>
-            <div className='my-4 px-4 flex items-center justify-center flex-col flex-wrap md:items-start'>
-                <p className='my-4 text-secondary text-[22px] font-extrabold text-wrap text-center'>
+        <div className='py-[120px] px-4 bg-[#f8fcfb] w-full h-auto lg:px-16'>
+            <div className='my-4 px-4 flex items-start justify-start flex-col flex-wrap md:items-start w-full md:w-1/2'>
+                <p className='my-4 text-secondary md:text-2xl lg:text-4xl  text-[22px] font-extrabold text-wrap'>
                     Smart business insure with MyCovergenius
                 </p>
-                <p className='my-4 text-gray-500 text-sm font-bold text-wrap text-center'>
+                <p className='my-4 text-gray-500 text-sm md:text-xl  font-medium text-wrap '>
                     Our automated claims process allows you to focus on your KPIs while we take care of your business risks and staff.
                 </p>
             </div>
@@ -46,7 +46,7 @@ const SmartBusinessTabs = () => {
                 {tabData.map((tab, index) => (
                     <button
                         key={index}
-                        className={`md:text-secondary lg:w-1/4 rounded lg:rounded-none text-gray-400 md:py-5 px-5 py-1 m-1 md:m-0 ${activeTab === index ? ' bg-primary md:text-[#4fbfa3] md:border-b-0  lg:bg-[#f8fcfb] md:bg-gray-100 md:border-2 border-gray-200  text-white' : ' bg-gray-200 border md:bg-white'}`}
+                        className={`md:text-secondary font-medium lg:w-1/4 rounded lg:rounded-none text-gray-400 md:py-5 px-5 py-1 m-1 md:m-0 ${activeTab === index ? ' bg-primary  md:text-primary md:border-b-0  lg:bg-[#f8fcfb] md:bg-gray-100 md:border-2 border-gray-200  text-white' : ' bg-gray-200 border md:bg-white'}`}
                         onClick={() => setActiveTab(index)}
                     >
                         {tab.title}
@@ -55,25 +55,28 @@ const SmartBusinessTabs = () => {
             </div>
 
             {/* card */}
-            <div className='lg:mt-12 mt-5 p-5 flex md:flex-row flex-col items-center bg-[#e6f4f2] w-full justify-center lg:pl-12 lg:pt-12 '>
+            <div className='lg:mt-12 mt-5 flex md:flex-row flex-col items-center bg-[#e6f4f2] w-full justify-center  '>
                 {activeTab !== null && (
-                    <div className=' flex-col md:flex-row flex-wrap flex items-center justify-center p-6 '>
-                        <div className=' flex items-center justify-center flex-col  w-full md:w-1/2 md:p-8'>
+                    <div className=' flex-col md:flex-row sm:flex-col  flex-wrap flex md:items-end md:justify-center items-center justify-center w-full    md:h-[450px] h-auto '>
+                        <div className=' flex items-center justify-center md:items-start md:justify-start flex-col md:flex-row flex-wrap  w-full md:w-3/5 md:p-28  '>
 
                             <p className=' text-[24px]
                          mb-6
                          font-bold'>{tabData[activeTab].title}</p>
-                            <p className='text-sm text-center text-gray-500 mt-1 mb-4 font-medium'>{tabData[activeTab].detail}</p>
+                            <p className='text-sm md:text-base text-center text-gray-500 mt-1 mb-4 font-medium'>{tabData[activeTab].detail}</p>
                         </div>
-                        <img
-                            className='w-[320px]'
-                            src={tabData[activeTab].image} alt={tabData[activeTab].title} />
-                        {/* <p className='text-lg font-semibold mt-3'>{tabData[activeTab].title}</p> */}
+                        <div className=' md:w-2/5 w-full md:px-12 flex items-center justify-center md:items-start md:justify-start'>
+
+                            <img
+                                className='w-[320px]'
+                                src={tabData[activeTab].image} alt={tabData[activeTab].title} />
+
+                        </div>
 
                     </div>
                 )}
             </div>
-        </div>
+        </div >
     );
 };
 
