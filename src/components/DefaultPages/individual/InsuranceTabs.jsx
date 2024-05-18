@@ -198,7 +198,7 @@ const InsuranceTabs = () => {
                                 duration-700 ease-in-out shadow flex items-center justify-center flex-col border border-gray-200 rounded-lg w-[280px] md:w-[380px] h-auto p-6 m-2 sm:m-5 hover:shadow-lg'
                             >
                                 <div className='flex items-center justify-center my-2'>
-                                    <img className='w-[24px]' src={card.icon} alt={tab.head} />
+                                    <img loading="lazy" className='w-[24px]' src={card.icon} alt={tab.head} />
                                     <p className='text-lg text-secondary font-semibold'>{card.title}</p>
                                 </div>
                                 {/* price */}

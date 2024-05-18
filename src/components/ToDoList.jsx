@@ -2,7 +2,7 @@ const ToDoList = () => {
   return (
     <div className=" w-full  h-72 flex items-center justify-start flex-col">
       <div className=" flex items-center justify-between w-full">
-        <p className=" text-2xl font-semibold">To Do List</p>
+        <p className=" text-xl font-semibold text-secondary">To Do List</p>
         <p className=" text-md text-green-600 cursor-pointer ">View All</p>
       </div>
       <div className=" h-72 flex items-center justify-center flex-col w-full">

@@ -58,11 +58,11 @@ const BusinessProtection = () => {
     ];
 
     return (
-        <div className='w-full p-5 lg:h-screen h-auto my-16'>
+        <div className='w-full  lg:h-screen h-auto my-16 px-2'>
             <div className=' flex items-center justify-center flex-col lg:mx-72 md:mx-32 '>
                 <p className='text-center my-2 md:my-4 text-wrap text-primary md:text-xl text-sm'>We are product driven</p>
                 <p className='text-secondary md:text-5xl text-xl  font-extrabold my-2 md:my-4 text-center text-wrap leading-relaxed'>All the protection your business needs in one place</p>
-                <p className='text-sm font-normal text-gray-500 text-center text-wrap my-1 md:my-4 md:text-xl'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate sunt voluptatum earum commodi qui? Architecto.</p>
+                <p className='text-sm font-normal text-gray-500 px-12 text-center text-wrap my-1 md:my-4 md:text-xl'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate sunt voluptatum earum commodi qui? Architecto.</p>
             </div>
 
             {/* tabs button */}
@@ -101,6 +101,7 @@ const BusinessProtection = () => {
                                 '>
 
                                     <img
+                                        loading="lazy"
                                         className=' w-[24px] mr-3'
                                         src={card.icon} alt={tabData[activeTab].head} />
                                     <p className='text-lg text-secondary font-semibold'>{card.title}</p>

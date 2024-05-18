@@ -65,7 +65,7 @@ const BusinessHero = () => {
                                 animate={{ opacity: 1, scale: 1 }}
                                 transition={{ type: "spring", duration: 0.5, delay: index * 0.1 }}
                             >
-                                <img src={image.src} alt="" className=' w-16 cursor-pointer ' />
+                                <img loading="lazy" src={image.src} alt="" className=' w-16 cursor-pointer ' />
                             </motion.div>
                         );
                     })}

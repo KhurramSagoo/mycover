@@ -64,7 +64,7 @@ const BusinessOneStopTab = () => {
         {tabData.map((tab, index) => (
           <div key={index} className={`${activeTab === index ? 'block' : 'hidden'} flex items-baseline justify-center flex-col bg-[#f8fcfb] p-5 `}>
             <li className=' text-primary text-xl font-normal px-2'>{tab.title}</li>
-            <img src={tab.image} alt={tab.title} />
+            <img loading="lazy" src={tab.image} alt={tab.title} />
           </div>
         ))}
       </div>

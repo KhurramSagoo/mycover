@@ -22,7 +22,7 @@ const data = [
 const InsuranceTips = () => {
   return (
     <div className=" flex items-start justify-start flex-col w-full">
-      <p className=" text-xl font-semibold">Insurance Tips</p>
+      <p className=" text-xl font-semibold text-secondary">Insurance Tips</p>
       <div>
         {data.map((item, index) => (
           <div
@@ -30,6 +30,7 @@ const InsuranceTips = () => {
             className=" flex items-center justify-center flex-col lg:flex-row text-gray-500 shadow w-full min-h-32 h-auto  mt-5 cursor-pointer p-5 rounded-lg"
           >
             <img
+              loading="lazy"
               src={item.image}
               alt={item.detail}
               className="  w-[150px]  object-cover rounded-md h-[120px]"

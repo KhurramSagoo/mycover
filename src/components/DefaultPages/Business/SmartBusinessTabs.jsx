@@ -69,6 +69,8 @@ const SmartBusinessTabs = () => {
                         <div className=' md:w-2/5 w-full md:px-12 flex items-center justify-center md:items-start md:justify-start'>
 
                             <img
+
+                                loading="lazy"
                                 className='w-[320px]'
                                 src={tabData[activeTab].image} alt={tabData[activeTab].title} />
 

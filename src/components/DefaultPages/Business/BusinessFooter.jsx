@@ -9,9 +9,11 @@ import { Link, useNavigate } from 'react-router-dom';
 const BusinessFooter = () => {
     const navigate = useNavigate()
     return (
-        <div className=' lg:py-12 = bg-[#101828] w-full'>
+        <div className=' lg:py-12 pt-20 sm:px-5   px-3 bg-[#101828] w-full'>
 
-            <div className='lg:mt-20 lg:w-full flex items-start justify-start h-[84px] lg:px-16 p-5'><img src={logo} alt="" /></div>
+            <div className='lg:mt-20 lg:w-full flex items-start justify-start h-[84px] lg:px-16 p-5'><img
+                loading="lazy"
+                src={logo} alt="" /></div>
 
             <section className=' lg:pt-6 flex lg:px-16 lg:items-start text-white justify-between w-full flex-col-reverse md:flex-row'>
                 <div className=' lg:px-4 p-5'>
@@ -33,22 +35,22 @@ const BusinessFooter = () => {
                     </div>
                     <div className=' lg:pt-4 w-full flex items-start justify-start'>
                         <a href="https://www.facebook.com" target='_blank'>
-                            <img src={fb} alt="" className='  pr-4' />
+                            <img loading="lazy" src={fb} alt="" className='  pr-4' />
                         </a>
                         <a href="https://www.instagram.com" target='_blank'>
-                            <img src={insta} alt="" className=' pr-4' />
+                            <img loading="lazy" src={insta} alt="" className=' pr-4' />
                         </a>
                         <a href="https://www.linkedin.com" target='_blank'>
-                            <img src={linkedIn} alt="" className=' pr-4' />
+                            <img loading="lazy" src={linkedIn} alt="" className=' pr-4' />
                         </a>
                         <a href="https://www.twitter.com" target='_blank'>
-                            <img src={twitter} alt="" className=' pr-4' />
+                            <img loading="lazy" src={twitter} alt="" className=' pr-4' />
                         </a>
 
                     </div>
                 </div>
 
-                <div className=' flex items-start justify-between w-full flex-wrap p-5'>
+                <div className=' flex items-start justify-between w-full flex-wrap p-5 text-sm'>
 
                     <div className=' lg:pl-4 flex lg:mb-4 lg:items-start lg:justify-start flex-col p-2'>
                         <p className=' text-xl mb-6 font-bold'>Quick Links</p>

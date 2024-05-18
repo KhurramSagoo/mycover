@@ -77,9 +77,9 @@ const IndividualCarousel = () => {
     ];
 
     return (
-        <div className="pt-16 px-4 my-8 h-[500px] flex items-center justify-center  flex-col md:h-screen">
+        <div className="pt-16 px-4 my-0 h-[500px] flex items-center justify-center  flex-col md:h-screen">
             <div className="w-full text-center lg:py-12 md:py-12 sm:py-8 py-4">
-                <span className="text-3xl sm:text-5xl md:text-7xl lg:text-9xl  text-secondary font-bold">
+                <span className="text-5xl sm:text-5xl md:text-7xl lg:text-[140px]  text-secondary font-bold">
                     See, It <span className="text-primary ml-4">Works!</span>
                 </span>
             </div>
@@ -98,9 +98,12 @@ const IndividualCarousel = () => {
                 >
                     <CarouselContent>
                         {cardData.map((card, index) => (
-                            <CarouselItem key={index} className="lg:basis-1/3 md:basis-1/2  basis-full">
+                            <CarouselItem key={index} className="lg:basis-1/3 md:basis-1/2 sm:basis-1/2  basis-full">
                                 <div
-                                    className="p-4 shadow-md rounded-lg w-[350px] mx-4 min-h-52 hover:border hover:border-primary bg-gray-100 flex items-start justify-center flex-col  hover:bg-[#d6f0ea] border-gray-400"
+                                    className="p-4 shadow-md rounded-lg
+                                    w-[350px]
+                                    sm:w-[300px]
+                                    mx-4 min-h-52 hover:border hover:border-primary bg-gray-100 flex items-start justify-center flex-col  hover:bg-[#d6f0ea] border-gray-400"
                                 >
                                     <div
                                         className="flex items-center p-2 justify-start text-secondary"
@@ -129,7 +132,7 @@ const IndividualCarousel = () => {
                 <p className="underline text-primary text-xl cursor-pointer">
                     Join The Genius Community!
                 </p>
-                <img src={arrow} alt="" className="ml-2 hover:ml-3" />
+                <img loading="lazy" src={arrow} alt="" className="ml-2 hover:ml-3" />
             </div>
         </div>
     );

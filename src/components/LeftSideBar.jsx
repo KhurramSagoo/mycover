@@ -16,7 +16,7 @@ const myArray = [
   {
     name: "Home",
     image: home,
-    route: "/",
+    route: "/protected/dashboard",
   },
   {
     name: "My Cover",
@@ -61,7 +61,7 @@ const LeftSideBar = () => {
         "
         onClick={() => navigate("/")}
       >
-        <img src={navbarlogo} alt="" className="" />
+        <img src={navbarlogo} alt="" className="" loading="lazy" />
       </div>
       <div className=" mt-[60px]">
         {myArray.map((item, index) => (
@@ -71,7 +71,9 @@ const LeftSideBar = () => {
             key={index}
             onClick={() => handleClick(index)}
           >
-            <img src={item.image} alt={item.name} className=" mx-4" />
+            <img
+              loading="lazy"
+              src={item.image} alt={item.name} className=" mx-4" />
             <span>{item.name}</span>
           </div>
         ))}

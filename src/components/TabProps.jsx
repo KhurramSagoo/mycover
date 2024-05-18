@@ -40,7 +40,9 @@ const TabProps = ({ tabs, images }) => {
                                 images &&
                                 <div className=" w-36 h-36 shadow-md rounded-xl flex items-center justify-center flex-col">
 
-                                    <img src={images[tab.value]} alt={tab.label} className="w-24 h-24" />
+                                    <img
+                                        loading="lazy"
+                                        src={images[tab.value]} alt={tab.label} className="w-24 h-24" />
                                     {tab.value}
                                 </div>
                             }

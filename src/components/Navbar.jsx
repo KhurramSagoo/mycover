@@ -6,11 +6,13 @@ const Navbar = () => {
   const navigate = useNavigate();
   return (
     <div
-      className=" max-w-[1000px] w-full px-5
-    bg-menuIcon  h-[100px] flex items-center  justify-between"
+      className=" max-w-[1000px] mx-auto w-full px-5
+    bg-menuIcon  h-[90px] shadow-sm flex items-center  justify-between"
     >
-      <div className=" flex items-center justify-center">
-        <div className=" rounded-full bg-teal-500 w-10 h-10 flex items-center justify-center text-md font-medium text-white ">
+      <div className=" flex items-center justify-center"
+        onClick={() => navigate("/")}
+      >
+        <div className=" rounded-full bg-teal-500 w-10 h-10 flex items-center justify-center text-md font-medium text-white cursor-pointer ">
           KS
         </div>
         <div className=" flex items-start justify-center flex-col md:flex-row text-2xl font-semibold ms-3  text-gray-500 ">
@@ -24,7 +26,9 @@ const Navbar = () => {
         </div>
       </div>
       <div className=" rounded-full border cursor-pointer">
-        <img src={bell} alt="" />
+        <img
+          loading="lazy"
+          src={bell} alt="" />
       </div>
     </div>
   );

@@ -38,7 +38,9 @@ const BusinessHero = () => {
                             }}
                         // exit={{ opacity: 0, }}
                         >
-                            <img src={item} alt="" className=' lg:w-52 lg:mx-5 sm:w-36 w-20 md:px-0 px-1 py-2' />
+                            <img
+                                loading="lazy"
+                                src={item} alt="" className=' lg:w-52 lg:mx-5 sm:w-36 w-20 md:px-0 px-1 py-2' />
                         </motion.div>
                     ))}
 

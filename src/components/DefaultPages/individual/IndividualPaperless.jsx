@@ -27,11 +27,11 @@ const IndividualPaperless = () => {
         },
     ]
     return (
-        <div className=' bg-[#f3faf8]  h-full lg:p-16 md:p-12 p-4'>
+        <div className=' bg-[#f3faf8]  h-full lg:p-16 md:p-12 px-5'>
 
             {/* uppers section */}
-            <div className=' py-4 sm:py-6 '>
-                <p className=' md:text-[48px]  text-secondary text-2xl font-bold text-center'>Skip The Hassle & Paper Work!
+            <div className=' py-4 sm:py-6 md:py-8 '>
+                <p className=' md:text-5xl leading-snug  text-secondary text-2xl font-bold text-center'>Skip The Hassle & Paper Work!
 
                 </p>
                 <br />
@@ -41,23 +41,25 @@ const IndividualPaperless = () => {
             </div>
 
             {/* lower section */}
-            <div className='  mt-14 pt-12 flex items-start lg:justify-between  md:justify-between justify-start w-full flex-col sm:flex-row flex-wrap '>
+            <div className='  mt-14 pt-12 flex items-start lg:justify-between  md:justify-between justify-start w-full flex-col sm:flex-row flex-wrap 
+            
+            '>
                 {
                     cardData.map((item, index) => (
                         <div key={index}
                             className=' flex items-start md:justify-start
                             justify-center
                             flex-col  p-5 md:p-2 lg:p-0
-                            sm:w-[400px]
+                            sm:w-[300px]
                             w-full
                             '
                         >
                             <div className=' flex items-end justify-center'>
 
-                                <img src={item.image} alt={item.title} className=' w-16' />
-                                <img src={item.dot && item.dot
+                                <img loading="lazy" src={item.image} alt={item.title} className=' w-16' />
+                                <img loading="lazy" src={item.dot && item.dot
                                 }
-                                    className='hidden md:flex '
+                                    className='hidden lg:flex '
                                     alt="" />
                             </div>
                             <div className=' mt-6'>

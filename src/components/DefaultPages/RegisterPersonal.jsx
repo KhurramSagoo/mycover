@@ -20,7 +20,9 @@ const RegisterPersonal = () => {
                 <div className=" lg:px-[60px] lg:pt-[60px] md:px-6 px-5  ">
                     <div className='  py-2 mb-8'>
 
-                        <img src={logo} alt="" className=' w-[160px]' />
+                        <img
+                            loading="lazy"
+                            src={logo} alt="" className=' w-[160px]' />
                     </div>
 
                     <div className=' w-full flex items-start justify-start md:pr-8 pr-0  text-white'>
@@ -53,7 +55,9 @@ const RegisterPersonal = () => {
 
                     </div>
                     <div className='w-full absolute bottom-0 right-0 left-0 '>
-                        <img src={lines} alt="" className=' h-52 w-full opacity-50  object-cover' />
+                        <img
+                            loading="lazy"
+                            src={lines} alt="" className=' h-52 w-full opacity-50  object-cover' />
                     </div>
 
                 </div>

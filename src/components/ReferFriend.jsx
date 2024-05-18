@@ -11,7 +11,9 @@ const ReferFriend = () => {
       <button className=" bg-white text-green-500 p-2 w-40 my-2">
         Refer friend
       </button>
-      <img src={refer} alt="" className=" my-2" />
+      <img
+        loading="lazy"
+        src={refer} alt="" className=" my-2" />
     </div>
   );
 };

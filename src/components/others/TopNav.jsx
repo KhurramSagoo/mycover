@@ -41,6 +41,7 @@ const Button = ({ children, active, onClick }) => {
 
 
 const TopNav = () => {
+    const [innerW, setInnerW] = useState(window.innerWidth)
     const navigate = useNavigate()
     const [activeButton, setActiveButton] = useState('Business');
     const [isOpen, setIsOpen] = useState(false);
@@ -52,6 +53,12 @@ const TopNav = () => {
         setIsOpen(!isOpen);
     };
 
+    // const innderWidthHandle = () => {
+    //     setInterval(() => {
+
+    //         setInnerW(window.innerWidth)
+    //     }, 300);
+    // }
     useEffect(() => {
         const handleScroll = () => {
             setScrollY(window.scrollY);
@@ -78,7 +85,7 @@ const TopNav = () => {
     return (
         <>
 
-            <div className='w-full lg:px-12 flex items-center px-5 justify-between my-0 md:h-[100px] h-[80px] shadow-md ' style={{ backdropFilter: `blur(${scrollY > 0 ? 10 : 0}px)` }}>
+            <div className='w-full lg:px-12 flex items-center sm:px-5 px-3 justify-between my-0 md:h-[100px] h-[80px] shadow-md ' style={{ backdropFilter: `blur(${scrollY > 0 ? 10 : 0}px)` }}>
                 <div className='flex items-center justify-center'>
                     <Sheet>
                         <SheetTrigger>
@@ -97,7 +104,10 @@ const TopNav = () => {
                             </SheetHeader>
                         </SheetContent>
                     </Sheet>
-                    <img src={logo} alt="" className=' w-36' />
+
+                    <img loading="lazy" src={logo} alt="" className=' w-36 cursor-pointer'
+                        onClick={() => navigate("/")}
+                    />
                 </div>
                 <div className={`md:flex hidden items-center justify-center ${isOpen ? 'flex' : 'hidden'}`}>
                     <div className='flex items-center justify-center mx-1'>
@@ -157,7 +167,9 @@ const TopNav = () => {
                             </DialogHeader>
                         </DialogContent>
                     </Dialog>
-
+                    {/* {
+                        innerW
+                    } */}
 
 
 

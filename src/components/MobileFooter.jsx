@@ -72,7 +72,9 @@ const MobileFooter = () => {
           key={index}
           onClick={() => handleClick(index)}
         >
-          <img src={item.image} alt={item.name} className=" mx-4" />
+          <img
+            loading="lazy"
+            src={item.image} alt={item.name} className=" mx-4" />
           <span>{item.name}</span>
         </div>
       ))}

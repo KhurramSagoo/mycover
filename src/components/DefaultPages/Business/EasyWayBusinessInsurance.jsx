@@ -27,7 +27,7 @@ rounded-lg
 
                     <div className=' mb-6 flex items-center justify-center text-white'>
                         <div className=' flex items-center justify-center flex-wrap'>
-                            <img className=' mr-6 w-16' src={web} alt="" />
+                            <img loading="lazy" className=' mr-6 w-16' src={web} alt="" />
 
                         </div>
                         <div className=' py-12 '>
@@ -40,7 +40,7 @@ rounded-lg
 
                     <div className='mb-6 pb-6 flex items-center justify-center text-white'>
                         <div className=' flex items-center justify-center flex-wrap'>
-                            <img className=' mr-6 w-16' src={mobile} alt="" />
+                            <img loading="lazy" className=' mr-6 w-16' src={mobile} alt="" />
 
                         </div>
                         <div>
@@ -54,7 +54,7 @@ rounded-lg
 
                 {/* right div collage */}
                 <div className=' w-full lg:w-1/2  p-6'>
-                    <img src={collage} alt="" className=' w-full' />
+                    <img loading="lazy" src={collage} alt="" className=' w-full' />
                 </div>
             </div>
 

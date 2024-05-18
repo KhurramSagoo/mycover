@@ -46,7 +46,7 @@ const IndividualInsuranceClick = () => {
     };
 
     return (
-        <div className='px-16 min-h-screen w-full bg-[#f8fcfb] lg:pt-20 md:pt-12 pt-5'>
+        <div className='px-16 min-h-screen w-full bg-[#f8fcfb] lg:pt-20 md:pt-5 pt-5'>
             <div className='mb-0 w-full'>
                 <p className='text-[48px] text-center font-bold text-secondary'>Get your insurance in <span className='text-primary'>1, 2, 3</span> Clicks</p>
             </div>
