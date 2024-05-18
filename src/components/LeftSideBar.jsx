@@ -53,33 +53,34 @@ const LeftSideBar = () => {
     setActiveItem(index);
     navigate(myArray[index].route);
   };
+
   return (
-    <div className=" flex flex-col fixed top-0 left-0 bottom-0 bg-white w-[290px] max-h-screen h-screen overflow-y-auto">
+    <div className="flex flex-col fixed top-0 left-0 bottom-0 bg-white w-[290px] max-h-screen h-screen overflow-y-auto">
       <div
-        className=" cursor-pointer fixed h-[50px] w-[290px] top-0 left-0
-        flex items-center justify-start ml-6 mt-5
-        "
+        className="cursor-pointer fixed h-[50px] w-[290px] top-0 left-0 flex items-center justify-start ml-6 mt-5"
         onClick={() => navigate("/")}
       >
         <img src={navbarlogo} alt="" className="" loading="lazy" />
       </div>
-      <div className=" mt-[60px]">
+      <div className="mt-[60px]">
         {myArray.map((item, index) => (
           <div
-            className={` flex items-center justify-start p-5 my-1 hover:bg-menuIcon cursor-pointer w-full hover:border-e-2 hover:border-green-500 ${activeItem === index ? "bg-menuIcon" : ""
-              }`}
+            className={`flex items-center justify-start p-5 my-1 cursor-pointer w-full ${activeItem === index ? "bg-menuIcon border-e-2 border-green-500 bg-[#ededf9]" : "hover:bg-menuIcon hover:border-e-2 hover:border-green-500"}`}
             key={index}
             onClick={() => handleClick(index)}
           >
             <img
               loading="lazy"
-              src={item.image} alt={item.name} className=" mx-4" />
+              src={item.image}
+              alt={item.name}
+              className="mx-4"
+            />
             <span>{item.name}</span>
           </div>
         ))}
       </div>
 
-      <div className=" flex items-center justify-center w-full flex-col">
+      <div className="flex items-center justify-center w-full flex-col">
         <ReferFriend />
       </div>
     </div>
