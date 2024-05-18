@@ -16,7 +16,7 @@ const myArray = [
   {
     name: "Home",
     image: home,
-    route: "/",
+    route: "/protected/dashboard",
   },
   {
     name: "My Cover",
