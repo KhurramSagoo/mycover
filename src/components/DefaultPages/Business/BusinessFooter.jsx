@@ -53,31 +53,31 @@ const BusinessFooter = () => {
                 <div className=' flex items-start justify-between w-full flex-wrap p-5 text-sm'>
 
                     <div className=' lg:pl-4 flex lg:mb-4 lg:items-start lg:justify-start flex-col p-2'>
-                        <p className=' text-xl mb-6 font-bold'>Quick Links</p>
-                        <p className=' py-2 mb-4 text-gray-400  text-sm'>Home</p>
-                        <p className=' py-2 mb-4 text-gray-400 text-sm'>Login</p>
-                        <p className=' py-2 mb-4 text-gray-400 text-sm'>News</p>
+                        <a className=' text-xl mb-6 font-bold'>Quick Links</a>
+                        <a className=' py-2 mb-4 text-gray-500 cursor-pointer  text-sm'>Home</a>
+                        <a className=' py-2 mb-4 text-gray-500 cursor-pointer text-sm'>Login</a>
+                        <a className=' py-2 mb-4 text-gray-500 cursor-pointer text-sm'>News</a>
 
                     </div>
                     <div className=' lg:pl-4 flex lg:mb-4 lg:items-start lg:justify-start flex-col p-2'>
-                        <p className=' text-xl mb-6 font-bold'>Products</p>
-                        <p className=' py-2 mb-4 text-gray-400'>FlexiCare Mini</p>
-                        <p className=' py-2 mb-4 text-gray-400 '>FlexiCare</p>
-                        <p className=' py-2 mb-4 text-gray-400 text-sm'>Montly Comprehensive</p>
-                        <p className=' py-2 mb-4 text-gray-400 text-sm'>Third Party</p>
-                        <p className=' py-2 mb-4 text-gray-400 text-sm'>Gadget</p>
-                        <p className=' py-2 mb-4 text-gray-400 text-sm'>Travel</p>
+                        <a className=' text-xl mb-6 font-bold'>Products</a>
+                        <a className=' py-2 mb-4 text-gray-500 cursor-pointer'>FlexiCare Mini</a>
+                        <a className=' py-2 mb-4 text-gray-500 cursor-pointer '>FlexiCare</a>
+                        <a className=' py-2 mb-4 text-gray-500 cursor-pointer text-sm'>Montly Comprehensive</a>
+                        <a className=' py-2 mb-4 text-gray-500 cursor-pointer text-sm'>Third Party</a>
+                        <a className=' py-2 mb-4 text-gray-500 cursor-pointer text-sm'>Gadget</a>
+                        <a className=' py-2 mb-4 text-gray-500 cursor-pointer text-sm'>Travel</a>
 
                     </div>
                     <div className=' lg:pl-4 flex lg:mb-4 lg:items-start lg:justify-start flex-col p-2'>
-                        <p className=' text-xl mb-6 font-bold'>Company</p>
-                        <p className=' py-2 mb-4 text-gray-400 text-sm'>Resources</p>
+                        <a className=' text-xl mb-6 font-bold cursor-pointer'>Company</a>
+                        <a className=' py-2 mb-4 text-gray-500 cursor-pointer text-sm'>Resources</a>
                     </div>
                     <div className=' lg:pl-4 flex lg:mb-4 lg:items-start lg:justify-start flex-col p-2'>
-                        <p className=' text-xl mb-6 font-bold'>Legal</p>
-                        <p className=' py-2 mb-4 text-gray-400 text-sm'>Privacy Policy</p>
-                        <p className=' py-2 mb-4 text-gray-400 text-sm'>Cookie Policy</p>
-                        <p className=' py-2 mb-4 text-gray-400 text-sm'>Terms & Conditions</p>
+                        <a className=' text-xl mb-6 font-bold'>Legal</a>
+                        <a className=' py-2 mb-4 text-gray-500 text-sm cursor-pointer'>Privacy Policy</a>
+                        <a className=' py-2 mb-4 text-gray-500 text-sm cursor-pointer'>Cookie Policy</a>
+                        <a className=' py-2 mb-4 text-gray-500 text-sm cursor-pointer'>Terms & Conditions</a>
                     </div>
 
                 </div>
