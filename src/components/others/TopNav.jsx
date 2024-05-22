@@ -136,7 +136,10 @@ const TopNav = () => {
                                 </DialogTitle>
                                 <DialogDescription>
                                     <div className=' flex flex-col items-center justify-around cursor-pointer'>
-                                        <div className=' flex items-center justify-around w-full my-5 border rounded-lg p-5 hover:border-primary hover:text-primary '>
+                                        <div className=' flex items-center justify-around w-full my-5 border rounded-lg p-5 hover:border-primary hover:text-primary '
+                                            onClick={() => navigate("/business-login")}
+
+                                        >
                                             <div className=' rounded-full w-12 h-12 bg-slate-200 flex items-center justify-center hover:bg-green-50 hover:text-primary'>
                                                 <BusinessCenterIcon />
                                             </div>

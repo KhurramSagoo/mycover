@@ -2,11 +2,12 @@ import { icons } from 'lucide-react'
 import React from 'react'
 import { IoNewspaperOutline } from "react-icons/io5";
 import { Ri24HoursFill } from "react-icons/ri";
+import CustomSVG from './customSvg/CustomSVG';
 const BusinessMiddlePart = () => {
     const cardData = [{
         title: "Affordable plans",
         detail: "Grow your business with insurance that fits your budget.",
-        image: <IoNewspaperOutline />
+        image: <CustomSVG />
     },
     {
         title: "Affordable plans",

@@ -12,6 +12,7 @@ import Login from "@/components/DefaultPages/Login";
 import OnBoarding from "@/components/DefaultPages/OnBoarding";
 import BoardingNext from "@/components/DefaultPages/BoardingNext";
 import RegisterPersonal from "@/components/DefaultPages/RegisterPersonal";
+import BusinessLogin from "@/components/DefaultPages/businessLogin/BusinessLogin";
 
 export const ROOT = "/"
 export const BUSINESS = "/business"
@@ -20,6 +21,8 @@ export const LOGIN = "/login"
 export const ONBOARDING = "/onboarding"
 export const BOARDINGNEXT = "/boarding-next"
 export const REGISTERPERSONAL = "/register-personal"
+export const BUSINESSLOGIN = "/business-login"
+
 
 
 export const PROTECTED = "/protected"
@@ -38,6 +41,7 @@ export const router = createBrowserRouter([
     { path: ONBOARDING, element: <OnBoarding /> },
     { path: BOARDINGNEXT, element: <BoardingNext /> },
     { path: REGISTERPERSONAL, element: <RegisterPersonal /> },
+    { path: BUSINESSLOGIN, element: <BusinessLogin /> },
     {
         path: PROTECTED, element: <Layout />,
         children: [
