@@ -25,18 +25,6 @@ import {
 import Btn from '../utils/Btn';
 import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, DialogTrigger } from '../ui/dialog';
 
-const Button = ({ children, active, onClick }) => {
-    return (
-        <motion.button
-            onClick={onClick}
-            className={`focus:outline-none text-sm px-4 h-8 py-2 rounded-full ${active ? 'bg-[#7a5af8] text-white font-medium' : 'bg-[#e6e4f9]'}
-        text-gray-800 transition-colors duration-300`}
-        >
-            {children}
-        </motion.button>
-    );
-};
-
 
 
 
@@ -47,6 +35,29 @@ const TopNav = () => {
     const [isOpen, setIsOpen] = useState(false);
     const [scrollY, setScrollY] = useState(0);
     const [showDialog, setShowDialog] = useState(false);
+
+    // test buton icon
+    const [testIcon, setTestIcon] = useState(activeButton)
+    console.log(testIcon)
+
+
+
+    const Button = ({ children, active, onClick }) => {
+        return (
+            <button
+                onClick={onClick}
+                className={`focus:outline-none text-sm px-4 h-8 py-1 rounded-full ${active ? 'bg-[#7a5af8] text-white font-semibold' : 'bg-[#e6e4f9]'}
+            text-gray-800 transition-colors duration-300`}
+            >
+                {/* {
+                    testIcon === "Individual" ? "business" : "indi"
+                } */}
+
+                {children}
+            </button>
+        );
+    };
+
 
 
     const toggleMenu = () => {
@@ -85,7 +96,7 @@ const TopNav = () => {
     return (
         <>
 
-            <div className='w-full lg:px-12 flex items-center sm:px-5 px-3 justify-between my-0 md:h-[100px] h-[80px] shadow-md ' style={{ backdropFilter: `blur(${scrollY > 0 ? 10 : 0}px)` }}>
+            <div className='w-full lg:px-12 flex items-center sm:px-5 px-3 justify-between my-0 md:h-[100px] h-[70px] shadow-md  ' style={{ backdropFilter: `blur(${scrollY > 0 ? 10 : 0}px)` }}>
                 <div className='flex items-center justify-center'>
                     <Sheet>
                         <SheetTrigger>
@@ -105,7 +116,9 @@ const TopNav = () => {
                         </SheetContent>
                     </Sheet>
 
-                    <img loading="lazy" src={logo} alt="" className=' w-36 cursor-pointer'
+                    <img loading="lazy" src={logo} alt="" className=' md:w-36
+                    w-24 mx-2
+                    cursor-pointer'
                         onClick={() => navigate("/")}
                     />
                 </div>
@@ -123,7 +136,11 @@ const TopNav = () => {
                 <div className=' flex items-center justify-center'>
 
                     <Dialog>
-                        <DialogTrigger>                    <Btn title="Login" handle={loginHandle} />
+                        <DialogTrigger>
+                            <button className='md:px-5 md:text-sm px-3 text-xs py-2 border-none rounded-full mx-2 font-medium text-[#439687] cursor-pointer'
+                                onClick={loginHandle}
+                            >Login</button>
+                            {/* <Btn title="Login" handle={loginHandle} /> */}
                         </DialogTrigger>
                         <DialogContent className=" transition-all ease-in-out">
                             <DialogHeader>
@@ -178,7 +195,7 @@ const TopNav = () => {
 
                     {/* <Btn title="Get Covered" handle={() => { }} /> */}
                     {/* <button className="mx-1 py-2 cursor-pointer md:px-5 px-2 text-white bg-primary rounded-full"> Get Covered</button> */}
-                    <button className='md:px-5 px-4 py-2 rounded-full bg-[#4fbfa3] text-white border cursor-pointer'
+                    <button className='md:px-5 md:text-sm px-3 text-xs py-2 border-none rounded-full bg-[#4fbfa3] text-white border cursor-pointer'
                         onClick={() => navigate("/protected/dashboard")}
                     >Dashboard</button>
                 </div>

@@ -21,6 +21,14 @@ const tabData = [
         image: check,
         text: "Compensation for delayed trips."
     },
+    {
+        image: check,
+        text: "Up to ₦100,000 for Major & Minor surgeries"
+    },
+    {
+        image: check,
+        text: "Up to ₦100,000 in Childbirth, Antenatal Care & CS"
+    },
 ]
 
 
@@ -67,13 +75,16 @@ const BoardingNext = () => {
 
                                 <div key={index} className=" flex items-center justify-center py-2 ">
                                     <img src={item.image} alt="" className=" mr-5" />
-                                    <p className=" text-sm text-gray-600 font-medium">{item.text}</p>
+                                    <p className=" text-base text-gray-600 font-medium">{item.text}</p>
 
                                 </div>
                             ))
                         }
                         <span className=" cursor-pointer text-primary py-5 ml-5"> Learn More</span>
 
+                    </div>
+                    <div className=" text-xs font-semibold text-gray-600 border border-[#f79009] bg-[#fffaeb] p-3 rounded-md">
+                        Important Notice: This plan is available only for individuals below the age of 70.
                     </div>
 
 

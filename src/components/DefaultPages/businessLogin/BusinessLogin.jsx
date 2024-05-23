@@ -98,7 +98,7 @@ const BusinessLogin = () => {
 
                                 >Don't have an account?
                                     <span className=' text-primary ml-2 cursor-pointer font-medium text-sm'
-                                        onClick={() => navigate("/onboarding")}
+                                        onClick={() => navigate("/business-boarding")}
                                     >
 
                                         Sign Up

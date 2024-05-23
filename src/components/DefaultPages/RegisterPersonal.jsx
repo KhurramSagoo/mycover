@@ -17,16 +17,16 @@ const RegisterPersonal = () => {
 
             {/* left side bar */}
             <div className='hidden md:flex items-start justify-start bg-loginBg md:w-1/3  min-h-screen  h-auto relative'>
-                <div className=" lg:px-[60px] lg:pt-[60px] md:px-6 px-5  ">
-                    <div className='  py-2 mb-8'>
+                <div className=" lg:px-12 lg:pt-[60px] md:px-6 px-5  ">
+                    <div className='  py-6 mb-12'>
 
                         <img
                             loading="lazy"
                             src={logo} alt="" className=' w-[160px]' />
                     </div>
 
-                    <div className=' w-full flex items-start justify-start md:pr-8 pr-0  text-white'>
-                        <p className=' lg:text-4xl md:text-2xl font-medium break-words pl-0 '>Get ready to enjoy insurance that truly covers you</p>
+                    <div className=' w-full flex items-start justify-start md:pr-8 pr-0  text-white mt-12 mb-4'>
+                        <p className=' lg:text-3xl !leading-normal  md:text-2xl font-semibold break-words pl-0 '>Get ready to enjoy insurance that truly covers you</p>
                     </div>
                     <div className=' flex items-start justify-start flex-col py-5'>
                         <div className=' flex items-center justify-center py-3'>
