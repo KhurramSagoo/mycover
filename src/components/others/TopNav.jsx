@@ -96,7 +96,7 @@ const TopNav = () => {
     return (
         <>
 
-            <div className='w-full lg:px-12 flex items-center sm:px-5 px-3 justify-between my-0 md:h-[100px] h-[70px] shadow-md  ' style={{ backdropFilter: `blur(${scrollY > 0 ? 10 : 0}px)` }}>
+            <div className=' w-full lg:px-12 flex items-center sm:px-5 px-5 justify-between my-0 md:h-[100px] h-[70px] shadow-md  ' style={{ backdropFilter: `blur(${scrollY > 0 ? 10 : 0}px)` }}>
                 <div className='flex items-center justify-center'>
                     <Sheet>
                         <SheetTrigger>
@@ -117,7 +117,7 @@ const TopNav = () => {
                     </Sheet>
 
                     <img loading="lazy" src={logo} alt="" className=' md:w-36
-                    w-24 mx-2
+                    w-24
                     cursor-pointer'
                         onClick={() => navigate("/")}
                     />

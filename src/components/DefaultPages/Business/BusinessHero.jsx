@@ -26,7 +26,7 @@ const BusinessHero = () => {
         return { x, y };
     };
     return (
-        <div className=' flex items-center justify-center lg:flex-row flex-col lg:mt-8 md:mt-24 md:h-screen lg:px-16 md:px-5 sm:px-2 px-2'>
+        <div className=' flex items-center justify-center lg:flex-row flex-col lg:mt-8 md:mt-24  lg:px-16 md:px-5 sm:px-2 px-2'>
 
             {/* left portion start */}
             <div className=' lg:w-3/5  lg:h-[500px] flex md:items-center 
@@ -53,19 +53,23 @@ const BusinessHero = () => {
             {/* left end */}
 
             {/* right start */}
-            <div className='lg:w-2/5 lg:h-[500px] flex items-center h-auto my-5 flex-col justify-center py-lg-5 w-full'>
-                <div className='h-96 w-96 rounded-full  border-gray-500 flex justify-center items-center relative p-0'>
+            <div className='lg:w-2/5 lg:h-[500px] flex items-center h-auto my-5 flex-col justify-center py-lg-5 w-full px-10 sm:px-20 '>
+                <div className=' md:w-96 sm:w-72  w-full h-full  rounded-full   border-gray-500 flex justify-center items-center relative p-0'>
                     {images.map((image, index) => {
-                        const { x, y } = getImagePosition(image.angle);
+                        // const { x, y } = getImagePosition(image.angle);
                         return (
                             <motion.div
                                 key={index}
-                                style={{ position: 'absolute', top: y, left: x, zIndex: 1 }}
+                                // style={{ position: 'absolute', top: "300px", left: "100px", zIndex: 1 }}
                                 initial={{ opacity: 0, scale: 0.5 }}
                                 animate={{ opacity: 1, scale: 1 }}
-                                transition={{ type: "spring", duration: 0.5, delay: index * 0.1 }}
+                                transition={{ type: "spring", duration: 0.5, delay: index * 0.3 }}
+                                exit={{
+                                    type: "easeinout", duration: 0.5, delay: index * 0.3,
+                                    opacity: 0
+                                }}
                             >
-                                <img loading="lazy" src={image.src} alt="" className=' w-16 cursor-pointer ' />
+                                <img loading="lazy" src={image.src} alt="" className=' w-full cursor-pointer ' />
                             </motion.div>
                         );
                     })}
