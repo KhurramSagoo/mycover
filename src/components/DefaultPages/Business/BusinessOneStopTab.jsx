@@ -28,7 +28,7 @@ const BusinessOneStopTab = ({ tabData, solution, head, detail }) => {
         <div className="flex md:flex-col font-medium items-start justify-center  w-full rounded-lg flex-row bg-lime-0">
           {tabData.map((tab, index) => (
             <div
-              className={`shadow-md lg:w-[560px] w-full  mb-4 flex items-center lg:justify-start justify-center   pl-2 h-[70px] cursor-pointer whitespace-nowrap ${
+              className={`shadow-md lg:w-[560px] w-full  mb-4 flex items-center lg:justify-start justify-start   pl-2 h-[70px] cursor-pointer  flex-wrap ${
                 activeTab === index
                   ? "opacity-100 font-bold "
                   : "opacity-50 hover:opacity-100"
@@ -40,7 +40,7 @@ const BusinessOneStopTab = ({ tabData, solution, head, detail }) => {
                 borderLeftWidth: "4px",
               }}
             >
-              {tab.head}
+              <button className=" w-auto h-auto">{tab.head}</button>
             </div>
           ))}
         </div>

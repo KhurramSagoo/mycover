@@ -19,6 +19,18 @@ export const heroData = [
   },
 ];
 
+// basic protection
+export const basicData = [
+  {
+    top: "What is covered in 3rd Party Comprehensive Insurance?",
+    head: "Basic protection for your vehicle needs",
+    detail:
+      "Get basic protection for damages against others on the road, without breaking the bank.",
+    span: "",
+    btn: "Get Covered",
+  },
+];
+
 // accordion
 export const accordData = [
   {

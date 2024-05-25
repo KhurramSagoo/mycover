@@ -10,7 +10,15 @@ import BusinessAccrodion from "../Business/BusinessAccrodion";
 import BusinessFooter from "../Business/BusinessFooter";
 import BusinessHero from "../Business/BusinessHero";
 // db
-import middlePlans, { heroData, oneStopTabs, accordData } from "./ThirdPartyDB";
+import middlePlans, {
+  heroData,
+  oneStopTabs,
+  accordData,
+  basicData,
+} from "./ThirdPartyDB";
+import BasicProtection from "./BasicProtection";
+import ThirdPartyCollage from "./ThirdPartyCollage";
+import MakeClaim from "./MakeClaim";
 
 const ThirdParty = () => {
   return (
@@ -37,6 +45,13 @@ const ThirdParty = () => {
         detail="3rd party relieves you of the financial risks involved with vehicle incidents on transit."
       />
 
+      {/* basic proteciton */}
+      {basicData.map((item, index) => (
+        <div key={index}>
+          <BasicProtection item={item} />
+        </div>
+      ))}
+
       {/* one stop tabs */}
       <BusinessOneStopTab
         tabData={oneStopTabs}
@@ -45,10 +60,15 @@ const ThirdParty = () => {
         detail="Our web interface enables you to manage your vehicles and riders under the plan conveniently. It also empowers you with data to make better management decisions."
       />
 
+      {/* make claim */}
+      <MakeClaim />
       {/* <BusinessProtection /> */}
       {/* <SmartBusinessTabs /> */}
       <BusinessMultiAnimation />
+
       {/* <EasyWayBusinessInsurance /> */}
+      <ThirdPartyCollage />
+
       <div className=" h-28 w-full">
         <br />
       </div>
