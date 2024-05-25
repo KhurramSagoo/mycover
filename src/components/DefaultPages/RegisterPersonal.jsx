@@ -159,9 +159,9 @@ const RegisterPersonal = () => {
                         {/* referral */}
                         <div className=' flex items-start justify-center flex-col  min-w-[300px] sm:w-full py-0'>
 
-                            <label htmlFor="lastName" className=' text-gray-500'>Phone Number</label>
+                            <label htmlFor="lastName" className=' text-gray-500'>Refferal Code</label>
                             <input type="text" placeholder='Enter referral code' className=' border outline-primary rounded-md py-2 w-full my-1 px-2 '
-                                {...register("phone",
+                                {...register("refferal",
                                     {
                                         // required: "The phone field is required",
                                         // pattern: {
@@ -200,8 +200,9 @@ const RegisterPersonal = () => {
                         </div> */}
                         <div className=' w-full my-5'>
                             <button className=' bg-primary w-full py-2 rounded-md text-white opacity-90'
-                            // disabled={!isValid}
-                            >Login</button>
+                                disabled={!isValid}
+                                onClick={() => alert("continue")}
+                            >Continue</button>
                         </div>
 
 
