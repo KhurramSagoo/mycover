@@ -37,7 +37,7 @@ const UserinfoFour = ({
             </label>
             <select
               defaultValue={formData.state}
-              {...register("businessSector", {
+              {...register("state", {
                 required: "The state field is required",
               })}
               name="state"

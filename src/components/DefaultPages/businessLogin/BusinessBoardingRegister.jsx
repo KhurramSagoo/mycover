@@ -29,7 +29,7 @@ const BusinessBoardingRegister = () => {
     if (step < 5) {
       setStep(step + 1);
     } else {
-      // console.log("Form submitted:", formData);
+      console.log("Form submitted:", formData);
       toast.success("Form submitted");
     }
   };
