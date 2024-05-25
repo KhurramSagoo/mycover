@@ -16,22 +16,30 @@ import BusinessLogin from "@/components/DefaultPages/businessLogin/BusinessLogin
 import BusinessBoarding from "@/components/DefaultPages/businessLogin/BusinessBoarding";
 import BusinessBoardingNext from "./../components/DefaultPages/businessLogin/BusinessBoardingNext";
 import BusinessBoardingRegister from "@/components/DefaultPages/businessLogin/BusinessBoardingRegister";
+import ThirdParty from "./../components/DefaultPages/thirdParty/ThirdParty";
 
 export const ROOT = "/";
 export const BUSINESS = "/business";
 export const INDIVIDUAL = "/individual";
 export const LOGIN = "/login";
+
+// personal
 export const ONBOARDING = "/onboarding";
 export const BOARDINGNEXT = "/boarding-next";
 export const REGISTERPERSONAL = "/register-personal";
+
+// business
 export const BUSINESSLOGIN = "/business-login";
 export const BUSINESSBOARDING = "/business-boarding";
 export const BUSINESSBOARDINGNEXT = "/business-boarding-next";
 export const BUESINESSBOARDINGREGISTER = "/business-boarding-register";
 
+// third party
+export const THIRDPARTY = "/thirdparty";
+
+// protected
 export const PROTECTED = "/protected";
 export const DASHBOARD = "/protected/dashboard";
-
 export const MYCOVER = "/protected/mycover";
 export const PLANS = "/protected/plans";
 export const WALLET = "/protected/wallet";
@@ -48,6 +56,7 @@ export const router = createBrowserRouter([
   { path: REGISTERPERSONAL, element: <RegisterPersonal /> },
   { path: BUSINESSLOGIN, element: <BusinessLogin /> },
   { path: BUESINESSBOARDINGREGISTER, element: <BusinessBoardingRegister /> },
+  { path: THIRDPARTY, element: <ThirdParty /> },
   {
     path: BUSINESSBOARDINGNEXT,
     element: <BusinessBoardingNext />,
