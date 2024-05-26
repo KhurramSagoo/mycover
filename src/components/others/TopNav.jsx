@@ -32,6 +32,11 @@ import {
 } from "../ui/dialog";
 
 const TopNav = () => {
+  const btnsData = [
+    { title: "Business", route: "/" },
+    { title: "Individual", route: "/individual" },
+  ];
+  // console.log(typeof btns);
   const [innerW, setInnerW] = useState(window.innerWidth);
   const navigate = useNavigate();
   const [activeButton, setActiveButton] = useState("Business");
@@ -39,28 +44,6 @@ const TopNav = () => {
   const [scrollY, setScrollY] = useState(0);
 
   const [showDialog, setShowDialog] = useState(false);
-
-  // test buton icon
-  const [testIcon, setTestIcon] = useState(activeButton);
-  console.log(testIcon);
-
-  const Button = ({ children, active, onClick }) => {
-    return (
-      <button
-        onClick={onClick}
-        className={`focus:outline-none text-sm px-4 h-8 py-1 rounded-full ${
-          active ? "bg-[#7a5af8] text-white font-semibold" : "bg-[#e6e4f9]"
-        }
-            text-gray-800 transition-colors duration-300`}
-      >
-        {/* {
-                    testIcon === "Individual" ? "business" : "indi"
-                } */}
-
-        {children}
-      </button>
-    );
-  };
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
@@ -83,12 +66,6 @@ const TopNav = () => {
       window.removeEventListener("resize", handleResize);
     };
   }, []);
-
-  useEffect(() => {
-    if (activeButton === "Individual") {
-      navigate("/individual");
-    }
-  }, [activeButton, navigate]);
 
   const loginHandle = () => {
     setShowDialog(true);
@@ -229,8 +206,6 @@ const TopNav = () => {
           {/* inner width counter */}
           {/* {innerW} */}
 
-          {/* <Btn title="Get Covered" handle={() => { }} /> */}
-          {/* <button className="mx-1 py-2 cursor-pointer md:px-5 px-2 text-white bg-primary rounded-full"> Get Covered</button> */}
           <button
             className="md:px-5 md:text-sm px-3 text-xs py-2 border-none rounded-full bg-[#4fbfa3] text-white border cursor-pointer"
             onClick={() => navigate("/protected/dashboard")}
@@ -239,25 +214,26 @@ const TopNav = () => {
           </button>
         </div>
       </div>
-      <div className="flex ml-20 mt-3 items-center justify-center rounded-full bg-[#e6e4f9] w-[180px] ">
-        <Button
-          active={activeButton === "Business"}
-          onClick={() => {
-            setActiveButton("Business");
-            navigate("/");
-          }}
-        >
-          Business
-        </Button>
-        <Button
-          active={activeButton === "Individual"}
-          onClick={() => {
-            setActiveButton("Individual");
-            navigate("/individual");
-          }}
-        >
-          Individual
-        </Button>
+
+      <div className="flex ml-20 mt-3 items-center justify-center rounded-full bg-[#e6e4f9] w-[180px]">
+        {btnsData.map((btn) => (
+          <div key={btn.title}>
+            <button
+              onClick={() => {
+                setActiveButton(btn.title);
+                navigate(btn.route);
+              }}
+              className={`focus:outline-none text-sm px-4 h-8 py-1 rounded-full ${
+                activeButton === btn.title
+                  ? "bg-[#7a5af8] text-white font-semibold"
+                  : "bg-[#e6e4f9]"
+              }
+              text-gray-800 transition-colors duration-300`}
+            >
+              {btn.title}
+            </button>
+          </div>
+        ))}
       </div>
     </>
   );

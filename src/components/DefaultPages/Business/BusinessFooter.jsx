@@ -58,25 +58,31 @@ const BusinessFooter = () => {
         <div className=" flex items-start justify-between w-full flex-wrap p-5 text-sm">
           <div className=" lg:pl-4 flex lg:mb-4 lg:items-start lg:justify-start flex-col p-2">
             <a className=" text-xl mb-6 font-bold">Quick Links</a>
-            <a className=" py-2 mb-4 text-gray-500 cursor-pointer hover:text-gray-100 text-sm">
+            <a
+              className=" py-2 mb-4 text-gray-500 cursor-pointer hover:text-gray-100 text-sm"
+              onClick={() => navigate("/")}
+            >
               Home
             </a>
-            <a className=" py-2 mb-4 text-gray-500 cursor-pointer hover:text-gray-100 text-sm">
+            <a className=" py-2 mb-4 text-gray-500 cursor-pointer  text-sm">
               Login
             </a>
-            <a className=" py-2 mb-4 text-gray-500 cursor-pointer hover:text-gray-100 text-sm">
+            <a className=" py-2 mb-4 text-gray-500 cursor-pointer  text-sm">
               News
             </a>
           </div>
           <div className=" lg:pl-4 flex lg:mb-4 lg:items-start lg:justify-start flex-col p-2">
             <a className=" text-xl mb-6 font-bold">Products</a>
-            <a className=" py-2 mb-4 text-gray-500 hover:text-gray-100 cursor-pointer">
+            <a className=" py-2 mb-4 text-gray-500 cursor-pointer">
               FlexiCare Mini
             </a>
-            <a className=" py-2 mb-4 text-gray-500 hover:text-gray-100 cursor-pointer ">
+            <a className=" py-2 mb-4 text-gray-500 cursor-pointer ">
               FlexiCare
             </a>
-            <a className=" py-2 mb-4 text-gray-500 hover:text-gray-100 cursor-pointer text-sm">
+            <a
+              className=" py-2 mb-4 text-gray-500 hover:text-gray-100 cursor-pointer text-sm"
+              onClick={() => navigate("/monthly-comprehensive")}
+            >
               Montly Comprehensive
             </a>
             <a
@@ -85,28 +91,28 @@ const BusinessFooter = () => {
             >
               Third Party
             </a>
-            <a className=" py-2 mb-4 text-gray-500 hover:text-gray-100 cursor-pointer text-sm">
+            <a className=" py-2 mb-4 text-gray-500  cursor-pointer text-sm">
               Gadget
             </a>
-            <a className=" py-2 mb-4 text-gray-500 hover:text-gray-100 cursor-pointer text-sm">
+            <a className=" py-2 mb-4 text-gray-500 cursor-pointer text-sm">
               Travel
             </a>
           </div>
           <div className=" lg:pl-4 flex lg:mb-4 lg:items-start lg:justify-start flex-col p-2">
             <a className=" text-xl mb-6  font-bold ">Company</a>
-            <a className=" py-2 mb-4 text-gray-500 hover:text-gray-100 cursor-pointer text-sm">
+            <a className=" py-2 mb-4 text-gray-500  cursor-pointer text-sm">
               Resources
             </a>
           </div>
           <div className=" lg:pl-4 flex lg:mb-4 lg:items-start lg:justify-start flex-col p-2">
             <a className=" text-xl mb-6 font-bold">Legal</a>
-            <a className=" py-2 mb-4 text-gray-500 hover:text-gray-100 text-sm cursor-pointer">
+            <a className=" py-2 mb-4 text-gray-500  text-sm cursor-pointer">
               Privacy Policy
             </a>
-            <a className=" py-2 mb-4 text-gray-500 hover:text-gray-100 text-sm cursor-pointer">
+            <a className=" py-2 mb-4 text-gray-500 text-sm cursor-pointer">
               Cookie Policy
             </a>
-            <a className=" py-2 mb-4 text-gray-500 hover:text-gray-100 text-sm cursor-pointer">
+            <a className=" py-2 mb-4 text-gray-500  text-sm cursor-pointer">
               Terms & Conditions
             </a>
           </div>
