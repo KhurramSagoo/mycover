@@ -125,10 +125,16 @@ const MakeClaim = () => {
                 className="sm:w-[300px] sm:h-[564px] ml-8
                 w-[194px] h-[350px] 
                 "
-                initial={{ y: "100%" }}
-                animate={{ y: 150 }}
-                transition={{ duration: 1 }}
-                exit={{ y: "50%" }}
+                initial={{ y: "150%" }}
+                animate={{ y: -200 }}
+                exit={{ y: "100%" }}
+                transition={{
+                  duration: 2.2,
+                  repeat: Infinity,
+                  repeatType: "mirror",
+                  repeatDelay: 0.5,
+                  delay: getBtn * 0.3,
+                }}
               />
             )}
           </div>
