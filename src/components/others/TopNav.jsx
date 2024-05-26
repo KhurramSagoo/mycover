@@ -66,21 +66,21 @@ const TopNav = () => {
     setIsOpen(!isOpen);
   };
 
-  // const innderWidthHandle = () => {
-  //     setInterval(() => {
+  const innderWidthHandle = () => {
+    setInterval(() => {
+      setInnerW(window.innerWidth);
+    }, 300);
+  };
 
-  //         setInnerW(window.innerWidth)
-  //     }, 300);
-  // }
   useEffect(() => {
-    const handleScroll = () => {
-      setScrollY(window.scrollY);
+    const handleResize = () => {
+      setInnerW(window.innerWidth);
     };
 
-    window.addEventListener("scroll", handleScroll);
+    window.addEventListener("resize", handleResize);
 
     return () => {
-      window.removeEventListener("scroll", handleScroll);
+      window.removeEventListener("resize", handleResize);
     };
   }, []);
 
@@ -225,9 +225,9 @@ const TopNav = () => {
               </DialogHeader>
             </DialogContent>
           </Dialog>
-          {/* {
-                        innerW
-                    } */}
+
+          {/* inner width counter */}
+          {/* {innerW} */}
 
           {/* <Btn title="Get Covered" handle={() => { }} /> */}
           {/* <button className="mx-1 py-2 cursor-pointer md:px-5 px-2 text-white bg-primary rounded-full"> Get Covered</button> */}

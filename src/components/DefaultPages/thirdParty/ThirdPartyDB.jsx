@@ -1,12 +1,11 @@
-// middle icons
 import QuickreplyIcon from "@mui/icons-material/Quickreply";
 import EventIcon from "@mui/icons-material/Event";
 import PaidIcon from "@mui/icons-material/Paid";
 
-// // one stop data
-// import track1 from "../../../assets/thirdparty/Claim1.mp4";
-// import track2 from "../../../assets/thirdparty/claim2.mp4";
-// import track3 from "../../../assets/thirdparty/claim3.mp4";
+// Import videos
+import track1 from "./assets/Claim1.mp4";
+import track2 from "./assets/Claim2.mp4";
+import track3 from "./assets/Claim3.mp4";
 
 // hero section
 export const heroData = [
@@ -55,20 +54,21 @@ export const accordData = [
   },
 ];
 
+// one stop data
 export const oneStopTabs = [
   {
     head: "Track Claims",
-    // video: track1,
-    borderColor: "#7A5AF8 ",
+    video: track1,
+    borderColor: "#7A5AF8",
   },
   {
     head: "Manage your Analytics",
-    // video: track2,
+    video: track2,
     borderColor: "#DD2690",
   },
   {
     head: "Access your insurance plans",
-    // video: track3,
+    video: track3,
     borderColor: "#2E90FA",
   },
 ];

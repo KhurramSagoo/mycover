@@ -12,7 +12,7 @@ const BusinessMiddlePart = ({ item, head, detail }) => {
         <p className=" text-xl sm:text-lg md:text-4xl lg:text-5xl  text-[#094063] font-extrabold text-wrap text-center ">
           {head}
         </p>
-        <p className="md:text-xl  text-wrap text-center font-medium py-5 mx-auto lg:px-20 px-10 text-sm text-gray-600  ">
+        <p className="md:text-xl  text-wrap text-center font-normal py-5 mx-auto lg:px-20 px-10 text-sm text-gray-600  ">
           {detail}
         </p>
       </div>

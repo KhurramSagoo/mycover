@@ -1,9 +1,3 @@
-import gadgets from "../../../assets/business/gadgets-circle.svg";
-import deliver from "../../../assets/business/deliver-circle-1.svg";
-import auto from "../../../assets/business/auto-circle-1.svg";
-import health from "../../../assets/business/health-circle-1.svg";
-import office from "../../../assets/business/office-content-1.svg";
-import travel from "../../../assets/business/travel-circle-1.svg";
 import { motion } from "framer-motion";
 
 const BasicProtection = ({ item }) => {
@@ -69,7 +63,7 @@ const BasicProtection = ({ item }) => {
       <div className="lg:w-2/5 lg:h-[450px]  h-auto my-5  py-lg-5 w-full px-5 sm:px-10 ">
         <div className="w-full h-full    border-gray-500 flex justify-center items-center flex-col">
           <motion.div
-            className="flex flex-col space-y-5"
+            className="flex flex-col space-y-5 md:h-screen h-auto  overflow-hidden"
             initial={{ y: 0 }}
             animate={{ y: [0, -SlideData.length * 10] }}
             transition={{
@@ -84,22 +78,24 @@ const BasicProtection = ({ item }) => {
                 <motion.div
                   key={index}
                   animate={{
-                    y: [5, -30, 40, -10, 0, 5],
-                    opacity: 20,
-                    scale: 1,
+                    y: [-100, 150, -100, 250],
+                    opacity: 90,
+                    scale: 0.8,
+                    velocity: 200,
                   }}
+                  exit={{
+                    type: "easein",
+                    duration: 10,
+                    delay: index * 1,
+                    opacity: 80,
+                    y: "50%",
+                  }}
+                  initial={{ y: "100%" }}
                   transition={{
-                    duration: 5,
+                    duration: 15,
                     ease: "easeInOut",
                     repeat: Infinity,
                     repeatType: "reverse",
-                  }}
-                  initial={{ opacity: 50, scale: 0.9 }}
-                  exit={{
-                    type: "spring",
-                    duration: 2,
-                    delay: index * 0.3,
-                    opacity: 30,
                   }}
                   className=" flex items-start justify-center max-w-[400px] md:h-[150px] h-auto flex-col flex-wrap my-5 shadow-lg px-2 py-3"
                 >

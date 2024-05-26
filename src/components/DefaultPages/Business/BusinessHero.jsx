@@ -17,7 +17,7 @@ const BusinessHero = ({ item }) => {
   ];
 
   return (
-    <div className=" flex items-center justify-center lg:flex-row flex-col lg:mt-8 md:mt-24  lg:px-16 md:px-5 sm:px-2 px-2">
+    <div className=" flex items-center justify-center lg:flex-row flex-col lg:mt-10 md:mt-24  lg:px-16 md:px-5 sm:px-2 px-2 lg:h-screen h-full">
       {/* left portion start */}
       <div
         className=" lg:w-3/5  lg:h-[500px] flex md:items-center 

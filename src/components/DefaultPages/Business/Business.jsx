@@ -12,8 +12,15 @@ import BusinessFooter from "./BusinessFooter";
 
 // business db
 import middlePlans, { heroData, oneStopTabs, accordData } from "./BusinessDB";
+import { useEffect } from "react";
 
 const Business = () => {
+  const tabTitle = () => {
+    document.title = "Business";
+  };
+  useEffect(() => {
+    tabTitle();
+  }, []);
   return (
     <div className="   w-full ">
       <div className=" fixed top-0 right-0 left-0">

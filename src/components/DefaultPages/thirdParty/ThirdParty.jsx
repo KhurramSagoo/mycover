@@ -2,13 +2,14 @@ import TopNav from "@/components/others/TopNav";
 import BusinessBrands from "../Business/BusinessBrands";
 import BusinessMiddlePart from "../Business/BusinessMiddlePart";
 import BusinessOneStopTab from "../Business/BusinessOneStopTab";
-import BusinessProtection from "../Business/BusinessProtection";
-import SmartBusinessTabs from "../Business/SmartBusinessTabs";
-import EasyWayBusinessInsurance from "../Business/EasyWayBusinessInsurance";
-import BusinessMultiAnimation from "../Business/BusinessMultiAnimation";
-import BusinessAccrodion from "../Business/BusinessAccrodion";
+import BasicProtection from "./BasicProtection";
+import ThirdPartyCollage from "./ThirdPartyCollage";
+import MakeClaim from "./MakeClaim";
 import BusinessFooter from "../Business/BusinessFooter";
+import BusinessAccrodion from "../Business/BusinessAccrodion";
 import BusinessHero from "../Business/BusinessHero";
+import BusinessMultiAnimation from "../Business/BusinessMultiAnimation";
+
 // db
 import middlePlans, {
   heroData,
@@ -16,15 +17,19 @@ import middlePlans, {
   accordData,
   basicData,
 } from "./ThirdPartyDB";
-import BasicProtection from "./BasicProtection";
-import ThirdPartyCollage from "./ThirdPartyCollage";
-import MakeClaim from "./MakeClaim";
+import { useEffect } from "react";
 
 const ThirdParty = () => {
+  const tabTitle = () => {
+    document.title = "Third Party";
+  };
+  useEffect(() => {
+    tabTitle();
+  }, []);
   return (
-    <div className="   w-full ">
+    <div className="w-full">
       {/* navbar */}
-      <div className=" fixed top-0 right-0 left-0">
+      <div className="fixed top-0 right-0 left-0">
         <TopNav />
       </div>
 
@@ -45,7 +50,7 @@ const ThirdParty = () => {
         detail="3rd party relieves you of the financial risks involved with vehicle incidents on transit."
       />
 
-      {/* basic proteciton */}
+      {/* basic protection */}
       {basicData.map((item, index) => (
         <div key={index}>
           <BasicProtection item={item} />
@@ -62,21 +67,18 @@ const ThirdParty = () => {
 
       {/* make claim */}
       <MakeClaim />
-      {/* <BusinessProtection /> */}
-      {/* <SmartBusinessTabs /> */}
+      <br />
+
+      {/* multianimation */}
       <BusinessMultiAnimation />
 
-      {/* <EasyWayBusinessInsurance /> */}
       <ThirdPartyCollage />
 
-      <div className=" h-28 w-full">
+      <div className="h-28 w-full">
         <br />
       </div>
       <BusinessAccrodion data={accordData} />
       <BusinessFooter />
-      {/* <div className=' h-28 w-full'>
-            <br />
-        </div> */}
     </div>
   );
 };
