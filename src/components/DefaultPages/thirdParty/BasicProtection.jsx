@@ -64,38 +64,30 @@ const BasicProtection = ({ item }) => {
         <div className="w-full h-full    border-gray-500 flex justify-center items-center flex-col">
           <motion.div
             className="flex flex-col space-y-5 md:h-screen h-auto  overflow-hidden"
-            initial={{ y: 0 }}
-            animate={{ y: [0, -SlideData.length * 10] }}
-            transition={{
-              duration: 10,
-              ease: "linear",
-              repeat: Infinity,
-              repeatType: "loop",
-            }}
+            // initial={{ x: "150%" }}
+            // animate={{ x: -200 }}
+            // exit={{ x: "100%" }}
+            // transition={{
+            //   duration: 2.2,
+            //   repeat: Infinity,
+            //   repeatType: "mirror",
+            //   repeatDelay: 0.5,
+            //   delay: index * 0.3,
+            // }}
           >
             {SlideData.map((slide, index) => {
               return (
                 <motion.div
                   key={index}
-                  animate={{
-                    y: [-100, 150, -100, 250],
-                    opacity: 90,
-                    scale: 0.8,
-                    velocity: 200,
-                  }}
-                  exit={{
-                    type: "easein",
-                    duration: 10,
-                    delay: index * 1,
-                    opacity: 80,
-                    y: "50%",
-                  }}
-                  initial={{ y: "100%" }}
+                  initial={{ y: "150%" }}
+                  animate={{ y: -100 }}
+                  exit={{ y: "100%" }}
                   transition={{
-                    duration: 15,
-                    ease: "easeInOut",
+                    duration: 3,
                     repeat: Infinity,
-                    repeatType: "reverse",
+                    repeatType: "mirror",
+                    repeatDelay: 0.5,
+                    delay: index * 0.5,
                   }}
                   className=" flex items-start justify-center max-w-[400px] md:h-[150px] h-auto flex-col flex-wrap my-5 shadow-lg px-2 py-3"
                 >

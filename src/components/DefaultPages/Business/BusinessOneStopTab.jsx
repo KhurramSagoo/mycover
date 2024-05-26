@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 
 const BusinessOneStopTab = ({ tabData, solution, head, detail }) => {
+  console.log(tabData);
   const [activeTab, setActiveTab] = useState(0);
 
   return (
@@ -46,8 +47,14 @@ const BusinessOneStopTab = ({ tabData, solution, head, detail }) => {
             key={index}
             className={`${
               activeTab === index ? "block" : "hidden"
-            } flex items-baseline justify-center flex-col bg-[#f8fcfb] p-5`}
+            } flex items-start justify-start w-full h-full  lg:mt-20 md:mt-12 mt-6  flex-col bg-[#f8fcfb] p-5`}
           >
+            {tab.title && (
+              <ul className=" my-5 text-primary lg:text-xl text-base">
+                <li>{tab.title}</li>
+              </ul>
+            )}
+            {tab.image && <img src={tab.image} alt="" />}
             {tab.video && (
               <video
                 controls
