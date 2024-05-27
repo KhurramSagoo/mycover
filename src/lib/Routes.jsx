@@ -41,13 +41,13 @@ export const THIRDPARTY = "/thirdparty";
 export const MONTHLYCOMPREHENSIVE = "/monthly-comprehensive";
 
 // protected
-export const PROTECTED = "/protected";
-export const DASHBOARD = "/protected/dashboard";
-export const MYCOVER = "/protected/mycover";
-export const PLANS = "/protected/plans";
-export const WALLET = "/protected/wallet";
-export const CLAIM = "/protected/claim";
-export const MORE = "/protected/more";
+// export const PROTECTED = "/protected";
+export const DASHBOARD = "/dashboard";
+export const MYCOVER = "/dashboard/mycover";
+export const PLANS = "/dashboard/plans";
+export const WALLET = "/dashboard/wallet";
+export const CLAIM = "/dashboard/claim";
+export const MORE = "/dashboard/more";
 
 export const router = createBrowserRouter([
   { path: ROOT, element: <Business /> },
@@ -66,7 +66,7 @@ export const router = createBrowserRouter([
     element: <BusinessBoardingNext />,
   },
   {
-    path: PROTECTED,
+    path: DASHBOARD,
     element: <Layout />,
     children: [
       { path: DASHBOARD, element: <Dashboard /> },

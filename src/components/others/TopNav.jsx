@@ -208,7 +208,7 @@ const TopNav = () => {
 
           <button
             className="md:px-5 md:text-sm px-3 text-xs py-2 border-none rounded-full bg-[#4fbfa3] text-white border cursor-pointer"
-            onClick={() => navigate("/protected/dashboard")}
+            onClick={() => navigate("/dashboard")}
           >
             Dashboard
           </button>
