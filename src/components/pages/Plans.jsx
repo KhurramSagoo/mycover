@@ -52,7 +52,7 @@ const Plans = () => {
   ];
 
   return (
-    <div className="flex max-w-[1200px] h-full min-h-screen flex-col ">
+    <div className=" flex max-w-[1200px] h-full min-h-screen flex-col w-full">
       <TopDashboardNav />
       <div className="w-full flex items-center justify-start mt-5 px-12 max-w-[1050px] mx-auto">
         <span className="text-xl font-medium text-blue-900">Plans </span>

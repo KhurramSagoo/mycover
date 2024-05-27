@@ -1,6 +1,10 @@
+import { useState } from "react";
 import TabProps from "../TabProps";
 import TopDashboardNav from "../utils/TopDashboardNav";
+import search from "../../assets/dashboard/doc-search.svg";
 const Cover = () => {
+  const [selectTab, setSelectTab] = useState(0);
+  // console.log(selectTab);
   const tabs = [
     {
       label: "Account",
@@ -28,13 +32,46 @@ const Cover = () => {
       <div
         className=" w-full flex items-center justify-start
        mt-5
-       px-12 "
+       px-24 "
       >
         <span className=" text-xl font-medium text-secondary">My Cover</span>
       </div>
-      <div className=" w-full">
-        <TabProps tabs={tabs} />
+
+      <div className=" flex items-center justify-center ">
+        {tabs.map((item, index) => (
+          <div
+            onClick={() => setSelectTab(index)}
+            key={index}
+            className={`text-base  md:px-16 py-2 border-l-0 cursor-pointer ${
+              selectTab === index
+                ? " border-b-4 border-primary"
+                : " border-b-4 border-b-gray-200"
+            } `}
+          >
+            <p
+              className={`text-base  px-5 py-2  ${
+                selectTab === index
+                  ? "font-bold  text-primary "
+                  : "font-medium text-gray-500 "
+              } `}
+            >
+              {item.label}
+            </p>
+          </div>
+        ))}
       </div>
+      <div className="flex items-center text-center break-words justify-center flex-col mt-16">
+        <img src={search} alt="" />
+        <h2 className="text-base font-medium text-gray-500">
+          {tabs[selectTab].title}
+        </h2>
+        <p className="text-sm font-medium text-gray-400">
+          {tabs[selectTab].detail}
+        </p>
+      </div>
+      {/* <div className=" w-full">
+        <TabProps tabs={tabs} />
+      </div> */}
     </div>
   );
 };
