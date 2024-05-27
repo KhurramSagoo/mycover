@@ -4,8 +4,7 @@ import auto from "../../../assets/business/auto-circle-1.svg";
 import health from "../../../assets/business/health-circle-1.svg";
 import office from "../../../assets/business/office-content-1.svg";
 import travel from "../../../assets/business/travel-circle-1.svg";
-import { motion, useAnimation } from "framer-motion";
-import { useEffect } from "react";
+import { motion } from "framer-motion";
 
 const BusinessHero = ({ item }) => {
   const images = [
@@ -17,8 +16,8 @@ const BusinessHero = ({ item }) => {
     { src: deliver, angle: 300 },
   ];
 
-  const radius = 150; // Radius of the circular path
-  const duration = 10; // Duration for one full circle
+  const radius = 150;
+  const duration = 10;
 
   return (
     <div className="flex items-center justify-center lg:flex-row flex-col lg:mt-10 md:mt-24 lg:px-16 md:px-5 sm:px-2 px-2 lg:h-screen h-full">
@@ -38,7 +37,7 @@ const BusinessHero = ({ item }) => {
 
       {/* right start */}
       <div className="lg:w-2/5 lg:h-[500px] flex items-center h-auto my-5 flex-col justify-center py-lg-5 w-full px-10 sm:px-20">
-        <div className="md:w-96 sm:w-72 w-full h-full rounded-full border-gray-500 flex justify-center items-center relative p-0">
+        <div className="md:w-96 sm:w-72 w-full h-[300px] flex justify-center items-center relative p-0">
           {images.map((image, index) => {
             const angle = (index / images.length) * 360;
             const x = radius * Math.cos((angle * Math.PI) / 180);
@@ -78,7 +77,7 @@ const BusinessHero = ({ item }) => {
                   loading="lazy"
                   src={image.src}
                   alt=""
-                  className="w-12 h-12 cursor-pointer"
+                  className="w-16 h-16 cursor-pointer"
                 />
               </motion.div>
             );

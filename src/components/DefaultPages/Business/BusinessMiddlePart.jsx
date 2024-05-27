@@ -9,7 +9,7 @@ const BusinessMiddlePart = ({ item, head, detail }) => {
   return (
     <div className=" flex items-center justify-center flex-col flex-wrap px-5 w-full lg:h-[500px] md:h-[600px] h-auto md:flex-row my-16 py-10">
       <div className=" flex items-center justify-center flex-col p-5">
-        <p className=" text-xl sm:text-lg md:text-4xl lg:text-5xl  text-[#094063] font-extrabold text-wrap text-center ">
+        <p className=" text-xl sm:text-2xl md:text-4xl lg:text-5xl  text-[#094063] font-extrabold text-wrap text-center ">
           {head}
         </p>
         <p className="md:text-xl  text-wrap text-center font-normal py-5 mx-auto lg:px-20 px-10 text-sm text-gray-600  ">

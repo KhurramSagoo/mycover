@@ -40,7 +40,7 @@ const BusinessOneStopTab = ({ tabData, solution, head, detail }) => {
           ))}
         </div>
       </div>
-      <div className="w-full lg:w-1/2 md:px-8 sm:px-4 px-0 my-12 h-full min-h-[450px]">
+      <div className="w-full lg:w-1/2 md:px-8 sm:px-0 px-0 my-12 h-full min-h-[450px]">
         {/* Render tab content */}
         {tabData.map((tab, index) => (
           <div
@@ -50,8 +50,8 @@ const BusinessOneStopTab = ({ tabData, solution, head, detail }) => {
             } flex items-start justify-start w-full h-full  lg:mt-20 md:mt-12 mt-6  flex-col bg-[#f8fcfb] p-5`}
           >
             {tab.title && (
-              <ul className=" my-5 text-primary lg:text-xl text-base">
-                <li>{tab.title}</li>
+              <ul className=" my-5 text-primary lg:text-xl text-sm font-medium">
+                <li className=" ">{tab.title}</li>
               </ul>
             )}
             {tab.image && <img src={tab.image} alt="" />}
