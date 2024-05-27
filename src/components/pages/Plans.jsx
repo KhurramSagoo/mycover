@@ -1,8 +1,8 @@
 import React from "react";
 import TabProps from "../TabProps";
-import heart from '../../assets/heart.svg';
-import auto from '../../assets/auto.svg';
-import aeroplane from '../../assets/aeroplane.svg';
+import heart from "../../assets/heart.svg";
+import auto from "../../assets/auto.svg";
+import aeroplane from "../../assets/aeroplane.svg";
 import TopDashboardNav from "../utils/TopDashboardNav";
 
 const Plans = () => {
@@ -52,7 +52,7 @@ const Plans = () => {
   ];
 
   return (
-    <div className="max-w-[1200px] bg-menuIcon h-screen">
+    <div className="flex max-w-[1200px] h-full min-h-screen flex-col ">
       <TopDashboardNav />
       <div className="w-full flex items-center justify-start mt-5 px-12 max-w-[1050px] mx-auto">
         <span className="text-xl font-medium text-blue-900">Plans </span>

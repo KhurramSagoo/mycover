@@ -6,7 +6,8 @@ const Cover = () => {
       label: "Account",
       value: "account",
       title: "Active plans Empty",
-      detail: "You don't have any active plans, go to Plans page to buy new plan",
+      detail:
+        "You don't have any active plans, go to Plans page to buy new plan",
     },
     {
       label: "Pending",
@@ -22,14 +23,14 @@ const Cover = () => {
     },
   ];
   return (
-    <div className=" max-w-[1200px]  bg-menuIcon h-screen">
+    <div className=" flex max-w-[1200px] h-full min-h-screen flex-col w-full">
       <TopDashboardNav />
       <div
         className=" w-full flex items-center justify-start
        mt-5
-       px-12 max-w-[900px] mx-auto"
+       px-12 "
       >
-        <span className=" text-xl font-medium text-blue-900">My Cover</span>
+        <span className=" text-xl font-medium text-secondary">My Cover</span>
       </div>
       <div className=" w-full">
         <TabProps tabs={tabs} />

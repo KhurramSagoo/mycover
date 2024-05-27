@@ -65,7 +65,7 @@ const LeftSideBar = () => {
   };
 
   return (
-    <div className="flex flex-col fixed top-0 left-0 bottom-0 bg-white w-[290px] max-h-screen h-screen overflow-y-hidden items-start justify-start">
+    <div className="sticky top-0 w-fit flex flex-col items-end justify-evenly xl:items-stretch h-screen xl:pe-3  max-h-full overflow-hidden space-y-16 lg:ps-0 md:ps-5 pb-4 scrollbar-hide">
       <div
         className="cursor-pointer fixed h-[50px] w-[290px] top-0 left-0 flex items-center justify-start mt-4 px-6 py-4"
         onClick={() => navigate("/")}

@@ -25,7 +25,7 @@ const data = [
 
 const Header = () => {
   return (
-    <div className=" bg-inherit xl:px-8 px-0 pb-2 flex items-start justify-start flex-col w-full ">
+    <div className="flex max-w-[1200px] h-full min-h-screen flex-col w-full  items-center justify-center ">
       <div className=" flex items-start justify-start flex-col bg-white w-full px-5">
         <p className=" text-2xl text-gray-500 font-semibold p-5 justify-start flex items-center flex-col">
           We&#39;ve got you covered
@@ -34,7 +34,7 @@ const Header = () => {
           {data.map((item, index) => (
             <div
               key={index}
-              className=" bg-[#e6f4f2] rounded-md md:w-[200px] md:h-[156px]
+              className=" bg-[#e6f4f2] rounded-md lg:w-[200px] lg:h-[156px]
               sm:w-full sm:h-[156px] w-[76px] h-[64px]
               flex items-center justify-center flex-wrap flex-col md:flex-row"
             >
@@ -43,7 +43,7 @@ const Header = () => {
                 src={item.image}
                 alt=""
                 className="  
-                object-contain  rounded-lg w-40  cursor-pointer "
+                object-contain  rounded-lg w-full  cursor-pointer "
               />
 
               {/* <p>{item.title}</p> */}

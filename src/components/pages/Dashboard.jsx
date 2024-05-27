@@ -21,7 +21,7 @@ const Dashboard = () => {
   }, []);
 
   return (
-    <div className=" container  flex items-center justify-center flex-col w-full ">
+    <div className=" flex max-w-[1200px] h-full min-h-screen flex-col w-full">
       <div
         className={` w-full items-center justify-center fixed top-0 transition-all duration-300 ${
           isScrolled ? "backdrop-blur-md" : ""
@@ -29,7 +29,7 @@ const Dashboard = () => {
       >
         <Navbar />
       </div>
-      <div className=" w-full  mt-32">
+      <div className=" flex max-w-[1200px] h-full min-h-screen flex-col w-full mt-32">
         <Header />
       </div>
     </div>
