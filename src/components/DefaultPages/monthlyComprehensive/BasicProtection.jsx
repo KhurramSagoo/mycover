@@ -60,41 +60,30 @@ const BasicProtection = ({ item }) => {
       {/* left end */}
 
       {/* right start */}
-      <div className="lg:w-2/5 lg:h-[450px]  h-auto my-5  py-lg-5 w-full px-5 sm:px-10 ">
-        <div className="w-full h-full    border-gray-500 flex justify-center items-center flex-col">
-          <motion.div
-            className="flex flex-col space-y-5 md:h-screen h-auto  overflow-hidden"
-            // initial={{ x: "150%" }}
-            // animate={{ x: -200 }}
-            // exit={{ x: "100%" }}
-            // transition={{
-            //   duration: 2.2,
-            //   repeat: Infinity,
-            //   repeatType: "mirror",
-            //   repeatDelay: 0.5,
-            //   delay: index * 0.3,
-            // }}
-          >
+      <div className="lg:w-2/5  h-[400px] my-5 w-full px-5 sm:px-10">
+        <div className="w-full h-full border-gray-500 flex justify-center items-center flex-col">
+          <motion.div className="flex flex-col space-y-5 md:h-screen h-auto overflow-hidden">
             {SlideData.map((slide, index) => {
               return (
                 <motion.div
                   key={index}
-                  initial={{ y: "150%" }}
-                  animate={{ y: -100 }}
-                  exit={{ y: "100%" }}
+                  initial={{ y: "-150%", scale: 0.9 }}
+                  animate={{ y: "0%", repeatDur: 2 }}
+                  exit={{ y: "100%", scale: 1.1 }}
                   transition={{
-                    duration: 3,
-                    repeat: Infinity,
-                    repeatType: "mirror",
-                    repeatDelay: 0.5,
-                    delay: index * 0.5,
+                    y: {
+                      repeat: Infinity,
+                      repeatType: "reverse",
+                      duration: 3,
+                      ease: "backInOut",
+                    },
                   }}
-                  className=" flex items-start justify-center max-w-[400px] md:h-[150px] h-auto flex-col flex-wrap my-5 shadow-lg px-2 py-3"
+                  className="flex items-start justify-center max-w-[400px] md:h-[150px] h-auto flex-col flex-wrap my-5 shadow-lg px-2 py-3"
                 >
-                  <p className=" text-sm font-bold text-gray-800 py-2 px-3">
+                  <p className="text-sm font-bold text-gray-800 py-2 px-3">
                     {slide.title}
                   </p>
-                  <p className=" text-sm font-medium text-gray-700 py-2 px-3">
+                  <p className="text-sm font-medium text-gray-700 py-2 px-3">
                     {slide.detail}
                   </p>
                 </motion.div>
