@@ -6,7 +6,7 @@ const Navbar = () => {
   return (
     <div
       className=" max-w-[1000px] mx-auto w-full px-5
-    bg-menuIcon  h-[90px] shadow-sm flex items-center  justify-between"
+    bg-menuIcon  h-[90px]  flex items-center  justify-between"
     >
       <div
         className=" flex items-center justify-center"

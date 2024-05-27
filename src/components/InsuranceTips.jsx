@@ -35,7 +35,9 @@ const InsuranceTips = () => {
               alt={item.detail}
               className="  w-[150px]  object-cover rounded-md h-[120px]"
             />
-            <p className=" text-md p-3 text-center ">{item.detail}</p>
+            <p className=" text-base font-medium p-1  text-center ">
+              {item.detail}
+            </p>
           </div>
         ))}
       </div>

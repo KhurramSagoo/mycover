@@ -21,15 +21,15 @@ const Dashboard = () => {
   }, []);
 
   return (
-    <div className="bg-menuIcon mx-auto flex items-center justify-center flex-col w-full">
+    <div className=" container  flex items-center justify-center flex-col w-full ">
       <div
-        className={`max-w-[1200px] w-full items-start justify-center fixed top-0 mx-auto transition-all duration-300 ${
+        className={` w-full items-center justify-center fixed top-0 transition-all duration-300 ${
           isScrolled ? "backdrop-blur-md" : ""
         }`}
       >
         <Navbar />
       </div>
-      <div className="max-w-[1200px] w-full items-start flex justify-center mt-24">
+      <div className=" w-full  mt-32">
         <Header />
       </div>
     </div>

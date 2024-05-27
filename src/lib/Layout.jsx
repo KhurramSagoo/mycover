@@ -4,17 +4,17 @@ import { Outlet } from "react-router-dom";
 
 const Layout = () => {
   return (
-    <div>
-      <div className=" flex">
-        <div className="  hidden md:block">
+    <>
+      <div className="w-full flex items-start container">
+        <div className="hidden md:flex w-[280px]">
           <LeftSideBar />
         </div>
-        <div className=" md:ml-[300px] w-full flex flex-col ">
+        <div className="flex-grow ">
           <Outlet />
         </div>
       </div>
       <MobileFooter />
-    </div>
+    </>
   );
 };
 

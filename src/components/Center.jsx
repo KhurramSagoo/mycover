@@ -14,7 +14,7 @@ const Center = () => {
       <div className=" w-[90%] md:w-1/2 p-5 mt-5">
         <ToDoList />
       </div>
-      <div className=" w-full md:w-1/2 p-5 mt-5">
+      <div className=" w-full md:w-1/2 p-5 mt-5 mb-20 md:mb-0">
         <InsuranceTips />
       </div>
     </div>
