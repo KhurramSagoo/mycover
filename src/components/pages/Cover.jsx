@@ -56,7 +56,7 @@ const Cover = () => {
               <p
                 className={`text-base  px-5 py-2  ${
                   selectTab === index
-                    ? "font-bold  text-primary "
+                    ? "font-medium  text-primary "
                     : " text-gray-500 font-normal "
                 } `}
               >

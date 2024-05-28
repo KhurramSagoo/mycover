@@ -25,7 +25,7 @@ const data = [
 
 const Header = () => {
   return (
-    <div className="flex max-w-[1200px] h-full min-h-screen flex-col w-full  items-center justify-center ">
+    <div className="flex  h-full min-h-screen flex-col w-full  items-center justify-center ">
       <div className=" flex items-start justify-start flex-col bg-white w-full px-5">
         <p className=" text-2xl text-gray-500 font-semibold p-5 justify-start flex items-center flex-col">
           We&#39;ve got you covered

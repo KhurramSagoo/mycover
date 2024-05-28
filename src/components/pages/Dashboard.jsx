@@ -21,16 +21,16 @@ const Dashboard = () => {
   }, []);
 
   return (
-    <div className=" flex max-w-[1200px] h-full min-h-screen flex-col w-full">
+    <div className=" flex h-full min-h-screen flex-col w-auto">
       <div
-        className={` w-full px-5
-         items-center justify-center fixed top-0 transition-all duration-300 ${
+        className={`  px-7 
+         items-center justify-center fixed top-0  lg:left-72 md:left-52 left-0 right-0 transition-all duration-300 ${
            isScrolled ? "backdrop-blur-md" : ""
          }`}
       >
         <Navbar />
       </div>
-      <div className=" flex max-w-[1200px] h-full min-h-screen flex-col w-full mt-32">
+      <div className=" flex h-full min-h-screen flex-col mt-32">
         <Header />
       </div>
     </div>

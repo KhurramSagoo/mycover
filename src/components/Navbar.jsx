@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 const Navbar = () => {
   const navigate = useNavigate();
   return (
-    <div className=" flex min-w-[600px] max-w-[1000px] items-center justify-between  h-24  ">
+    <div className=" flex  items-center justify-between  w-full   h-24   ">
       <div
         className=" flex items-center justify-center"
         onClick={() => navigate("/")}
