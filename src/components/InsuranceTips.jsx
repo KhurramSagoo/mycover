@@ -27,7 +27,7 @@ const InsuranceTips = () => {
         {data.map((item, index) => (
           <div
             key={index}
-            className=" flex items-center justify-center flex-col lg:flex-row text-gray-500 shadow w-full min-h-32 h-auto  mt-5 cursor-pointer p-5 rounded-lg"
+            className=" flex items-center hover:border-primary border justify-center flex-col lg:flex-row text-gray-500 shadow w-full min-h-32 h-auto  mt-5 cursor-pointer p-5 rounded-lg"
           >
             <img
               loading="lazy"
