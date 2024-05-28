@@ -72,7 +72,7 @@ const MobileFooter = () => {
   };
   return (
     <div
-      className=" fixed bottom-0 left-0 right-0 bg-white flex items-center justify-between  h-28
+      className=" fixed bottom-0 left-0 right-0  bg-white flex items-center justify-between  h-20
     sm:hidden
     "
     >
@@ -84,8 +84,8 @@ const MobileFooter = () => {
       </div> */}
       {myArray.map((item, index) => (
         <div
-          className={` flex items-center flex-col justify-center py-10 my-1 hover:bg-menuIcon cursor-pointer w-full hover:border-t-2 hover:border-green-500 ${
-            activeItem === index ? "bg-menuIcon" : ""
+          className={` flex items-center flex-col hover:bg-[#f4f3ff] justify-center py-4 my-2 hover:bg-menuIcon cursor-pointer w-full hover:border-t-4 hover:border-primary ${
+            activeItem === index ? "bg-menuIcon " : ""
           }`}
           key={index}
           onClick={() => handleClick(index)}
@@ -109,7 +109,7 @@ const MobileFooter = () => {
           <span
             className={`
           
-          ${activeItem === index ? " font-medium text-primary" : ""}
+          ${activeItem === index ? " font-medium text-primary " : ""}
           `}
           >
             {item.name}
