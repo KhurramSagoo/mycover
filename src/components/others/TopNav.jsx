@@ -76,7 +76,7 @@ const TopNav = () => {
       <div
         className=" w-full lg:px-12 flex items-center sm:px-5 px-5 justify-between my-0 md:h-[100px] h-[70px] shadow-md  "
         style={{
-          backdropFilter: `blur(${scrollY > 0 ? 10 : 0}px)`,
+          backdropFilter: `blur(${scrollY > 0 ? 5 : 0}px)`,
         }}
       >
         <div className="flex items-center justify-center">
@@ -202,8 +202,6 @@ const TopNav = () => {
               </DialogHeader>
             </DialogContent>
           </Dialog>
-
-          {/* inner width counter */}
           {/* {innerW} */}
 
           <button
@@ -214,7 +212,6 @@ const TopNav = () => {
           </button>
         </div>
       </div>
-
       <div className="flex ml-20 mt-3 items-center justify-center rounded-full bg-[#e6e4f9] w-[180px]">
         {btnsData.map((btn) => (
           <div key={btn.title}>
