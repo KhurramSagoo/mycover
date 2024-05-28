@@ -23,7 +23,7 @@ const Wallet = () => {
         <div className="flex lg:items-center md:items-end items-center justify-enter flex-col w-full">
           <TopDashboardNav />
 
-          <div className="flex lg:items-center md:items-end items-center justify-enter flex-col w-full">
+          <div className="  flex lg:items-center md:items-end items-center justify-enter flex-col w-full">
             <div className="w-full flex items-start justify-start mb-2 md:px-16 px-12 flex-col">
               <span className="text-xl font-semibold text-secondary">
                 Wallet

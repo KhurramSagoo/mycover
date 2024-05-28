@@ -90,7 +90,7 @@ items-center justify-start mb-32 md:mb-0
       <div className=" flex lg:items-center md:items-end items-center justify-enter flex-col  w-full">
         <TopDashboardNav />
         <div
-          className=" w-full flex items-start justify-start
+          className="  w-full flex items-start justify-start
      mb-2
      md:px-16 px-12 flex-col "
         >
@@ -105,7 +105,8 @@ items-center justify-start mb-32 md:mb-0
             <div
               onClick={() => setSelectTab(index)}
               key={index}
-              className={`text-base md:px-10 lg:px-16  py-2 border-l-0 cursor-pointer ${
+              className={`text-base px-0
+              sm:px-5 md:px-10 lg:px-16  py-2 border-l-0 cursor-pointer ${
                 selectTab === index
                   ? " border-b-4 border-primary"
                   : " border-b-4 border-b-gray-200 "
@@ -144,6 +145,9 @@ items-center justify-start mb-32 md:mb-0
               </p>
             </div>
           ))}
+        </div>
+        {/* compare button */}
+        <div className="flex items-center  text-center break-words justify-center   mt-16 px-16 w-full  gap-10 flex-wrap cursor-pointer">
           {tabs[selectTab].btn && (
             <div className=" flex items-center justify-center gap-2 text-primary font-medium border py-4 px-6 rounded-lg border-primary">
               <CompareSvg />

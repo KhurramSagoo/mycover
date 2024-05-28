@@ -11,7 +11,7 @@ items-center justify-start mb-32 md:mb-0
       <div className=" flex lg:items-center md:items-end items-center justify-enter flex-col  w-full">
         <TopDashboardNav />
         <div
-          className=" w-full flex items-start justify-start
+          className="  w-full flex items-start justify-start
    mb-2
    md:px-16 px-12 flex-col "
         >

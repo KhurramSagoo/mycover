@@ -23,7 +23,7 @@ const TopDashboardNav = () => {
   return (
     <div
       className="  w-full pr-20
-bg-menuIcon  h-[100px] flex items-center  justify-end "
+bg-white  h-[100px] flex items-center  justify-end "
     >
       <div className=" rounded-full border cursor-pointer mx-2">
         <img src={bell} alt="" />

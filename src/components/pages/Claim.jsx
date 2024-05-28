@@ -54,7 +54,8 @@ const Claim = () => {
             <div
               onClick={() => setSelectTab(index)}
               key={index}
-              className={`text-base md:px-10 lg:px-16  py-2 border-l-0 cursor-pointer ${
+              className={`text-base px-0
+              sm:px-5 md:px-10 lg:px-16  py-2 border-l-0 cursor-pointer ${
                 selectTab === index
                   ? " border-b-4 border-primary"
                   : " border-b-4 border-b-gray-200 "

@@ -37,7 +37,7 @@ const BusinessHero = ({ item }) => {
 
       {/* right start */}
       <div className="lg:w-2/5 lg:h-[500px] flex items-center h-auto my-5 flex-col justify-center py-lg-5 w-full px-10 sm:px-20">
-        <div className="md:w-96 sm:w-72 w-full h-[300px] flex justify-center items-center relative p-0">
+        <div className="md:w-96 sm:w-72 w-full h-[300px] flex justify-center items-center relative p-0 overflow-hidden">
           {images.map((image, index) => {
             const angle = (index / images.length) * 360;
             const x = radius * Math.cos((angle * Math.PI) / 180);
