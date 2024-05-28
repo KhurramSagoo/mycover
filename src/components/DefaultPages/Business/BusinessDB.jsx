@@ -12,9 +12,9 @@ import wallet from "../../../assets/business/solution-wallet.png";
 // hero section
 export const heroData = [
   {
-    head: "Save on your vehicle insurance costs",
+    head: "Insurance made easy for your business",
     detail:
-      "3rd Party is a basic auto insurance plan that protects your business against damages to other people, vehicles and property in transit.",
+      "Set your business up for success with a seamless insurance platform with tools and products that help you recover from unplanned events quickly.",
     span: "",
     btn: "Get Covered",
   },

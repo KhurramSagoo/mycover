@@ -65,7 +65,7 @@ const Cover = () => {
             </div>
           ))}
         </div>
-        <div className="flex items-center text-center break-words justify-center flex-col mt-16">
+        <div className="flex items-center text-center break-words justify-center flex-col mt-16 px-16">
           <img src={search} alt="" />
           <h2 className="text-base font-medium text-gray-500">
             {tabs[selectTab].title}

@@ -65,7 +65,7 @@ const LeftSideBar = () => {
   };
 
   return (
-    <div className="sticky top-0 w-fit flex flex-col items-end justify-evenly xl:items-stretch h-screen xl:pe-3  max-h-full overflow-hidden space-y-16 lg:ps-0 md:ps-5 pb-4 scrollbar-hide">
+    <div className="sticky top-0 right-0 flex flex-col items-end justify-evenly xl:items-stretch h-screen  max-h-full overflow-hidden pb-4 w-full">
       <div
         className="cursor-pointer fixed h-[50px] w-[290px] top-0 left-0 flex items-center justify-start mt-4 px-6 py-4"
         onClick={() => navigate("/")}
@@ -75,8 +75,8 @@ const LeftSideBar = () => {
       <div className="pt-[80px] w-full">
         {myArray.map((item, index) => (
           <div
-            className={`flex items-center h-[52px] justify-start ps-4
-             mb-6 cursor-pointer w-ful  ${
+            className={`flex items-center h-[52px] justify-start ps-3
+             mb-4 cursor-pointer w-ful  ${
                activeItem === index
                  ? "bg-menuIcon border-e-4 border-primary bg-[#fafaff]"
                  : "hover:bg-menuIcon hover:border-e-4 hover:border-primary"
@@ -88,7 +88,7 @@ const LeftSideBar = () => {
               loading="lazy"
               src={activeItem === index ? item.active : item.inactive}
               alt={item.name}
-              className="mx-4"
+              className="mx-3"
             />
             <span
               className={` text-base font-medium ${
