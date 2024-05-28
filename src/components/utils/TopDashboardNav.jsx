@@ -14,15 +14,6 @@ import {
   DropdownMenuTrigger,
 } from "@radix-ui/react-dropdown-menu";
 
-// import {
-//   DropdownMenu,
-//   DropdownMenuContent,
-//   DropdownMenuItem,
-//   DropdownMenuLabel,
-//   DropdownMenuSeparator,
-//   DropdownMenuTrigger,
-// } from "@/components/ui/dropdown-menu";
-
 const TopDashboardNav = () => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
@@ -31,8 +22,8 @@ const TopDashboardNav = () => {
   };
   return (
     <div
-      className=" max-w-[1200px] w-full float-left ms-auto me-5  xl:pr-40
-bg-menuIcon  h-[100px] flex items-center  justify-end"
+      className="  w-full pr-20
+bg-menuIcon  h-[100px] flex items-center  justify-end "
     >
       <div className=" rounded-full border cursor-pointer mx-2">
         <img src={bell} alt="" />
@@ -47,9 +38,6 @@ bg-menuIcon  h-[100px] flex items-center  justify-end"
         >
           <span>KS</span>
         </div>
-        {/* <span>
-          <img src={down} alt="" />
-        </span> */}
       </div>
       {isDropdownOpen && (
         <DropdownMenu>
@@ -73,28 +61,8 @@ bg-menuIcon  h-[100px] flex items-center  justify-end"
           </DropdownMenuContent>
         </DropdownMenu>
       )}
-      {/* <div className=" flex items-center justify-end">
-        <div className=" flex items-start justify-center flex-col md:flex-row text-2xl font-semibold ms-3  text-gray-500 hidden ">
-          <p>Hello,</p>
-          <p>
-            User{" "}
-            <span role="img" aria-label="Wave">
-              👋
-            </span>
-          </p>
-        </div>
-      </div> */}
     </div>
   );
 };
 
 export default TopDashboardNav;
-
-// import React from "react";
-
-// const Navbar = () => {
-//   const navigate = useNavigate();
-//   return (
-
-//   );
-// };

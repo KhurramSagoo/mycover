@@ -83,18 +83,20 @@ const Plans = () => {
 
   return (
     <div
-      className=" flex max-w-[1200px] h-full min-h-screen flex-col 
+      className=" flex  h-full min-h-screen flex-col 
 items-center justify-start mb-32 md:mb-0
   "
     >
-      <div className=" flex lg:items-center md:items-end items-center justify-enter flex-col max-w-[1000px]  w-full">
+      <div className=" flex lg:items-center md:items-end items-center justify-enter flex-col  w-full">
         <TopDashboardNav />
         <div
           className=" w-full flex items-start justify-start
      mb-2
      md:px-16 px-12 flex-col "
         >
-          <span className=" text-xl font-bold text-secondary">All Plans</span>
+          <span className=" text-xl font-semibold text-secondary">
+            All Plans
+          </span>
           <p className=" text-sm text-gray-500">Find the perfect cover</p>
         </div>
 

@@ -1,5 +1,4 @@
 import { useState } from "react";
-import TabProps from "../TabProps";
 import TopDashboardNav from "../utils/TopDashboardNav";
 import search from "../../assets/dashboard/doc-search.svg";
 const Cover = () => {
@@ -28,18 +27,21 @@ const Cover = () => {
   ];
   return (
     <div
-      className=" flex max-w-[1200px] h-full min-h-screen flex-col 
+      className=" flex  h-full min-h-screen flex-col 
   items-center justify-start
-    "
+  w-full   
+  "
     >
-      <div className=" flex lg:items-center md:items-end items-center justify-enter flex-col max-w-[1000px]  w-full">
+      <div className=" flex lg:items-center md:items-end items-center justify-enter flex-col   w-full">
         <TopDashboardNav />
         <div
           className=" w-full flex items-center justify-start
        mb-2
        md:px-16 px-12 "
         >
-          <span className=" text-xl font-bold text-secondary">My Cover</span>
+          <span className=" text-xl font-semibold text-secondary">
+            My Cover
+          </span>
         </div>
 
         <div className="  flex items-center justify-start   ">
@@ -47,7 +49,7 @@ const Cover = () => {
             <div
               onClick={() => setSelectTab(index)}
               key={index}
-              className={`text-base md:px-10 lg:px-16  py-2 border-l-0 cursor-pointer ${
+              className={`text-base md:px-8 px-5 lg:px-16  py-2 border-l-0 cursor-pointer ${
                 selectTab === index
                   ? " border-b-4 border-primary"
                   : " border-b-4 border-b-gray-200 "

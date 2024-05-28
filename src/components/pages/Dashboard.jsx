@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import Navbar from "../Navbar";
 import Header from "../Header";
 
@@ -30,7 +30,7 @@ const Dashboard = () => {
       >
         <Navbar />
       </div>
-      <div className=" flex h-full min-h-screen flex-col mt-32 w-auto">
+      <div className=" flex h-full min-h-screen flex-col mt-28 w-auto">
         <Header />
       </div>
     </div>

@@ -35,11 +35,11 @@ const Claim = () => {
 
   return (
     <div
-      className=" flex max-w-[1200px] h-full min-h-screen flex-col 
+      className=" flex  h-full min-h-screen flex-col 
   items-center justify-start
     "
     >
-      <div className=" flex lg:items-center md:items-end items-center justify-enter flex-col max-w-[1000px]  w-full">
+      <div className=" flex lg:items-center md:items-end items-center justify-enter flex-col  w-full">
         <TopDashboardNav />
         <div
           className=" w-full flex items-center justify-start
