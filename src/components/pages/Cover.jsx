@@ -27,51 +27,57 @@ const Cover = () => {
     },
   ];
   return (
-    <div className=" flex max-w-[1200px] h-full min-h-screen flex-col w-full">
-      <TopDashboardNav />
-      <div
-        className=" w-full flex items-center justify-start
-       mt-5
-       px-24 "
-      >
-        <span className=" text-xl font-medium text-secondary">My Cover</span>
-      </div>
+    <div
+      className=" flex max-w-[1200px] h-full min-h-screen flex-col 
+  items-center justify-start
+    "
+    >
+      <div className=" flex lg:items-center md:items-end items-center justify-enter flex-col max-w-[1000px]  w-full">
+        <TopDashboardNav />
+        <div
+          className=" w-full flex items-center justify-start
+       mb-2
+       md:px-16 px-12 "
+        >
+          <span className=" text-xl font-bold text-secondary">My Cover</span>
+        </div>
 
-      <div className=" flex items-center justify-center ">
-        {tabs.map((item, index) => (
-          <div
-            onClick={() => setSelectTab(index)}
-            key={index}
-            className={`text-base  md:px-16 py-2 border-l-0 cursor-pointer ${
-              selectTab === index
-                ? " border-b-4 border-primary"
-                : " border-b-4 border-b-gray-200"
-            } `}
-          >
-            <p
-              className={`text-base  px-5 py-2  ${
+        <div className="  flex items-center justify-start   ">
+          {tabs.map((item, index) => (
+            <div
+              onClick={() => setSelectTab(index)}
+              key={index}
+              className={`text-base md:px-10 lg:px-16  py-2 border-l-0 cursor-pointer ${
                 selectTab === index
-                  ? "font-bold  text-primary "
-                  : "font-medium text-gray-500 "
+                  ? " border-b-4 border-primary"
+                  : " border-b-4 border-b-gray-200 "
               } `}
             >
-              {item.label}
-            </p>
-          </div>
-        ))}
-      </div>
-      <div className="flex items-center text-center break-words justify-center flex-col mt-16">
-        <img src={search} alt="" />
-        <h2 className="text-base font-medium text-gray-500">
-          {tabs[selectTab].title}
-        </h2>
-        <p className="text-sm font-medium text-gray-400">
-          {tabs[selectTab].detail}
-        </p>
-      </div>
-      {/* <div className=" w-full">
+              <p
+                className={`text-base  px-5 py-2  ${
+                  selectTab === index
+                    ? "font-bold  text-primary "
+                    : " text-gray-500 font-normal "
+                } `}
+              >
+                {item.label}
+              </p>
+            </div>
+          ))}
+        </div>
+        <div className="flex items-center text-center break-words justify-center flex-col mt-16">
+          <img src={search} alt="" />
+          <h2 className="text-base font-medium text-gray-500">
+            {tabs[selectTab].title}
+          </h2>
+          <p className="text-sm font-medium text-gray-400">
+            {tabs[selectTab].detail}
+          </p>
+        </div>
+        {/* <div className=" w-full">
         <TabProps tabs={tabs} />
       </div> */}
+      </div>
     </div>
   );
 };
