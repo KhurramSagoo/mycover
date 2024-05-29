@@ -80,18 +80,21 @@ const middlePlans = [
     detail:
       "Getting auto Insurance shouldn’t waste time. You receive your insurance certificate in minutes.",
     image: <QuickreplyIcon />,
+    bg: "#fce7f6",
   },
   {
     title: "Instant claims",
     detail:
       "Claims settlement is digital, seamless and instant without any additional payment from you.",
     image: <EventIcon />,
+    bg: "#ffead5",
   },
   {
     title: "Complete Protection",
     detail:
       "Get the maximum coverage for any damages to your vehicles, without strain on your budget.",
     image: <PaidIcon />,
+    bg: "#fce7f6",
   },
 ];
 

@@ -4,7 +4,7 @@ import BusinessMiddlePart from "../Business/BusinessMiddlePart";
 import BusinessOneStopTab from "../Business/BusinessOneStopTab";
 import BusinessFooter from "../Business/BusinessFooter";
 import BusinessAccrodion from "../Business/BusinessAccrodion";
-import BusinessHero from "../Business/BusinessHero";
+// import BusinessHero from "../Business/BusinessHero";
 import BusinessMultiAnimation from "../Business/BusinessMultiAnimation";
 import MonthlyComprehensiveCollage from "./MonthlyComprehensiveCollage";
 import MakeClaim from "./MakeClaim";
@@ -18,6 +18,7 @@ import middlePlans, {
   basicData,
 } from "./MonthlyComprehensiveDB";
 import { useEffect } from "react";
+import MonthlyHero from "./MonthlyHero";
 
 const MonthlyComprehensive = () => {
   const tabTitle = () => {
@@ -37,7 +38,7 @@ const MonthlyComprehensive = () => {
       {/* hero section */}
       {heroData.map((item, index) => (
         <div key={index}>
-          <BusinessHero item={item} index={index} />
+          <MonthlyHero item={item} index={index} />
         </div>
       ))}
 

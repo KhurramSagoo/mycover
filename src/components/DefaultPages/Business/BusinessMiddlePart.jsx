@@ -4,8 +4,9 @@ import { IoNewspaperOutline } from "react-icons/io5";
 import { Ri24HoursFill } from "react-icons/ri";
 import CustomSVG from "./customSvg/CustomSVG";
 import { motion } from "framer-motion";
+
 const BusinessMiddlePart = ({ item, head, detail }) => {
-  // console.log(item);
+  console.log(item);
   return (
     <div className=" flex items-center justify-center flex-col flex-wrap px-5 w-full lg:h-[500px] md:h-[600px] h-auto md:flex-row my-16 py-10">
       <div className=" flex items-center justify-center flex-col p-5">
@@ -22,18 +23,24 @@ const BusinessMiddlePart = ({ item, head, detail }) => {
             key={index}
             className=" w-72 flex items-center justify-center flex-col flex-wrap p-5"
           >
-            <motion.span
-              className="py-2 text-primary"
-              animate={{ color: ["#f00", "#00f", "#f00"] }}
-              transition={{
-                duration: 2,
-                repeat: Infinity,
-                ease: "easeInOut",
-                delay: 1,
-              }}
+            <div
+              className={` rounded-full w-12 h-12 flex items-center justify-center  `}
+              style={{ backgroundColor: item.bg }}
             >
-              {item.image}
-            </motion.span>
+              <motion.span
+                className="py-2 text-primary"
+                animate={{ color: ["#f00", "#00f", "#f00"] }}
+                transition={{
+                  duration: 2,
+                  repeat: Infinity,
+                  ease: "easeInOut",
+                  delay: index * 1,
+                  repeatDelay: 1,
+                }}
+              >
+                {item.image}
+              </motion.span>
+            </div>
             <p className=" py-2 text-2xl sm:text-xl  text-[#094063] font-bold text-center">
               {item.title}
             </p>

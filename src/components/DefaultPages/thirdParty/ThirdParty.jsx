@@ -18,6 +18,7 @@ import middlePlans, {
   basicData,
 } from "./ThirdPartyDB";
 import { useEffect } from "react";
+import ThirdPartyHero from "./ThirdPartyHero";
 
 const ThirdParty = () => {
   const tabTitle = () => {
@@ -36,7 +37,7 @@ const ThirdParty = () => {
       {/* hero section */}
       {heroData.map((item, index) => (
         <div key={index}>
-          <BusinessHero item={item} index={index} />
+          <ThirdPartyHero item={item} index={index} />
         </div>
       ))}
 

@@ -21,7 +21,7 @@ const Individual = () => {
       <div className=" fixed top-0 right-0 left-0">
         <TopNav />
       </div>
-      <div className="  sm:mt-40 mt-28">
+      <div className=" md:mt-20 sm:mt-10 mt-5">
         <HeroSection />
       </div>
       <IndividualCarousel />

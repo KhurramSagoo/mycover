@@ -28,6 +28,9 @@ module.exports = {
       // },
     },
     extend: {
+      backgroundImage: {
+        "gradient-individual": "linear-gradient(to right, #6dcde2, #5cc5be)",
+      },
       colors: {
         loginBg: "#3baa90",
         accord: "#e6f4f2",

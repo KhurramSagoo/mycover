@@ -1,22 +1,16 @@
 import { useState, useEffect, useRef } from "react";
 import { motion } from "framer-motion";
-import gadgets from "../../../assets/business/gadgets-circle.svg";
-import deliver from "../../../assets/business/deliver-circle-1.svg";
-import auto from "../../../assets/business/auto-circle-1.svg";
-import health from "../../../assets/business/health-circle-1.svg";
-import office from "../../../assets/business/office-content-1.svg";
-import travel from "../../../assets/business/travel-circle-1.svg";
-import home from "../../../assets/business/home-centered.png";
 import hero from "../../../assets/business/home/hero-ping-blob.svg";
+import comprehensiveAuto from "./assets/comprehensive-auto.svg";
+import image1 from "./assets/comprehensive-collision-and-damages.png";
+import image2 from "./assets/tooth-ache.png";
+import image3 from "./assets/comprehensive-crash.png";
 
-const BusinessHero = ({ item }) => {
+const MonthlyHero = ({ item }) => {
   const images = [
-    { src: deliver, angle: 30, hover: "Logistics Cover" },
-    { src: travel, angle: 90, hover: "Travel Cover" },
-    { src: office, angle: 150, hover: "Office Cover" },
-    { src: auto, angle: 210, hover: "Auto Cover" },
-    { src: gadgets, angle: 270, hover: "Gadget Cover" },
-    { src: health, angle: 330, hover: "Health Cover" },
+    { src: image1, angle: 30, hover: "Logistics Cover" },
+    { src: image2, angle: 150, hover: "Travel Cover" },
+    { src: image3, angle: 270, hover: "Office Cover" },
   ];
 
   const calculatePosition = (angle, radius) => {
@@ -26,8 +20,8 @@ const BusinessHero = ({ item }) => {
     return { x, y };
   };
 
-  const angles = [30, 90, 150, 210, 270, 330];
-  const [radius, setRadius] = useState(120);
+  const angles = [30, 150, 270];
+  const [radius, setRadius] = useState(360);
   const containerRef = useRef(null);
 
   useEffect(() => {
@@ -52,11 +46,11 @@ const BusinessHero = ({ item }) => {
       {/* left portion start */}
       <div className="lg:w-3/5 lg:h-[500px] flex md:items-center w-full flex-col md:justify-center py-lg-5 pt-20 items-start justify-start">
         <p className="font-extrabold text-[#094063] w-full md:text-6xl sm:text-3xl text-4xl md:mb-3 mb-0 px-5 mt-10 py-4 !leading-snug">
-          Insurance made
+          Get your business
           <span className="mx-2 bg-gradient-to-t from-yellow-400 via-orange-50 to-white">
-            easy
+            vehicles
           </span>
-          for your business
+          on the road without worry.
         </p>
 
         <p className="text-gray-600 md:px-5 px-5 leading-8 text-lg font-medium">
@@ -70,12 +64,12 @@ const BusinessHero = ({ item }) => {
 
       {/* right start */}
       <div
-        className="lg:w-2/5 lg:h-[500px] flex items-center h-auto my-5 flex-col justify-center py-lg-5 w-full px-10 sm:px-20"
+        className="lg:w-2/5 lg:min-h-[500px] flex items-center h-auto my-5 flex-col justify-center py-lg-5 w-full px-10 sm:px-20 mt-12"
         ref={containerRef}
       >
         <div className="md:w-96 md:h-96 w-52 h-52 sm:w-72 sm:h-72 border-2 rounded-full flex items-center justify-center relative">
           <div className="w-32 rounded-full flex items-center justify-center h-32 relative">
-            <img src={home} alt="Home" className="w-16 sm:w-full" />
+            <img src={comprehensiveAuto} alt="Home" className="w-16" />
           </div>
           {images.map((image, index) => {
             const { x, y } = calculatePosition(image.angle, radius);
@@ -96,15 +90,16 @@ const BusinessHero = ({ item }) => {
             alt=""
             className="w-4 absolute"
             animate={{
-              rotate: [30, 90, 150, 210, 270, 330],
+              rotate: [0, 270, 360],
               x: angles.map((angle) => calculatePosition(angle, radius).x),
               y: angles.map((angle) => calculatePosition(angle, radius).y),
               rotateZ: angles,
             }}
             transition={{
               ease: "easeInOut",
-              duration: 6,
+              duration: 3,
               repeat: Infinity,
+              repeatType: "reverse",
             }}
           />
         </div>
@@ -114,4 +109,4 @@ const BusinessHero = ({ item }) => {
   );
 };
 
-export default BusinessHero;
+export default MonthlyHero;

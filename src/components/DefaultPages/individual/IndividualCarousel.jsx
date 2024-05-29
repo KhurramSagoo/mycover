@@ -104,7 +104,7 @@ const IndividualCarousel = () => {
   ];
 
   return (
-    <div className="pt-16 px-4 my-0 h-[500px] flex items-center justify-center  flex-col md:h-screen">
+    <div className="pt-10 px-4 my-0 h-[500px] flex items-center justify-center  flex-col md:h-screen">
       <div className="w-full text-center lg:py-12 md:py-12 sm:py-8 py-4">
         <span className="text-5xl sm:text-5xl md:text-7xl lg:text-[140px]  text-secondary font-bold">
           See, It <span className="text-primary ml-4">Works!</span>
