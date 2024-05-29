@@ -46,9 +46,9 @@ const More = () => {
     },
   ];
 
-  useEffect(() => {
-    toast(getTabIndex);
-  }, [getTabIndex]);
+  // useEffect(() => {
+  //   toast(getTabIndex);
+  // }, [getTabIndex]);
 
   const tabData = [
     {
