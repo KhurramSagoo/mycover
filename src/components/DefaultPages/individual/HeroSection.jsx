@@ -7,7 +7,7 @@ const HeroSection = () => {
       {/* left portion */}
       <div className="  xl:w-3/5 mx-0 py-5 h-full">
         <p
-          className=" lg:text-6xl  md:text-5xl sm:text-3xl text-3xl  leading-tight md:font-black  md:!leading-snug
+          className=" lg:text-6xl  md:text-5xl sm:text-3xl text-2xl  leading-tight md:font-black  md:!leading-snug
                  break-words 
                 text-wrap lg:pt-12  lg:mb-6  text-secondary font-extrabold"
         >
