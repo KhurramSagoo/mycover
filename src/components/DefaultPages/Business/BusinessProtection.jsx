@@ -63,7 +63,7 @@ const BusinessProtection = () => {
   ];
 
   return (
-    <div className="w-full  lg:h-screen h-auto my-16 px-2">
+    <div className="w-full  lg:h-screen h-auto my-16 px-5">
       <div className=" flex items-center justify-center flex-col lg:mx-72 md:mx-32 ">
         <p className="text-center my-2 md:my-4 text-wrap text-primary md:text-xl text-sm">
           We are product driven
@@ -95,11 +95,11 @@ const BusinessProtection = () => {
       {/* card */}
       <div className="mt-5">
         {activeTab !== null && (
-          <div className="flex items-center justify-center flex-col sm:flex-row flex-wrap">
+          <div className="flex items-center justify-center flex-col sm:flex-row flex-wrap gap-12">
             {tabData[activeTab].cardData.map((card, cardIndex) => (
               <div
                 key={cardIndex}
-                className="shadow  flex items-start justify-start flex-col border border-gray-200 rounded md:w-[400px] w-full h-[160px] md:h-auto p-6 m-2 sm:m-5 hover:shadow-lg"
+                className="shadow  flex items-start justify-start flex-col border border-gray-200 rounded md:w-[400px] w-full h-[190px] md:h-auto px-5 py-3 sm:m-5 hover:shadow-lg "
               >
                 <div className="flex  items-center justify-center mt-3">
                   <img
