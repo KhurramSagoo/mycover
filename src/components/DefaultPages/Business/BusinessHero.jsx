@@ -60,10 +60,10 @@ const BusinessHero = ({ item }) => {
         </p>
 
         <p className="text-gray-600 md:px-5 px-5 leading-8 text-lg font-medium">
-          {item.detail}
+          {item?.detail}
         </p>
         <button className="bg-[#4fbfa3] px-6 py-3 my-5 rounded-md mx-5 flex items-start justify-start mr-auto text-white">
-          {item.btn}
+          {item?.btn}
         </button>
       </div>
       {/* left end */}
@@ -96,15 +96,16 @@ const BusinessHero = ({ item }) => {
             alt=""
             className="w-4 absolute"
             animate={{
-              rotate: [30, 90, 150, 210, 270, 330],
+              rotate: [90],
               x: angles.map((angle) => calculatePosition(angle, radius).x),
               y: angles.map((angle) => calculatePosition(angle, radius).y),
               rotateZ: angles,
             }}
             transition={{
               ease: "easeInOut",
-              duration: 6,
+              duration: 5,
               repeat: Infinity,
+              repeatType: "mirror",
             }}
           />
         </div>

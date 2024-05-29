@@ -52,7 +52,7 @@ const ThirdPartyHero = ({ item }) => {
     <div className="flex items-center min-h-screen justify-center lg:flex-row flex-col lg:mt-10 md:mt-24 lg:px-16 md:px-5 sm:px-2 px-2 lg:h-screen h-full">
       {/* left portion start */}
       <div className="lg:w-3/5 lg:h-[500px] flex md:items-center w-full flex-col md:justify-center py-lg-5 pt-20 items-start justify-start">
-        <p className="font-extrabold text-[#094063] w-full md:text-6xl sm:text-3xl text-4xl md:mb-3 mb-0 px-5 mt-10 py-4 !leading-snug">
+        <p className="font-extrabold text-[#094063] w-full md:text-6xl sm:text-3xl text-4xl md:mb-3 mb-0 px-5 mt-10 py-4 !leading-snug break-words ">
           Save on your
           <span className="mx-2 bg-gradient-to-t from-yellow-400 via-orange-50 to-white">
             vehicle
@@ -98,7 +98,7 @@ const ThirdPartyHero = ({ item }) => {
             alt=""
             className="w-4 absolute"
             animate={{
-              rotate: [0, 270, 360],
+              rotate: [90],
               x: angles.map((angle) => calculatePosition(angle, radius).x),
               y: angles.map((angle) => calculatePosition(angle, radius).y),
               rotateZ: angles,
@@ -107,7 +107,7 @@ const ThirdPartyHero = ({ item }) => {
               ease: "easeInOut",
               duration: 3,
               repeat: Infinity,
-              repeatType: "reverse",
+              repeatType: "mirror",
             }}
           />
         </div>
