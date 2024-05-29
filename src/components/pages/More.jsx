@@ -146,7 +146,7 @@ items-center justify-start mb-32 md:mb-0
             {/* account */}
             {tabDataMd.map((item, index) => (
               <div
-                className=" w-full flex items-center justify-between border-b py-2 "
+                className=" w-full flex items-center justify-between border-b py-2  cursor-pointer "
                 key={index}
               >
                 {/* left */}
@@ -239,7 +239,7 @@ items-center justify-start mb-32 md:mb-0
           </div>
 
           {/* log out button */}
-          <div className=" flex items-center justify-center gap-5 py-5 mt-2">
+          <div className=" flex items-center justify-center gap-5 py-5 mt-2 md:hidden">
             <img src={exit} alt="" className=" w-6" />
             <div className=" flex items-start justify-start flex-col">
               <p className=" text-sm font-semibold text-red-500 cursor-pointer">
