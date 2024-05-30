@@ -27,7 +27,7 @@ const DrawerSheet = ({ head, title, detail, subDetail, value }) => {
           </SheetTitle>
           <SheetDescription>
             {value === 0 && (
-              <div className=" h-screen flex items-center justify-center flex-col gap-5">
+              <div className=" mt-10 h-screen flex items-center justify-start flex-col gap-5">
                 <div className=" text-xl font-bold text-black text-center break-words">
                   {detail}
                 </div>

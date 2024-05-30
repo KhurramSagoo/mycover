@@ -104,10 +104,10 @@ const More = () => {
   return (
     <div
       className=" flex  h-full min-h-screen flex-col 
-items-center justify-start mb-32 md:mb-0
+items-center justify-start mb-32 md:mb-0 px-5 
 "
     >
-      <div className=" flex lg:items-center md:items-end items-center justify-enter flex-col  w-full">
+      <div className=" flex lg:items-center md:items-end items-center justify-enter flex-col   w-full md:px-5 px-0 ">
         <TopDashboardNav />
         <div
           className="  w-full flex items-start justify-start
@@ -127,7 +127,7 @@ items-center justify-start mb-32 md:mb-0
             <p className=" text-secondary text-base font-semibold">User name</p>
           </div>
 
-          <div className="  flex items-center justify-start w-full  lg:px-16 md:px-12 sm:px-10 px-5 bg-[#094063] text-base font-semibold text-white  rounded-lg py-3 mt-5 ">
+          <div className="  flex items-center justify-start w-full  lg:px-16 md:px-12 sm:px-10 px-5 bg-[#094063] text-base font-semibold text-white  rounded-lg py-3 mt-5 my-5 ">
             {blueCardHeader.map((blue, blueIndex) => (
               <div
                 className={`w-1/3 flex items-center justify-center flex-col gap-6 p-2 ${
@@ -183,7 +183,7 @@ items-center justify-start mb-32 md:mb-0
                 key={tabIndex}
               >
                 <div
-                  className={`  font-medium text-sm  py-2 px-5 rounded-md cursor-pointer ${
+                  className={`  font-medium text-sm  py-2 sm:px-5 px-1 rounded-md cursor-pointer ${
                     tabIndex === getTabIndex
                       ? "bg-white text-gray-600"
                       : "text-gray-500  bg-gray-50"
