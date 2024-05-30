@@ -1,5 +1,6 @@
 import bell from "../assets//bell.svg";
 import { useNavigate } from "react-router-dom";
+import DrawerSheet from "./utils/DrawerSheet";
 
 const Navbar = () => {
   const navigate = useNavigate();
@@ -22,8 +23,14 @@ const Navbar = () => {
           </p>
         </div>
       </div>
-      <div className=" rounded-full border cursor-pointer">
-        <img loading="lazy" src={bell} alt="" />
+      <div className=" cursor-pointer">
+        <DrawerSheet
+          head={<img loading="lazy" src={bell} alt="" />}
+          title={"To Dos"}
+          detail={"No Pending To-Dos"}
+          value={0}
+          subDetail={"To-dos will appear here when you have any"}
+        />
       </div>
     </div>
   );
