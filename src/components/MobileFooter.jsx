@@ -72,7 +72,7 @@ const MobileFooter = () => {
   };
   return (
     <div
-      className=" fixed bottom-0 left-0 right-0  bg-white flex items-center justify-between  h-20
+      className=" fixed bottom-0 left-0 right-0  bg-white flex items-center justify-between   w-full
     sm:hidden
     "
     >
@@ -84,31 +84,32 @@ const MobileFooter = () => {
       </div> */}
       {myArray.map((item, index) => (
         <div
-          className={` flex items-center flex-col hover:bg-[#f4f3ff] justify-center py-4 my-2 hover:bg-menuIcon cursor-pointer w-full hover:border-t-4 hover:border-primary ${
+          className={` flex items-center flex-col  hover:bg-[#f4f3ff] justify-center px-0 h-24 hover:bg-menuIcon gap-3 cursor-pointer w-full  ${
             activeItem === index ? "bg-menuIcon " : ""
           }`}
           key={index}
           onClick={() => handleClick(index)}
         >
-          {activeItem === index ? (
-            <img
-              loading="lazy"
-              src={item.imageActive}
-              alt={item.name}
-              className=" mx-4"
-            />
-          ) : (
-            <img
-              loading="lazy"
-              src={item.image}
-              alt={item.name}
-              className=" mx-4"
-            />
-          )}
+          <div className="">
+            {activeItem === index ? (
+              <img
+                loading="lazy"
+                src={item.imageActive}
+                alt={item.name}
+                className=" mx-4"
+              />
+            ) : (
+              <img
+                loading="lazy"
+                src={item.image}
+                alt={item.name}
+                className=" mx-4"
+              />
+            )}
+          </div>
 
           <span
             className={`
-          
           ${activeItem === index ? " font-medium text-primary " : ""}
           `}
           >
