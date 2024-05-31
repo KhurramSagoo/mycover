@@ -73,7 +73,7 @@ const MobileFooter = () => {
   return (
     <div
       className=" fixed bottom-0 left-0 right-0  bg-white flex items-center justify-between   w-full
-    sm:hidden
+    md:hidden
     "
     >
       {/* <div
