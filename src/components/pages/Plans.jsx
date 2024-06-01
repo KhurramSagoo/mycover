@@ -89,7 +89,12 @@ const Plans = () => {
   ];
 
   const getTheCard = (tabIndex, cardIndex) => {
-    setSelectTab(tabIndex);
+    if (tabIndex === 0) {
+      setSelectTab(tabIndex);
+    } else {
+      setSelectTab(0);
+    }
+
     setSelectPlan(cardIndex);
     if (cardIndex !== null) {
       const selectedTab = tabs[tabIndex];
@@ -99,10 +104,20 @@ const Plans = () => {
         card: selectedCard,
       };
       setGetTheWholeData(selectedData);
-      toast(
-        `Selected Plan: ${selectedCard.title} from Tab: ${selectedTab.head}`
-      );
+      // toast(
+      //   `Selected Plan: ${selectedCard.title} from Tab: ${selectedTab.head}`
+      // );
     }
+  };
+
+  // Updated getTheCard function
+  const handleTabChange = (tabIndex) => {
+    setSelectTab(tabIndex);
+    setSelectPlan(null);
+    setGetTheWholeData({
+      head: tabs[tabIndex].head,
+      title: "",
+    });
   };
 
   return (
@@ -119,7 +134,7 @@ const Plans = () => {
         <div className="flex items-center justify-start">
           {tabs.map((tab, tabIndex) => (
             <div
-              onClick={() => setSelectTab(tabIndex)}
+              onClick={() => handleTabChange(tabIndex)}
               key={tabIndex}
               className={`text-base px-0 sm:px-5 md:px-10 lg:px-16 py-2 border-l-0 cursor-pointer ${
                 selectTab === tabIndex
