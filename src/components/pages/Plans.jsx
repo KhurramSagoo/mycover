@@ -14,6 +14,7 @@ import {
   SheetTitle,
   SheetTrigger,
 } from "../ui/sheet";
+import DrawerComponent from "./plans/health/DrawerComponent";
 
 const CompareSvg = () => (
   <svg
@@ -51,11 +52,13 @@ const Plans = () => {
           title: "Flexi Care",
           image: heart,
           bg: "#fce7f6",
+          drawerComponent: <DrawerComponent />,
         },
         {
           title: "Flexi Care Mini",
           image: heart,
           bg: "#ebe9fe",
+          drawerComponent: <DrawerComponent />,
         },
       ],
     },
@@ -107,11 +110,13 @@ const Plans = () => {
     if (cardIndex !== null) {
       const selectedTab = tabs[tabIndex];
       const selectedCard = selectedTab.cards[cardIndex];
+      // console.log(selectedCard);
       const selectedData = {
         head: selectedTab.head,
-        card: selectedCard,
+        title: selectedCard.title,
       };
       setGetTheWholeData(selectedData);
+      console.log(getTheWholeData);
       // toast.success(
       //   `Selected Plan: ${selectedCard.title} from Tab: ${selectedTab.head}`
       // );
@@ -124,7 +129,7 @@ const Plans = () => {
     setSelectPlan(null);
     setGetTheWholeData({
       head: tabs[tabIndex].head,
-      title: "",
+      title: tabs[tabIndex].cards[0],
     });
   };
 
@@ -164,33 +169,87 @@ const Plans = () => {
         </div>
         <div className="flex items-center text-center break-words justify-center mt-16 px-16 w-full gap-10 flex-wrap">
           {tabs[selectTab].cards.map((card, cardIndex) => (
-            <div
-              key={cardIndex}
-              className={`flex items-center justify-between flex-col w-48 min-h-40 h-auto rounded-md border p-3 cursor-pointer ${
-                selectPlan === cardIndex ? " bg-primary" : ""
-              }`}
-              onClick={() => getTheCard(selectTab, cardIndex)}
-            >
-              <div
-                className="flex items-end rounded-md justify-center w-full"
-                style={{ backgroundColor: card.bg }}
-              >
-                <img
-                  src={card.image}
-                  alt={card.title}
-                  className="w-20 h-20 object-contain pt-5"
-                />
+            <Sheet key={cardIndex} className="">
+              <SheetTrigger>
+                <div
+                  key={cardIndex}
+                  className={`flex items-center justify-between flex-col w-48 min-h-40 h-auto rounded-md border p-3 cursor-pointer ${
+                    selectPlan === cardIndex ? " bg-primary" : ""
+                  }`}
+                  onClick={() => getTheCard(selectTab, cardIndex)}
+                >
+                  <div
+                    className="flex items-end rounded-md justify-center w-full"
+                    style={{ backgroundColor: card.bg }}
+                  >
+                    <img
+                      src={card.image}
+                      alt={card.title}
+                      className="w-20 h-20 object-contain pt-5"
+                    />
+                  </div>
+                  <p
+                    className={`text-sm font-medium ${
+                      selectPlan === cardIndex
+                        ? " text-white"
+                        : "text-secondary"
+                    }  mt-2 `}
+                  >
+                    {card.title}
+                  </p>
+                </div>
+              </SheetTrigger>
+
+              {/* <SheetContent>
+                <SheetHeader>
+                  <SheetTitle>{getTheWholeData.head}</SheetTitle>
+                  <SheetDescription>
+                    
+                    {getTheWholeData.title}</SheetDescription>
+                </SheetHeader>
+              </SheetContent> */}
+
+              <SheetContent className="  w-72 border-b-2 sm:w-full h-auto">
+                <SheetHeader>
+                  <SheetTitle className=" w-full rounded-md">
+                    <div className=" flex items-center  justify-center text-secondary text-xl font-bold ">
+                      <p>{getTheWholeData.head}</p>
+                      {/* <p>({value})</p> */}
+                    </div>
+                  </SheetTitle>
+                  <SheetDescription>
+                    {/* {value === 0 && (
+              <div className=" mt-10 h-screen flex items-center justify-start flex-col gap-5">
+                <div className=" text-xl font-bold text-black text-center break-words">
+                  {detail}
+                </div>
+                <div className=" text-base font text-gray-500 text-center break-words">
+                  {subDetail}
+                </div>
+                <div className=" text-xl font-bold text-center break-words bg-[#eff8ff] rounded-full w-36 h-36 ">
+                  <img src={search} alt="" />
+                </div>
               </div>
-              <p
-                className={`text-sm font-medium ${
-                  selectPlan === cardIndex ? " text-white" : "text-secondary"
-                }  mt-2 `}
-              >
-                {card.title}
-              </p>
-            </div>
+            )} */}
+                    <div
+                      className=" flex items-start  justify-start  w-full 
+               text-secondary text-xl font-semibold my-5 flex-col"
+                    >
+                      <p>{getTheWholeData.title}</p>
+                      <p className=" text-base font-normal">
+                        Get quality cover
+                      </p>
+                    </div>
+                    {tabs[selectTab]?.cards[selectPlan]?.drawerComponent && (
+                      <DrawerComponent />
+                    )}
+                  </SheetDescription>
+                </SheetHeader>
+              </SheetContent>
+            </Sheet>
           ))}
         </div>
+
         {/* compare button */}
         <div className="flex items-center text-center break-words justify-center mt-16 px-16 w-full gap-10 flex-wrap cursor-pointer">
           {tabs[selectTab].btn && (
