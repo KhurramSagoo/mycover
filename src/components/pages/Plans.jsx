@@ -6,6 +6,14 @@ import aeroplane from "../../assets/aeroplane.svg";
 import TopDashboardNav from "../utils/TopDashboardNav";
 import { toast } from "react-toastify";
 import PlansCardsDrawerSheet from "../utils/PlansCardsDrawerSheet";
+import {
+  Sheet,
+  SheetContent,
+  SheetDescription,
+  SheetHeader,
+  SheetTitle,
+  SheetTrigger,
+} from "../ui/sheet";
 
 const CompareSvg = () => (
   <svg
@@ -89,7 +97,7 @@ const Plans = () => {
   ];
 
   const getTheCard = (tabIndex, cardIndex) => {
-    if (tabIndex === 0) {
+    if (tabIndex !== 0) {
       setSelectTab(tabIndex);
     } else {
       setSelectTab(0);
@@ -104,7 +112,7 @@ const Plans = () => {
         card: selectedCard,
       };
       setGetTheWholeData(selectedData);
-      // toast(
+      // toast.success(
       //   `Selected Plan: ${selectedCard.title} from Tab: ${selectedTab.head}`
       // );
     }
@@ -158,7 +166,7 @@ const Plans = () => {
           {tabs[selectTab].cards.map((card, cardIndex) => (
             <div
               key={cardIndex}
-              className={`flex items-center justify-between flex-col w-48 min-h-32 h-auto rounded-md border p-3 cursor-pointer ${
+              className={`flex items-center justify-between flex-col w-48 min-h-40 h-auto rounded-md border p-3 cursor-pointer ${
                 selectPlan === cardIndex ? " bg-primary" : ""
               }`}
               onClick={() => getTheCard(selectTab, cardIndex)}
