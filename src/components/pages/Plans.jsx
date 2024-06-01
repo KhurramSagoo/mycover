@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import TabProps from "../TabProps";
 import heart from "../../assets/heart.svg";
 import auto from "../../assets/auto.svg";
@@ -40,12 +40,12 @@ const Plans = () => {
       btn: "Compare products",
       cards: [
         {
-          name: "Flexi Care",
+          title: "Flexi Care",
           image: heart,
           bg: "#fce7f6",
         },
         {
-          name: "Flexi Care Mini",
+          title: "Flexi Care Mini",
           image: heart,
           bg: "#ebe9fe",
         },
@@ -55,22 +55,22 @@ const Plans = () => {
       head: "Auto",
       cards: [
         {
-          name: "Comprehensive Cover",
+          title: "Comprehensive Cover",
           image: auto,
           bg: "#ebe9fe",
         },
         {
-          name: "Monthly Comprehensive Cover",
+          title: "Monthly Comprehensive Cover",
           image: auto,
           bg: "#ffead5",
         },
         {
-          name: "Third Party",
+          title: "Third Party",
           image: auto,
           bg: "#d1fadf",
         },
         {
-          name: "Mini Comprehensive",
+          title: "Mini Comprehensive",
           image: auto,
           bg: "#d1e9ff",
         },
@@ -80,7 +80,7 @@ const Plans = () => {
       head: "Travel",
       cards: [
         {
-          name: "Travel Insurance",
+          title: "Travel Insurance",
           image: aeroplane,
           bg: "#ffead5",
         },
@@ -91,20 +91,19 @@ const Plans = () => {
   const getTheCard = (tabIndex, cardIndex) => {
     setSelectTab(tabIndex);
     setSelectPlan(cardIndex);
-  };
-
-  useEffect(() => {
-    if (selectPlan !== null) {
-      const selectedTab = tabs[selectTab];
-      const selectedCard = selectedTab.cards[selectPlan];
+    if (cardIndex !== null) {
+      const selectedTab = tabs[tabIndex];
+      const selectedCard = selectedTab.cards[cardIndex];
       const selectedData = {
         head: selectedTab.head,
         card: selectedCard,
       };
       setGetTheWholeData(selectedData);
-      toast(`Selected Plan: ${selectedCard.name} under ${selectedTab.head}`);
+      toast(
+        `Selected Plan: ${selectedCard.title} from Tab: ${selectedTab.head}`
+      );
     }
-  }, [selectPlan, selectTab]);
+  };
 
   return (
     <div className="flex h-full min-h-screen flex-col items-center justify-start mb-32 md:mb-0">
@@ -155,12 +154,16 @@ const Plans = () => {
               >
                 <img
                   src={card.image}
-                  alt={card.name}
+                  alt={card.title}
                   className="w-20 h-20 object-contain pt-5"
                 />
               </div>
-              <p className="text-sm font-medium text-secondary mt-2">
-                {card.name}
+              <p
+                className={`text-sm font-medium ${
+                  selectPlan === cardIndex ? " text-white" : "text-secondary"
+                }  mt-2 `}
+              >
+                {card.title}
               </p>
             </div>
           ))}
