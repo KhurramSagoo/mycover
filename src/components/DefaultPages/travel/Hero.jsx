@@ -1,12 +1,12 @@
 import { useState, useEffect, useRef } from "react";
 import { motion } from "framer-motion";
 import hero from "../../../assets/business/home/hero-ping-blob.svg";
-import comprehensiveAuto from "./assets/comprehensive-auto.svg";
+import comprehensiveAuto from "./assets/travel-big.svg";
 import image1 from "./assets/comprehensive-collision-and-damages.png";
 import image2 from "./assets/tooth-ache.png";
 import image3 from "./assets/comprehensive-crash.png";
 
-const MonthlyHero = ({ item }) => {
+const Hero = ({ item }) => {
   const images = [
     { src: image1, angle: 30, hover: "Logistics Cover" },
     { src: image2, angle: 150, hover: "Travel Cover" },
@@ -46,11 +46,11 @@ const MonthlyHero = ({ item }) => {
       {/* left portion start */}
       <div className="lg:w-3/5 lg:h-[500px] flex md:items-center w-full flex-col md:justify-center py-lg-5 pt-20 items-start justify-start">
         <p className="font-extrabold text-[#094063] w-full md:text-6xl sm:text-3xl text-2xl md:mb-3 mb-0 px-5 mt-10 py-4 !leading-snug break-words">
-          Get your business
+          Take the right
           <span className="mx-2 bg-gradient-to-t from-yellow-400 via-orange-50 to-white">
-            vehicles
+            cover
           </span>
-          on the road without worry.
+          with you anywhere you go.
         </p>
 
         <p className="text-gray-600 md:px-5 px-5 leading-8 text-lg font-medium">
@@ -69,7 +69,7 @@ const MonthlyHero = ({ item }) => {
       >
         <div className="md:w-96 md:h-96 w-52 h-52 sm:w-72 sm:h-72 border-2 rounded-full flex items-center justify-center relative">
           <div className="w-32 rounded-full flex items-center justify-center h-32 relative shadow-md">
-            <img src={comprehensiveAuto} alt="Home" className="w-16" />
+            <img src={comprehensiveAuto} alt="Home" className="md:w-12 w-8" />
           </div>
           {images.map((image, index) => {
             const { x, y } = calculatePosition(image.angle, radius);
@@ -109,4 +109,4 @@ const MonthlyHero = ({ item }) => {
   );
 };
 
-export default MonthlyHero;
+export default Hero;

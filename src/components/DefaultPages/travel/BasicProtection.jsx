@@ -3,24 +3,23 @@ import { motion } from "framer-motion";
 const BasicProtection = ({ item }) => {
   const SlideData = [
     {
-      title: "Bodily Injuries",
-      detail:
-        "We also compensate for damages to riders and drivers involved to keep business running smoothly.",
+      title: "Compensation for delayed trips",
+      detail: "You get protection for every ‘what-ifs’ and unplanned event.",
     },
     {
-      title: "Vehicle damages",
+      title: "Medical evacuation",
       detail:
-        "Our policies save face and keep you worry-free when accidental damages to other vehicles or their riders occur.",
+        "Our unique plan ensures swift repatriation by experts, from anywhere.",
     },
     {
-      title: "Theft",
+      title: "Compensation for delayed trips",
       detail:
         "We also bear the financial costs of your vehicles if they get stolen. Superfast.",
     },
     {
-      title: "Third-party wahala",
+      title: "Emergency medical expenses abroad",
       detail:
-        "Our policies save face and keep you worry-free when accidental damages to other vehicles or their riders occur.",
+        "Your team gets complete coverage for emergency healthcare care from anywhere.",
     },
   ];
 
@@ -39,8 +38,8 @@ const BasicProtection = ({ item }) => {
           {item.top}
         </p>
         <p
-          className="  font-extrabold text-[#094063] w-full lg:text-6xl
-          sm:text-3xl text-2xl md:mb-3 mb-0 px-5 mt-10 py-4"
+          className="  font-extrabold text-[#094063] w-full  lg:text-6xl
+          sm:text-3xl text-2xl md:mb-3 mb-0 px-5 md:mt-10 mt-0 py-4"
         >
           {item.head}
           {/* <span className="bg-gradient-to-t  from-yellow-400 from-50% via-10%   to-white to-60%">
@@ -48,7 +47,7 @@ const BasicProtection = ({ item }) => {
           </span> */}
           {""}
         </p>
-        <p className=" text-gray-600  md:px-5 px-5 leading-8 text-lg font-medium ">
+        <p className=" text-gray-600  md:px-5 px-5 leading-8 md:text-lg text-base font-medium ">
           {item.detail}
         </p>
         <button className=" bg-[#4fbfa3] px-6 py-3 my-5 rounded-md mx-5 flex items-start justify-start mr-auto text-white">
@@ -88,6 +87,10 @@ const BasicProtection = ({ item }) => {
               );
             })}
           </motion.div>
+        </div>
+
+        <div className=" flex items-center justify-center text-sm text-primary font-bold mt-10">
+          <p className=" cursor-pointer">learn more</p>
         </div>
       </div>
     </div>

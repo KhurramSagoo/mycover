@@ -116,7 +116,7 @@ const BusinessBoardingNext = () => {
 
             </div> */}
 
-      <div div className="  flex items-center justify-center mt-6 ">
+      <div className="  flex items-center justify-center mt-6 ">
         <div className="border rounded-lg bg-[#f6fef9] py-6 px-12  max-w-[551px] w-full ">
           {/* card data */}
           <div className=" flex items-start justify-start flex-col">

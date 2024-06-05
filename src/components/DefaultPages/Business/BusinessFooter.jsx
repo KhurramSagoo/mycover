@@ -94,7 +94,10 @@ const BusinessFooter = () => {
             <a className=" py-2 mb-4 text-gray-500  cursor-pointer text-sm">
               Gadget
             </a>
-            <a className=" py-2 mb-4 text-gray-500 cursor-pointer text-sm">
+            <a
+              className=" py-2 mb-4 text-gray-500 cursor-pointer text-sm  hover:text-gray-100"
+              onClick={() => navigate("/travel")}
+            >
               Travel
             </a>
           </div>

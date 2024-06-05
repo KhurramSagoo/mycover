@@ -51,14 +51,14 @@ const BusinessMultiAnimation = () => {
           <div className="flex items-center justify-center overflow-hidden flex-col  w-full">
             <motion.div
               className="flex"
-              initial={{ x: "-25%" }}
+              initial={{ x: "-30%" }}
               animate={{ x: "0%" }}
-              exit={{ x: "25%" }}
+              exit={{ x: "30%" }}
               transition={{
                 x: {
                   repeat: Infinity,
-                  repeatType: "reverse",
-                  duration: 5,
+                  repeatType: "mirror",
+                  duration: 4,
                   ease: "linear",
                 },
               }}
@@ -81,7 +81,7 @@ const BusinessMultiAnimation = () => {
                 x: {
                   repeat: Infinity,
                   repeatType: "reverse",
-                  duration: 3,
+                  duration: 2,
                   ease: "linear",
                 },
               }}
@@ -104,7 +104,7 @@ const BusinessMultiAnimation = () => {
                 x: {
                   repeat: Infinity,
                   repeatType: "reverse",
-                  duration: 4,
+                  duration: 6,
                   ease: "linear",
                 },
               }}
@@ -127,8 +127,8 @@ const BusinessMultiAnimation = () => {
             Can't find what you're looking for?
           </p>
           <p className="lg:mb-12 mb-6">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet,
-            necessitatibus et. Molestias.
+            We are partners with trusted and leading insurance companies to
+            create unique plans that cannot be found anywhere.
           </p>
           <button className="bg-primary text-white py-3 px-6 w-[150px] rounded-md">
             Let's talk

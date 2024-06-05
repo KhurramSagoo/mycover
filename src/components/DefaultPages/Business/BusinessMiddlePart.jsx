@@ -1,15 +1,16 @@
-import { icons } from "lucide-react";
-import React from "react";
 import { IoNewspaperOutline } from "react-icons/io5";
 import { Ri24HoursFill } from "react-icons/ri";
 import CustomSVG from "./customSvg/CustomSVG";
 import { motion } from "framer-motion";
 
-const BusinessMiddlePart = ({ item, head, detail }) => {
-  console.log(item);
+const BusinessMiddlePart = ({ item, head, detail, top }) => {
+  // console.log(item);
   return (
-    <div className=" flex items-center justify-center flex-col flex-wrap px-5 w-full lg:h-[500px] md:h-[600px] h-auto md:flex-row my-16 py-10">
-      <div className=" flex items-center justify-center flex-col p-5">
+    <div className=" flex items-center justify-center flex-col flex-wrap px-5 w-full xl:h=[500px] lg:h-[550px] md:h-[700px] h-full md:flex-row my-16 py-10">
+      <div className=" flex items-center justify-center flex-col p-5 break-words ">
+        <p className=" text-base font-medium text-primary  py-5">
+          {top && top}
+        </p>
         <p className=" text-xl sm:text-2xl md:text-4xl lg:text-5xl  text-[#094063] font-extrabold text-wrap text-center ">
           {head}
         </p>
@@ -21,7 +22,7 @@ const BusinessMiddlePart = ({ item, head, detail }) => {
         {item.map((item, index) => (
           <div
             key={index}
-            className=" w-72 flex items-center justify-center flex-col flex-wrap p-5"
+            className=" sm:w-96 break-words flex items-center justify-center flex-col flex-wrap px-3 md:px-5 py-5"
           >
             <div
               className={` rounded-full w-12 h-12 flex items-center justify-center  `}
