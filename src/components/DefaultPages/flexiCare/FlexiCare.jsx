@@ -19,6 +19,7 @@ import Hero from "./Hero";
 import FlexiBusinessNeed from "./FlexiBusinessNeed";
 import SmartBusinessTabs from "../Business/SmartBusinessTabs";
 import FlexiCareEveryThing from "./FlexiCareEverything";
+import FlexiCareAvailableHospitals from "./FlexiCareAvailableHospitals";
 
 const MonthlyComprehensive = () => {
   const tabTitle = () => {
@@ -62,6 +63,9 @@ const MonthlyComprehensive = () => {
 
       {/* flexicare everything */}
       <FlexiCareEveryThing />
+
+      {/* available hospitals */}
+      <FlexiCareAvailableHospitals />
 
       {/* flexi business needs */}
       <FlexiBusinessNeed
