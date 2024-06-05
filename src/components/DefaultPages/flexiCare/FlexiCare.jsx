@@ -18,6 +18,7 @@ import { useEffect } from "react";
 import Hero from "./Hero";
 import FlexiBusinessNeed from "./FlexiBusinessNeed";
 import SmartBusinessTabs from "../Business/SmartBusinessTabs";
+import FlexiCareEveryThing from "./FlexiCareEverything";
 
 const MonthlyComprehensive = () => {
   const tabTitle = () => {
@@ -58,6 +59,10 @@ const MonthlyComprehensive = () => {
         </div>
       ))}
       <br />
+
+      {/* flexicare everything */}
+      <FlexiCareEveryThing />
+
       {/* flexi business needs */}
       <FlexiBusinessNeed
         tabData={tabsBusinessSmartData}
