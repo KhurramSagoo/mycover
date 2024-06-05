@@ -76,8 +76,15 @@ const BusinessFooter = () => {
             <a className=" py-2 mb-4 text-gray-500 cursor-pointer">
               FlexiCare Mini
             </a>
-            <a className=" py-2 mb-4 text-gray-500 cursor-pointer ">
+            <a
+              className=" py-2 mb-4 text-gray-500 cursor-pointer hover:text-gray-100 "
+              onClick={() => navigate("/flexicare")}
+            >
               FlexiCare
+            </a>
+            <a className=" py-2 mb-4 text-gray-500 cursor-pointer">ZenCare</a>
+            <a className=" py-2 mb-4 text-gray-500 cursor-pointer  ">
+              ZenCare Plus
             </a>
             <a
               className=" py-2 mb-4 text-gray-500 hover:text-gray-100 cursor-pointer text-sm"

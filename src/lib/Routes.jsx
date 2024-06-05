@@ -19,6 +19,7 @@ import BusinessBoardingRegister from "@/components/DefaultPages/businessLogin/Bu
 import ThirdParty from "./../components/DefaultPages/thirdParty/ThirdParty";
 import MonthlyComprehensive from "@/components/DefaultPages/monthlyComprehensive/MonthlyComprehensive";
 import Travel from "@/components/DefaultPages/travel/Travel";
+import FlexiCare from "@/components/DefaultPages/flexiCare/FlexiCare";
 
 export const ROOT = "/";
 export const BUSINESS = "/business";
@@ -42,6 +43,8 @@ export const THIRDPARTY = "/thirdparty";
 export const MONTHLYCOMPREHENSIVE = "/monthly-comprehensive";
 // travel
 export const TRAVEL = "/travel";
+// flexiCare
+export const FLEXICARE = "/flexicare";
 
 // protected
 // export const PROTECTED = "/protected";
@@ -64,6 +67,7 @@ export const router = createBrowserRouter([
   { path: BUESINESSBOARDINGREGISTER, element: <BusinessBoardingRegister /> },
   { path: THIRDPARTY, element: <ThirdParty /> },
   { path: MONTHLYCOMPREHENSIVE, element: <MonthlyComprehensive /> },
+  { path: FLEXICARE, element: <FlexiCare /> },
   { path: TRAVEL, element: <Travel /> },
   {
     path: BUSINESSBOARDINGNEXT,

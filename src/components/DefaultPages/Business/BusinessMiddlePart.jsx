@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 const BusinessMiddlePart = ({ item, head, detail, top }) => {
   // console.log(item);
   return (
-    <div className=" flex items-center justify-center flex-col flex-wrap px-5 w-full xl:h=[500px] lg:h-[550px] md:h-[700px] h-full md:flex-row my-16 py-10">
+    <div className=" flex items-center justify-center flex-col flex-wrap px-5 w-full xl:h=[500px] lg:h-[650px] md:h-[700px] sm:h-[1000px] h-auto md:flex-row my-0 md:my-16 py-5">
       <div className=" flex items-center justify-center flex-col p-5 break-words ">
         <p className=" text-base font-medium text-primary  py-5">
           {top && top}
