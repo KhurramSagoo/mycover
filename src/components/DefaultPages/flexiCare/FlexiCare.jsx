@@ -8,9 +8,16 @@ import Collage from "./Collage";
 import BasicProtection from "./BasicProtection";
 
 // db
-import middlePlans, { heroData, accordData, basicData } from "./TravelDB";
+import middlePlans, {
+  heroData,
+  accordData,
+  basicData,
+  tabsBusinessSmartData,
+} from "./TravelDB";
 import { useEffect } from "react";
 import Hero from "./Hero";
+import FlexiBusinessNeed from "./FlexiBusinessNeed";
+import SmartBusinessTabs from "../Business/SmartBusinessTabs";
 
 const MonthlyComprehensive = () => {
   const tabTitle = () => {
@@ -51,6 +58,14 @@ const MonthlyComprehensive = () => {
         </div>
       ))}
       <br />
+      {/* flexi business needs */}
+      <FlexiBusinessNeed
+        tabData={tabsBusinessSmartData}
+        headTitle="Paper-less insurance"
+        headDetail="If paperwork and bottleneck processes stress you, then you've come to the right place. Say goodbye to filling long forms on paper. Say hello to the easy life.
+      "
+      />
+      {/* <SmartBusinessTabs/> */}
       {/* multianimation */}
       <BusinessMultiAnimation />
       <Collage />

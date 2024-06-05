@@ -2,6 +2,56 @@ import CheckCircleIcon from "@mui/icons-material/CheckCircle";
 import ElectricBoltIcon from "@mui/icons-material/ElectricBolt";
 import PrivacyTipIcon from "@mui/icons-material/PrivacyTip";
 
+// flexibusinessSmart Data
+import claim1 from "./assets/claim1.png";
+import claim2 from "./assets/claim2.png";
+
+import person from "./assets/persons.svg";
+import access from "./assets/access.svg";
+
+// flexi business needs data
+export const flexiBusinessNeedsData = [
+  // {
+  //   title: "Easy access to care",
+  //   detail:
+  //     "With access to over 1200 hospitals, your team is always within reach to every health centre in our network. No matter which state you move to, you are always close to quality care.",
+  //   image: <CheckCircleIcon />,
+  //   bg: "#fce7f6",
+  // },
+  {
+    head: "Everything your business needs to enjoy quality health care.",
+    detail: "Choose the plan that suits you best",
+    span: "",
+    btn: "Get Covered",
+  },
+];
+
+// smart business tabs data
+export const tabsBusinessSmartData = [
+  {
+    title: "A Unified Platform",
+    detail:
+      "Our web interface enables you to manage your plans and staff in one place. It helps you:",
+    image: claim1,
+    extra: [
+      {
+        line: "Manage employee benefits",
+        image: person,
+      },
+      {
+        line: "Access all business insurance plans.",
+        image: access,
+      },
+    ],
+  },
+  {
+    title: "Digital HMO ID",
+    detail:
+      "Everything is in place to ensure ill health does not get in the way of your business. Your team gets a personalised experience using a digital HMO ID to access healthcare from anywhere. Staff view their HMO ID from a mobile interface to manage their plans and get care.",
+    image: claim2,
+  },
+];
+
 // hero section
 export const heroData = [
   {

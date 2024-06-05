@@ -3,6 +3,12 @@ import PaymentsIcon from "@mui/icons-material/Payments";
 import SupportAgentIcon from "@mui/icons-material/SupportAgent";
 import DescriptionIcon from "@mui/icons-material/Description";
 
+// smart business
+import hmo from "../../../assets/business/smartBusinessTabs/e-hmo-id.png";
+import self from "../../../assets/business/smartBusinessTabs/self-inspection.png";
+import peace from "../../../assets/business/smartBusinessTabs/peace-of-mind.png";
+import claim from "../../../assets/business/smartBusinessTabs/instant-claim.png";
+
 // one stop tabs
 import beneficiaries from "../../../assets/business/solutions-beneficiaries.png";
 import claims from "../../../assets/business/solutions-claims.png";
@@ -71,6 +77,34 @@ export const oneStopTabs = [
     title: "See your claims payout in real-time.",
     image: wallet,
     borderColor: "#12B76A",
+  },
+];
+
+// smart business tabs data
+export const tabsBusinessSmartData = [
+  {
+    title: "Digital HMO ID",
+    detail:
+      "Staff can access quality healthcare with an eHMO ID from anywhere.",
+    image: hmo,
+  },
+  {
+    title: "Self inspection",
+    detail:
+      "Whether you need to protect your car, devices or office space, our self inspection process is easy and convenient.",
+    image: self,
+  },
+  {
+    title: "Peace of Mind",
+    detail:
+      "Some things shouldn't take time and we believe insurance is one of them. We've taken out the worries involved with paperworks and lengthy insurance processes.",
+    image: peace,
+  },
+  {
+    title: "Instant claim pay-outs",
+    detail:
+      "The sweet part. We care about your business, just like you do. That's why we ensure your business gets compensated swiftly, if anything ever goes wrong.",
+    image: claim,
   },
 ];
 

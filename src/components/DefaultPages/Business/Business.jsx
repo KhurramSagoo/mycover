@@ -11,7 +11,12 @@ import BusinessAccrodion from "./BusinessAccrodion";
 import BusinessFooter from "./BusinessFooter";
 
 // business db
-import middlePlans, { heroData, oneStopTabs, accordData } from "./BusinessDB";
+import middlePlans, {
+  heroData,
+  oneStopTabs,
+  accordData,
+  tabsBusinessSmartData,
+} from "./BusinessDB";
 import { useEffect } from "react";
 
 const Business = () => {
@@ -50,7 +55,12 @@ const Business = () => {
       />
 
       <BusinessProtection />
-      <SmartBusinessTabs />
+      <SmartBusinessTabs
+        tabData={tabsBusinessSmartData}
+        headTitle="Smart business insure with MyCovergenius"
+        headDetail="Our automated claims process allows you to focus on your KPIs while we take care of your business risks and staff.
+      "
+      />
       <BusinessMultiAnimation />
       <EasyWayBusinessInsurance />
       <div className=" h-28 w-full">
