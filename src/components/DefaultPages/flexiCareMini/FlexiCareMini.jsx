@@ -13,7 +13,7 @@ import middlePlans, {
   accordData,
   basicData,
   tabsBusinessSmartData,
-} from "./TravelDB";
+} from "./FlexiCareMiniDB";
 import { useEffect } from "react";
 import Hero from "./Hero";
 import FlexiBusinessNeed from "./FlexiBusinessNeed";
@@ -21,7 +21,7 @@ import SmartBusinessTabs from "../Business/SmartBusinessTabs";
 import FlexiCareEveryThing from "./FlexiCareEverything";
 import FlexiCareAvailableHospitals from "./FlexiCareAvailableHospitals";
 
-const FlexiCare = () => {
+const FlexiCareMini = () => {
   const tabTitle = () => {
     document.title = "FlexiCare";
   };
@@ -49,8 +49,8 @@ const FlexiCare = () => {
       {/* middle plans */}
       <BusinessMiddlePart
         item={middlePlans}
-        top="Seamless healthcare experience"
-        head="Access instant, affordable and quality healthcare"
+        top="Affordable healthcare"
+        head="Get affordable and quality healthcare easily"
         detail="We help your business cover the medical costs of your employees."
       />
       {/* basic protection */}
@@ -87,4 +87,4 @@ const FlexiCare = () => {
   );
 };
 
-export default FlexiCare;
+export default FlexiCareMini;

@@ -73,7 +73,10 @@ const BusinessFooter = () => {
           </div>
           <div className=" lg:pl-4 flex lg:mb-4 lg:items-start lg:justify-start flex-col p-2">
             <a className=" text-xl mb-6 font-bold">Products</a>
-            <a className=" py-2 mb-4 text-gray-500 cursor-pointer">
+            <a
+              className=" py-2 mb-4 text-gray-500 cursor-pointer hover:text-gray-100"
+              onClick={() => navigate("/flexicare-mini")}
+            >
               FlexiCare Mini
             </a>
             <a
