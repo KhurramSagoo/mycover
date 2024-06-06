@@ -24,6 +24,40 @@ const FlexiCareAvailableHospitals = () => {
     setter(event.target.value);
   };
 
+  const filteredHospitals = hospitals.filter((hospital) => {
+    // Convert selected state and hospital state to lowercase
+    const selectedStateLower = selectedState.toLowerCase();
+    const hospitalStateLower = hospital.state.toLowerCase();
+
+    // Check for plan match
+    const planMatch =
+      (selectedPlan === "ZenCare Prime" && hospital.plan === "ZenCare Prime") ||
+      (selectedPlan === "ZenCare Plus" && hospital.plan === "ZenCare Plus") ||
+      (selectedPlan === "Flexi Care" && hospital.plan === "Flexi Care") ||
+      (selectedPlan === "Flexi Care Mini" &&
+        hospital.plan === "Flexi Care Mini") ||
+      (selectedPlan === "ZenCare" && hospital.plan === "ZenCare");
+
+    // Check for type match
+    const typeMatch =
+      selectedType === "all" || // If "all" is selected, type match is true
+      (selectedType === "clinic" && types.includes(hospital.type)) ||
+      hospital.type === selectedType;
+
+    // Check for state match
+    const stateMatch =
+      selectedStateLower === "all" || // If "all" is selected, state match is true
+      selectedStateLower === hospitalStateLower;
+
+    // Check for keyword match
+    const keywordMatch = hospital.name
+      .toLowerCase()
+      .includes(searchKeyword.toLowerCase());
+
+    // Return true if all conditions match
+    return planMatch && typeMatch && stateMatch && keywordMatch;
+  });
+
   // filtered hospitals
   // const filteredHospitals = hospitals.filter((hospital) => {
   //   return (
@@ -36,24 +70,47 @@ const FlexiCareAvailableHospitals = () => {
   //       (selectedPlan === "ZenCare" && hospital.plan === "ZenCare")) &&
   //     ((selectedType === "clinic" && types.includes(hospital.type)) ||
   //       hospital.type === selectedType) &&
-  //     ((selectedState === "all" && hospital.state.toLowerCase()) ||
+  //     ((selectedState === "all" && hospital.state((state) => state)) ||
+  //       (selectedState === states.includes(hospital.state) &&
+  //         hospital.state === selectedState) ||
+  //       hospital.state.toLowerCase() ||
   //       hospital.state.toLowerCase() === selectedState) &&
   //     hospital.name.toLowerCase().includes(searchKeyword.toLowerCase())
   //   );
   // });
-  const filteredHospitals = hospitals.filter((hospital) => {
-    const matchesPlan =
-      hospital.plan.toLowerCase() === selectedPlan.toLowerCase();
-    const matchesType =
-      hospital.type.toLowerCase() === selectedType.toLowerCase();
-    const matchesState =
-      selectedState === "All" ||
-      hospital.state.toLowerCase() === selectedState.toLowerCase();
-    const matchesSearch = hospital.name
-      .toLowerCase()
-      .includes(searchKeyword.toLowerCase());
-    return matchesPlan && matchesType && matchesState && matchesSearch;
-  });
+
+  // const filteredHospitals = hospitals.filter((hospital) => {
+  //   const matchesPlan =
+  //     hospital.plan.toLowerCase() === selectedPlan.toLowerCase();
+  //   const matchesType =
+  //     hospital.type.toLowerCase() === selectedType.toLowerCase();
+  //   const matchesState =
+  //     selectedState === "All" && matchesType ||
+  //     hospital.state.toLowerCase() === selectedState.toLowerCase();
+  //   const matchesSearch = hospital.name
+  //     .toLowerCase()
+  //     .includes(searchKeyword.toLowerCase());
+  //   return matchesPlan && matchesType && matchesState && matchesSearch;
+  // });
+
+  // const filteredHospitals = hospitals.filter((hospital) => {
+  // Check for plan match
+  // const planMatch =
+  //   (selectedPlan === "ZenCare Prime" && hospital.plan === "ZenCare Prime") ||
+  //   (selectedPlan === "ZenCare Plus" && hospital.plan === "ZenCare Plus") ||
+  //   (selectedPlan === "Flexi Care" && hospital.plan === "Flexi Care") ||
+  //   (selectedPlan === "Flexi Care Mini" &&
+  //     hospital.plan === "Flexi Care Mini") ||
+  //   (selectedPlan === "ZenCare" && hospital.plan === "ZenCare");
+
+  // {
+  //   name: "Hospital 23",
+  //   type: "Dental Clinic",
+  //   plan: "ZenCare Plus",
+  //   state: "Ogun",
+  // },
+  // Check for type match
+  // const types = ["Clinic", "Hospital", "Eye Care", "Dental Clinic", "Pharmacy"];
 
   return (
     <div className=" px-4 bg-[#f8fcfb] w-full lg:px-16  lg:h-screen h-auto flex items-center justify-center flex-col">
