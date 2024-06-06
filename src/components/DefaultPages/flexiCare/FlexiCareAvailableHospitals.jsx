@@ -1,43 +1,19 @@
 import React, { useState } from "react";
-import { states } from "@/components/db/state";
-import { hospitals } from "@/components/db/flexiCareHospitalsData";
-// export const hospitals = [
-//   {
-//     name: "ZenCare Prime Hospital",
-//     type: "Hospital",
-//     plan: "ZenCare Prime",
-//     state: "lagos",
-//   },
-//   {
-//     name: "ZenCare Plus Clinic",
-//     type: "Clinic",
-//     plan: "ZenCare Plus",
-//     state: "abuja",
-//   },
-//   {
-//     name: "Flexi Care Eye Center",
-//     type: "Eye Care",
-//     plan: "Flexi Care",
-//     state: "enugu",
-//   },
-//   {
-//     name: "Flexi Care Mini Dental",
-//     type: "Dental Clinic",
-//     plan: "Flexi Care Mini",
-//     state: "kano",
-//   },
-//   { name: "ZenCare Pharmacy", type: "Pharmacy", plan: "ZenCare", state: "oyo" },
-//   // Add more dummy data as needed
-// ];
-
+// import {} from "@/components/db/state";
+import { hospitals, states } from "@/components/db/flexiCareHospitalsData";
+import SearchIcon from "@mui/icons-material/Search";
+import CloseIcon from "@mui/icons-material/Close";
 const FlexiCareAvailableHospitals = () => {
-  const [selectedPlan, setSelectedPlan] = useState("all");
-  const [selectedType, setSelectedType] = useState("all");
+  const [selectedPlan, setSelectedPlan] = useState("ZenCare Prime");
+  const [selectedType, setSelectedType] = useState("clinic");
   const [selectedState, setSelectedState] = useState("all");
   const [searchKeyword, setSearchKeyword] = useState("");
 
+  const [showCloseIcon, setShowCloseIcon] = useState(false);
+
+  // console.log(searchKeyword);
+
   const plans = [
-    "all",
     "ZenCare Prime",
     "ZenCare Plus",
     "Flexi Care",
@@ -45,14 +21,9 @@ const FlexiCareAvailableHospitals = () => {
     "ZenCare",
   ];
 
-  const types = [
-    "all",
-    "Clinic",
-    "Hospital",
-    "Eye Care",
-    "Dental Clinic",
-    "Pharmacy",
-  ];
+  // console.log(hospitals);
+
+  const types = ["Clinic", "Hospital", "Eye Care", "Dental Clinic", "Pharmacy"];
 
   const handleFilterChange = (setter) => (event) => {
     setter(event.target.value);
@@ -60,12 +31,31 @@ const FlexiCareAvailableHospitals = () => {
 
   const filteredHospitals = hospitals.filter((hospital) => {
     return (
-      (selectedPlan === "all" || hospital.plan === selectedPlan) &&
-      (selectedType === "all" || hospital.type === selectedType) &&
+      ((selectedPlan === "ZenCare Prime" &&
+        hospital.plan === "ZenCare Prime") ||
+        (selectedPlan === "ZenCare Plus" && hospital.plan === "ZenCare Plus") ||
+        (selectedPlan === "Flexi Care" && hospital.plan === "Flexi Care") ||
+        (selectedPlan === "Flexi Care Mini" &&
+          hospital.plan === "Flexi Care Mini") ||
+        (selectedPlan === "ZenCare" && hospital.plan === "ZenCare")) &&
+      ((selectedType === "clinic" && types.includes(hospital.type)) ||
+        hospital.type === selectedType) &&
       (selectedState === "all" || hospital.state === selectedState) &&
+      // hospital.name.toLowerCase().includes(searchKeyword.toLowerCase())
       hospital.name.toLowerCase().includes(searchKeyword.toLowerCase())
     );
   });
+
+  // const filteredHospitals = hospitals.filter((hospital) => {
+  //   return (
+  //     ((selectedPlan === "ZenCare Prime" &&
+  //       hospital.plan === "ZenCare Prime") ||
+  //       (selectedPlan === "ZenCare" && hospital.plan === "ZenCare")) &&
+  //     (selectedType === "Clinic" || hospital.type === selectedType) &&
+  //     (selectedState === "all" || hospital.state === selectedState) &&
+  //     hospital.name.toLowerCase().includes(searchKeyword.toLowerCase())
+  //   );
+  // });
 
   return (
     <div className="lg:py-[120px] md:py-[100px] sm:py-[80px] py-[50px] px-4 bg-[#f8fcfb] w-full lg:px-16 h-full flex items-center justify-center flex-col">
@@ -84,8 +74,8 @@ const FlexiCareAvailableHospitals = () => {
         {plans.map((plan, index) => (
           <button
             onClick={() => setSelectedPlan(plan)}
-            className={`m-2 p-2 border rounded ${
-              selectedPlan === plan ? "bg-primary text-white" : ""
+            className={`m-2 p-2 text-base font-medium ${
+              selectedPlan === plan ? " text-primary   " : " text-gray-700"
             }`}
             key={index}
           >
@@ -94,18 +84,22 @@ const FlexiCareAvailableHospitals = () => {
         ))}
       </div>
 
-      <div className="flex flex-wrap justify-center items-center mb-4">
-        <input
-          type="text"
-          placeholder="Search by name"
-          value={searchKeyword}
-          onChange={(e) => setSearchKeyword(e.target.value)}
-          className="m-2 p-2 border rounded"
-        />
+      <div className="flex flex-wrap justify-center items-center mb-4 w-full border border-primary px-5 py-2 rounded-md">
+        <div className=" w-3/5">
+          <SearchIcon className=" text-gray-400 cursor-pointer" />
+          <input
+            type="text"
+            placeholder="Search by name"
+            value={searchKeyword}
+            onChange={(e) => setSearchKeyword(e.target.value)}
+            className=" p-2 rounded w-4/5  outline-none "
+          />
+          <CloseIcon className=" text-gray-400 cursor-pointer" />
+        </div>
         <select
           value={selectedType}
           onChange={handleFilterChange(setSelectedType)}
-          className="m-2 p-2 border rounded"
+          className=" p-2  rounded w-1/5 "
         >
           {types.map((type) => (
             <option key={type} value={type}>
@@ -116,38 +110,65 @@ const FlexiCareAvailableHospitals = () => {
         <select
           value={selectedState}
           onChange={handleFilterChange(setSelectedState)}
-          className="m-2 p-2 border rounded"
+          className=" p-2  rounded   w-1/5"
         >
           {states.map((state) => (
             <option key={state} value={state}>
-              {state}
+              {state.toLowerCase()}
             </option>
           ))}
         </select>
       </div>
 
+      <div className="flex justify-between  items-start lg:w-1/2 w-full px-5">
+        <div className=" text-primary font-semibold text-base ">
+          {/* hospitals searched */}
+          {filteredHospitals.length} Hospitals
+        </div>
+        <div className=" text-primary font-semibold text-base ">
+          {/* hospitals searched */}
+          <p>State </p>
+        </div>
+      </div>
+
       <div
-        className="flex flex-wrap justify-center  items-center md:w-1/2 w-full
+        className="flex flex-wrap justify-start  items-start lg:w-1/2 w-full
        h-96 overflow-y-scroll"
       >
         {filteredHospitals.length > 0 ? (
           filteredHospitals.map((hospital, index) => (
             <div
               key={index}
-              className="bg-white p-4 m-2 border rounded shadow-md w-full flex items-center justify-between"
+              className=" hover:bg-gray-200 rounded-md p-4 m-2   w-full flex items-center justify-between"
             >
-              <div>
-                <h3 className="text-base text-primary font-medium">
+              <div className=" flex items-start justify-start flex-col">
+                {/* no of hospitals searched */}
+                <div className=" text-primary font-semibold text-base ">
+                  {/* hospitals searched */}
+                </div>
+
+                <h3 className="text-base text-gray-600  font-medium">
                   {hospital.name}
                 </h3>
                 {/* <p>{hospital.plan}</p> */}
                 {/* <p>{hospital.type}</p> */}
               </div>
-              <p>{hospital.state}</p>
+              <div className=" flex items-start justify-start flex-col">
+                {/* no of hospitals searched */}
+
+                <h3 className="text-base text-gray-600  font-medium">
+                  {hospital.state}
+                </h3>
+                {/* <p>{hospital.plan}</p> */}
+                {/* <p>{hospital.type}</p> */}
+              </div>
             </div>
           ))
         ) : (
-          <p>No hospitals found matching the criteria.</p>
+          <div className=" text-primary font-semibold text-base ">
+            {/* 0 {hospital.name} */}
+            {/* hospitals searched */}
+          </div>
         )}
       </div>
     </div>
