@@ -1,7 +1,7 @@
-import React from "react";
+import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useForm } from "react-hook-form";
-
+import { stateCityMapping } from "@/components/db/stateCitiesData";
 const UserinfoFour = ({
   register,
   handleSubmit,
@@ -11,6 +11,17 @@ const UserinfoFour = ({
   formData,
 }) => {
   const navigate = useNavigate();
+
+  const [selectedState, setSelectedState] = useState(formData.state || "");
+  const [cities, setCities] = useState(
+    selectedState ? stateCityMapping[selectedState] : []
+  );
+
+  const handleStateChange = (event) => {
+    const newState = event.target.value;
+    setSelectedState(newState);
+    setCities(stateCityMapping[newState] || []);
+  };
 
   return (
     <div>
@@ -39,50 +50,18 @@ const UserinfoFour = ({
               defaultValue={formData.state}
               {...register("state", {
                 required: "The state field is required",
+                onChange: handleStateChange,
               })}
               name="state"
               id=""
               className=" border w-full py-2 outline-teal-600 focus:outline-teal-600"
             >
-              <option value="Abia">Abia</option>
-              <option value="Adamawa">Adamawa</option>
-              <option value="Akwa Ibom">Akwa Ibom</option>
-              <option value="Anambra">Anambra</option>
-              <option value="Bauchi">Bauchi</option>
-              <option value="Bayelsa">Bayelsa</option>
-              <option value="Benue">Benue</option>
-              <option value="Borno">Borno</option>
-              <option value="Cross River">Cross River</option>
-              <option value="Delta">Delta</option>
-              <option value="Ebonyi">Ebonyi</option>
-              <option value="Edo">Edo</option>
-              <option value="Ekiti">Ekiti</option>
-              <option value="Enugu">Enugu</option>
-              <option value="Federal Capital Territory">
-                Federal Capital Territory
-              </option>
-              <option value="Gombe">Gombe</option>
-              <option value="Jigawa">Jigawa</option>
-              <option value="Imo">Imo</option>
-              <option value="Kaduna">Kaduna</option>
-              <option value="Kano">Kano</option>
-              <option value="Katsina">Katsina</option>
-              <option value="Kebbi">Kebbi</option>
-              <option value="Kwara">Kwara</option>
-              <option value="Kogi">Kogi</option>
-              <option value="Lagos">Lagos</option>
-              <option value="Nasarawa">Nasarawa</option>
-              <option value="Niger">Niger</option>
-              <option value="Ogun">Ogun</option>
-              <option value="Ondo">Ondo</option>
-              <option value="Osun">Osun</option>
-              <option value="Oyo">Oyo</option>
-              <option value="Plateau">Plateau</option>
-              <option value="Rivers">Rivers</option>
-              <option value="Sokoto">Sokoto</option>
-              <option value="Taraba">Taraba</option>
-              <option value="Yobe">Yobe</option>
-              <option value="Zamfara">Zamfara</option>
+              {/* states options */}
+              {Object.keys(stateCityMapping).map((state) => (
+                <option key={state} value={state}>
+                  {state}
+                </option>
+              ))}
             </select>
             {errors.state && (
               <p className="text-red-500">{errors.state.message}</p>
@@ -106,25 +85,12 @@ const UserinfoFour = ({
               id=""
               className=" border w-full py-2 outline-teal-600 focus:outline-teal-600"
             >
-              <option value=""></option>
-
-              <option value="Aba North">Aba North</option>
-              <option value="Arochukwu">Arochukwu</option>
-              <option value="Aba South">Aba South</option>
-              <option value="Bende">Bende</option>
-              <option value="Isiala Ngwa North">Isiala Ngwa North</option>
-              <option value="Ikwuano">Ikwuano</option>
-              <option value="Isiala Ngwa South">Isiala Ngwa South</option>
-              <option value="Isuikwuato">Isuikwuato</option>
-              <option value="Obi Ngwa">Obi Ngwa</option>
-              <option value="Ohafia">Ohafia</option>
-              <option value="Osisioma">Osisioma</option>
-              <option value="Ugwunagbo">Ugwunagbo</option>
-              <option value="Ukwa East">Ukwa East</option>
-              <option value="Ukwa West">Ukwa West</option>
-              <option value="Umuahia North">Umuahia North</option>
-              <option value="Umuahia South">Umuahia South</option>
-              <option value="Umu Nneochi">Umu Nneochi</option>
+              {/* cities option */}
+              {cities.map((city) => (
+                <option key={city} value={city}>
+                  {city}
+                </option>
+              ))}
             </select>
             {errors.city && (
               <p className="text-red-500">{errors.city.message}</p>
@@ -142,17 +108,12 @@ const UserinfoFour = ({
               className=" border outline-primary rounded-md py-2 w-full my-1 px-2 "
               {...register("businessAddress", {
                 required: "The business address field is required",
-                // pattern: {
-                //     value: /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/i,
-                //     message: "Invalid email address"
-                // }
               })}
             />
             {errors.businessAddress && (
               <p className="text-red-500">{errors.businessAddress.message}</p>
             )}
           </div>
-
           <div className=" w-full my-5">
             <button
               className=" bg-[#347469] w-full py-2 rounded-md text-white opacity-90"
