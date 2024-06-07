@@ -104,7 +104,7 @@ const More = () => {
   return (
     <div
       className=" flex  h-full min-h-screen flex-col 
-items-center justify-start mb-32 md:mb-0 px-5 
+items-center justify-start mb-32 md:mb-0  
 "
     >
       <div className=" flex lg:items-center md:items-end items-center justify-enter flex-col   w-full md:px-5 px-0 ">

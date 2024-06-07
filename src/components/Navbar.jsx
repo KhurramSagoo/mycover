@@ -5,11 +5,8 @@ import DrawerSheet from "./utils/DrawerSheet";
 const Navbar = () => {
   const navigate = useNavigate();
   return (
-    <div className=" flex  items-center justify-between  w-full   h-24   ">
-      <div
-        className=" flex items-center justify-center"
-        onClick={() => navigate("/")}
-      >
+    <div className=" flex  items-center justify-between  w-full   h-24    ">
+      <div className=" flex items-center justify-center">
         <div className=" rounded-full bg-teal-500 w-10 h-10 flex items-center justify-center text-md font-medium text-white cursor-pointer ">
           KS
         </div>

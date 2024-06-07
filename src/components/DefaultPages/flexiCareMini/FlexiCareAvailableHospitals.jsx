@@ -128,7 +128,7 @@ const FlexiCareAvailableHospitals = () => {
         {plans.map((plan, index) => (
           <button
             onClick={() => setSelectedPlan(plan)}
-            className={`m-2 p-2 text-base font-medium ${
+            className={`m-2 p-2 md:text-base  text-sm font-medium ${
               selectedPlan === plan ? " text-primary" : " text-gray-700"
             }`}
             key={index}
@@ -139,7 +139,7 @@ const FlexiCareAvailableHospitals = () => {
       </div>
 
       <div className="flex flex-wrap justify-center items-center mb-4 lg:w-1/2 w-full border border-primary px-5 py-2 rounded-md">
-        <div className=" w-3/5 relative">
+        <div className=" sm:w-3/5 w-full relative">
           <SearchIcon
             className=" text-gray-400 cursor-pointer absolute left-2 top-3"
             onClick={() => setSearchKeyword(searchKeyword)}
@@ -152,7 +152,7 @@ const FlexiCareAvailableHospitals = () => {
               setSearchKeyword(e.target.value);
               setShowCloseIcon(e.target.value.length > 0);
             }}
-            className=" p-2 rounded w-4/5 pl-10 outline-none "
+            className=" p-2 rounded sm:w-4/5 w-full pl-10 outline-none "
           />
           {showCloseIcon && (
             <CloseIcon
@@ -167,7 +167,7 @@ const FlexiCareAvailableHospitals = () => {
         <select
           value={selectedType}
           onChange={handleFilterChange(setSelectedType)}
-          className=" p-2  rounded w-1/5 "
+          className=" p-2  rounded sm:w-1/5 w-full outline-none "
         >
           {types.map((type) => (
             <option key={type} value={type}>
@@ -178,7 +178,7 @@ const FlexiCareAvailableHospitals = () => {
         <select
           value={selectedState}
           onChange={handleFilterChange(setSelectedState)}
-          className=" p-2  rounded   w-1/5"
+          className=" p-2  rounded   sm:w-1/5 w-full outline-none"
         >
           {states.map((state) => (
             <option key={state} value={state}>
@@ -190,10 +190,10 @@ const FlexiCareAvailableHospitals = () => {
 
       {/* Number of hospitals found */}
       <div className="flex justify-between  items-start lg:w-1/2 w-full px-5">
-        <div className=" text-primary font-semibold text-base ">
+        <div className=" text-primary font-semibold md:text-base text-sm ">
           {filteredHospitals.length} Hospitals
         </div>
-        <div className=" text-primary font-semibold text-base ">
+        <div className=" text-primary font-semibold md:text-base text-sm ">
           <p>State</p>
         </div>
       </div>
@@ -210,12 +210,12 @@ const FlexiCareAvailableHospitals = () => {
                 <div className=" text-primary font-semibold text-base ">
                   {/* Hospital name */}
                 </div>
-                <h3 className="text-base text-gray-600 font-medium">
+                <h3 className="md:text-base text-sm text-gray-600 font-medium">
                   {hospital.name}
                 </h3>
               </div>
               <div className=" flex items-start justify-start flex-col">
-                <h3 className="text-base text-gray-600 font-medium">
+                <h3 className="md:text-base text-sm text-gray-600 font-medium">
                   {hospital.state}
                 </h3>
               </div>
