@@ -70,6 +70,9 @@ const ComparePlansBenefitsDialog = ({ note }) => {
         productId = 0;
     }
 
+    localStorage.setItem("selectedProductId", JSON.stringify(productId));
+    localStorage.setItem("productParam", JSON.stringify(productParam));
+    // localStorage.setItem("productId", JSON.stringify(productId));
     const url = `/business-boarding-next?p=${productParam}&product_id=${productId}`;
     // navigate(url);
     window.open(url, "_blank");
