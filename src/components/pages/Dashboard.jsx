@@ -23,7 +23,7 @@ const Dashboard = () => {
   return (
     <div className=" flex h-full min-h-screen flex-col w-auto">
       <div
-        className={`  lg:px-20 md:px-10 px-5 
+        className={`  
          items-center justify-center fixed top-0  lg:left-72 md:left-52 left-0 right-0 transition-all duration-300 ${
            isScrolled ? "backdrop-blur-md" : ""
          }`}

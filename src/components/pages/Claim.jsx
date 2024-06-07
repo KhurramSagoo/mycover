@@ -36,10 +36,10 @@ const Claim = () => {
   return (
     <div
       className=" flex  h-full min-h-screen flex-col 
-  items-center justify-start px-5
+  items-center justify-start 
     "
     >
-      <div className=" flex lg:items-center md:items-end items-center justify-enter flex-col  w-full px-5">
+      <div className=" flex lg:items-center md:items-end items-center justify-enter flex-col  w-full ">
         <TopDashboardNav />
       </div>
 

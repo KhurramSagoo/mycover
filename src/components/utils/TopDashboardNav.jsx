@@ -13,7 +13,7 @@ import { useNavigate } from "react-router-dom";
 const TopDashboardNav = () => {
   const navigate = useNavigate();
   return (
-    <div className="  w-full pr-20bg-white  h-[100px] flex items-center  justify-between md:px-0 px-5">
+    <div className="  w-full pr-20bg-white  h-[100px] flex items-center  justify-between md:px-10 px-5">
       <div className=" cursor-pointer" onClick={() => navigate("/")}>
         <img src={logo} alt="" />
       </div>
