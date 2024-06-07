@@ -15,7 +15,7 @@ const TopDashboardNav = () => {
   return (
     <div className="  w-full pr-20bg-white  h-[100px] flex items-center  justify-between md:px-10 px-5">
       <div className=" cursor-pointer" onClick={() => navigate("/")}>
-        <img src={logo} alt="" />
+        <img src={logo} alt="" className=" flex md:hidden" />
       </div>
       <div className=" flex items-center justify-center">
         <DrawerSheet

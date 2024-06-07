@@ -1,3 +1,5 @@
+import React from "react";
+import { useNavigate } from "react-router-dom";
 import {
   Dialog,
   DialogContent,
@@ -8,6 +10,8 @@ import {
 } from "@/components/ui/dialog";
 
 const ComparePlansBenefitsDialog = ({ note }) => {
+  const navigate = useNavigate();
+
   const careBtnData = [
     {
       name: "Flexi Care Mini",
@@ -15,7 +19,7 @@ const ComparePlansBenefitsDialog = ({ note }) => {
       btn: "Get Covered",
     },
     {
-      name: "Flexi Care ",
+      name: "Flexi Care",
       amount: "₦ 3,500",
       btn: "Get Covered",
     },
@@ -35,6 +39,41 @@ const ComparePlansBenefitsDialog = ({ note }) => {
       btn: "Get Covered",
     },
   ];
+
+  const handleButtonClick = (name) => {
+    let productParam;
+    let productId;
+
+    switch (name) {
+      case "Flexi Care Mini":
+        productParam = "miniflexicare";
+        productId = 20;
+        break;
+      case "Flexi Care":
+        productParam = "flexicare";
+        productId = 21;
+        break;
+      case "ZenCare":
+        productParam = "zencare";
+        productId = 22;
+        break;
+      case "ZenCare Plus":
+        productParam = "zencareplus";
+        productId = 23;
+        break;
+      case "ZenCare Prime":
+        productParam = "zencareprime";
+        productId = 24;
+        break;
+      default:
+        productParam = "defaultparam";
+        productId = 0;
+    }
+
+    const url = `/business-boarding-next?p=${productParam}&product_id=${productId}`;
+    // navigate(url);
+    window.open(url, "_blank");
+  };
 
   return (
     <Dialog className="w-full">
@@ -63,13 +102,16 @@ const ComparePlansBenefitsDialog = ({ note }) => {
                       key={index}
                       className="flex items-center justify-center flex-col gap-2"
                     >
-                      <p className="  text-base font-semibold text-primary">
+                      <p className="text-base font-semibold text-primary">
                         {item.name}
                       </p>
-                      <p className=" text-xl font-bold  ">{item.amount}</p>
-                      <p className=" rounded-md px-7 py-3 bg-primary text-white text-base">
+                      <p className="text-xl font-bold">{item.amount}</p>
+                      <button
+                        className="rounded-md px-7 py-3 bg-primary text-white text-base"
+                        onClick={() => handleButtonClick(item.name)}
+                      >
                         {item.btn}
-                      </p>
+                      </button>
                     </div>
                   ))}
                 </div>
