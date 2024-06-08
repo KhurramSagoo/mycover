@@ -2,161 +2,23 @@ import { ArrowLeft } from "@mui/icons-material";
 import { useEffect, useState, useContext } from "react";
 import { useNavigate } from "react-router-dom";
 import logo from "../../../assets/login/active-more.svg";
-import check from "./check-circle-small.svg";
 import olivia from "./olivia.jpg";
 import ErrorIcon from "@mui/icons-material/Error";
 import { DataContext } from "@/components/db/DataProvider";
+import questionMark from "../Business/customSvg/question-success.svg";
+import { tabData } from "./tabData";
 
-const tabData = [
-  {
-    id: 0,
-    btn: "Click to Start",
-    title:
-      "FlexiCare Mini covers you and your staff with quality healthcare at only ₦2000 per person.",
-    detail: [
-      {
-        image: check,
-        text: "Access to over 1000 hospitals across Nigeria.",
-      },
-      {
-        image: check,
-        text: "Cover for Delivery and Ante-natal Care.",
-      },
-      {
-        image: check,
-        text: "Treatment of everyday illnesses, like malaria, e.t.c",
-      },
-      {
-        image: check,
-        text: "Cover for 26 different types of surgeries.",
-      },
-      {
-        image: check,
-        text: "A digital HMO ID for each person.",
-      },
-    ],
-    note: "Important Notice: This plan is available only for individuals below the age of 70.",
-  },
-  {
-    id: 1,
-    btn: "Click to Start",
-    title:
-      "Flexicare covers you and your staff with quality healthcare at only ₦3500 per person.",
-    detail: [
-      {
-        image: check,
-        text: "Access to over 1000 hospitals across Nigeria.",
-      },
-      {
-        image: check,
-        text: "Cover for Delivery and Ante-natal Care.",
-      },
-      {
-        image: check,
-        text: "Treatment of everyday illnesses, like malaria, e.t.c",
-      },
-      {
-        image: check,
-        text: "Cover for 26 different types of surgeries.",
-      },
-      {
-        image: check,
-        text: "A digital HMO ID for each person.",
-      },
-    ],
-    note: "Important Notice: This plan is available only for individuals below the age of 70.",
-  },
-  {
-    id: 2,
-    btn: "Click to Start",
-    title:
-      "ZenCare covers you and your staff with quality healthcare at only ₦7,000 per person.",
-    detail: [
-      {
-        image: check,
-        text: "Access to over 1200 hospitals across Nigeria.",
-      },
-      {
-        image: check,
-        text: "Cover for Delivery and Ante-natal Care.",
-      },
-      {
-        image: check,
-        text: "Exclusive access to category B hospitals.",
-      },
-      {
-        image: check,
-        text: "Coverage for Chronic illnesses.",
-      },
-      {
-        image: check,
-        text: "Special coverage for surgeries.",
-      },
-    ],
-    note: "Important Notice: This plan is exclusively available for individuals below the age of 80",
-    unlock: "Unlock waiting Period with ₦2000",
-  },
-  {
-    id: 3,
-    btn: "Click to Start",
-    title:
-      "ZenCare Plus covers you and your staff with quality healthcare at only ₦9,000 per person.",
-    detail: [
-      {
-        image: check,
-        text: "Access to over 1200 hospitals across Nigeria.",
-      },
-      {
-        image: check,
-        text: "Cover for Delivery and Ante-natal Care.",
-      },
-      {
-        image: check,
-        text: "Exclusive access to category B hospitals.",
-      },
-      {
-        image: check,
-        text: "Coverage for Chronic illnesses.",
-      },
-      {
-        image: check,
-        text: "Special coverage for surgeries.",
-      },
-    ],
-    note: "Important Notice: This plan is exclusively available for individuals below the age of 80",
-    unlock: "Unlock waiting Period with ₦2000",
-  },
-  {
-    id: 4,
-    btn: "Click to Start",
-    title:
-      "ZenCare Prime covers you and your staff with quality healthcare at only ₦18,000 per person.",
-    detail: [
-      {
-        image: check,
-        text: "Access to over 2400 hospitals across Nigeria.",
-      },
-      {
-        image: check,
-        text: "Cover for Delivery and Ante-natal Care.",
-      },
-      {
-        image: check,
-        text: "Exclusive access to category B hospitals.",
-      },
-      {
-        image: check,
-        text: "Special coverage for surgeries.",
-      },
-      {
-        image: check,
-        text: "Dental and eye care treatments.",
-      },
-    ],
-    note: "Important Notice: This plan is exclusively available for individuals below the age of 80",
-    unlock: "Unlock waiting Period with ₦5,000",
-  },
-];
+// dialog
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+} from "@/components/ui/dialog";
+import * as DialogPrimitive from "@radix-ui/react-dialog";
+import { toast } from "react-toastify";
 
 // console.log(tabData);
 const BusinessBoardingNext = () => {
@@ -165,6 +27,8 @@ const BusinessBoardingNext = () => {
   const [tabId, setTabId] = useState(0);
   const [newIdData, setNewIdData] = useState(0);
   const [getParam, setGetParam] = useState("");
+  const [dialogText, setDialogText] = useState("no");
+  const [isDialogOpen, setIsDialogOpen] = useState(false);
 
   const paramAndId = () => {
     const productParam = localStorage.getItem("productParam");
@@ -188,8 +52,18 @@ const BusinessBoardingNext = () => {
 
   const handleClick = (choice, id) => {
     setSelected(choice);
+    const text =
+      choice === "Yes"
+        ? "Switching to the No-waiting period lets you unlock all the benefits early on. This would cost an extra 5,000 to your plan."
+        : "You are switching off the no-waiting period";
+    setDialogText(text);
     setTabId(id);
+    setIsDialogOpen(true);
     localStorage.setItem("selectedTabId", id);
+  };
+  const handleCloseDialog = () => {
+    setIsDialogOpen(false);
+    toast.success("Waiting Period Locked, Your Premium Is Now 18,000/Month");
   };
 
   return (
@@ -237,24 +111,68 @@ const BusinessBoardingNext = () => {
                   <ErrorIcon className=" text-green-700 mx-1" />
                 </div>
                 <div className="bg-[#d9d6fe] px-2 py-2 rounded-lg text-sm flex items-center justify-center text-white">
-                  <button
-                    className={`px-1  ${
-                      selected === "Yes"
-                        ? "bg-[#3C1E96]  rounded"
-                        : " text-black"
-                    }`}
-                    onClick={() => handleClick("Yes")}
-                  >
-                    Yes
-                  </button>
-                  <button
-                    className={` px-1 ${
-                      selected === "No" ? "bg-[#3C1E96] rounded" : "text-black"
-                    }`}
-                    onClick={() => handleClick("No")}
-                  >
-                    No
-                  </button>
+                  <Dialog>
+                    <DialogTrigger>
+                      <button
+                        className={`px-1 ${
+                          selected === "Yes"
+                            ? "bg-[#3C1E96] rounded"
+                            : "text-black"
+                        }`}
+                        onClick={() => handleClick("Yes")}
+                      >
+                        Yes
+                      </button>
+                      <button
+                        className={`px-1 ${
+                          selected === "No"
+                            ? "bg-[#3C1E96] rounded"
+                            : "text-black"
+                        }`}
+                        onClick={() => handleClick("No")}
+                      >
+                        No
+                      </button>
+                    </DialogTrigger>
+                    <DialogContent>
+                      <DialogHeader>
+                        <DialogTitle className=" flex items-center justify-center w-full flex-col gap-5">
+                          <img src={questionMark} alt="" />
+                          <p className=" text-primary text-base font-semibold">
+                            Proceed Action
+                          </p>
+                        </DialogTitle>
+                        <DialogDescription className=" flex items-center justify-center flex-col w-full gap-5">
+                          {/*on yes */}
+                          <p className="text-base text-gray-800 font-medium">
+                            {dialogText}
+                          </p>
+                          <div className="flex items-center justify-between w-full">
+                            <DialogPrimitive.Close aria-label="Close">
+                              <p className="text-base text-gray-900 font-medium cursor-pointer">
+                                Go Back
+                              </p>
+                            </DialogPrimitive.Close>
+
+                            <DialogPrimitive.Close aria-label="Close">
+                              <p
+                                className="text-white text-base py-3 px-2 bg-[#439687] cursor-pointer rounded-md"
+                                onClick={handleCloseDialog}
+                                // onClick={(prev) => {
+                                //   handleClick(!prev);
+                                //   toast.success(
+                                //     "Waiting Period Locked, Your Premium Is Now 18,000/Month"
+                                //   );
+                                // }}
+                              >
+                                Yes, I Understand
+                              </p>
+                            </DialogPrimitive.Close>
+                          </div>
+                        </DialogDescription>
+                      </DialogHeader>
+                    </DialogContent>
+                  </Dialog>
                 </div>
               </div>
             </div>
