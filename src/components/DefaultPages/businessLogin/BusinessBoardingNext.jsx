@@ -158,7 +158,7 @@ const tabData = [
   },
 ];
 
-console.log(tabData);
+// console.log(tabData);
 const BusinessBoardingNext = () => {
   const navigate = useNavigate();
   const [selected, setSelected] = useState("Yes");
@@ -205,7 +205,9 @@ const BusinessBoardingNext = () => {
           <ArrowLeft />{" "}
           <button className="text-xs text-black  font-medium">Go Back</button>
         </div>
-        <img src={logo} alt="" className=" w-28 hidden md:flex" />
+        <div className=" cursor-pointer" onClick={() => navigate("/")}>
+          <img src={logo} alt="" className=" w-28 hidden md:flex" />
+        </div>
       </div>
       {/* olivia div */}
 
@@ -213,7 +215,7 @@ const BusinessBoardingNext = () => {
 
       {
         <div className=" flex items-center justify-center flex-col">
-          <div className=" pt-4 flex items-center flex-col justify-center w-full px-5 md:px-0">
+          <div className=" pt-4 flex items-center flex-col justify-center w-full px-5 md:px-0 cursor-pointer">
             <img src={olivia} alt="Logo" className=" rounded-full w-12 mb-6" />
             <p className="text-2xl font-bold text-[#439687] mb-2  ">
               Welcome to MyCoverGenius

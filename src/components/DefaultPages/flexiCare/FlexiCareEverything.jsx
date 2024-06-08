@@ -1,6 +1,8 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { tabData } from "./flexiCareEveryThingData";
+import ComparePlansBenefitsDialog from "@/components/utils/ComparePlansBenefitsDialog";
+import note from "./assets/note.svg";
 
 const FlexiCareEveryThing = () => {
   const [loading, setLoading] = useState(false);
@@ -21,7 +23,7 @@ const FlexiCareEveryThing = () => {
   };
 
   return (
-    <div className="my-5 px-6 pb-12 pt-6 w-full h-full">
+    <div className="my-5 px-6 pb-12 pt-6 w-full h-full lg:my-20 md:my-16 flex items-center justify-center gap-5 flex-col">
       {/* Olivia div */}
       <div className="pt-4 flex items-center flex-col break-words justify-center w-full px-5 md:px-0 gap-5">
         <p className="xl:text-5xl md:text-3xl text-xl font-extrabold text-secondary mb-2 lg:w-2/3 md:w-4/5 w-full leading-normal text-center break-words px-5">
@@ -90,6 +92,8 @@ const FlexiCareEveryThing = () => {
           ))}
         </div>
       </div>
+      {/* compare plans */}
+      <ComparePlansBenefitsDialog note={note} />
     </div>
   );
 };
