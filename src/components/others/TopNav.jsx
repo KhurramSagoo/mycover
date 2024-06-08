@@ -30,6 +30,11 @@ import {
   DialogTitle,
   DialogTrigger,
 } from "../ui/dialog";
+import {
+  HoverCard,
+  HoverCardContent,
+  HoverCardTrigger,
+} from "../ui/hover-card";
 
 const TopNav = () => {
   const btnsData = [
@@ -128,12 +133,20 @@ const TopNav = () => {
             isOpen ? "flex" : "hidden"
           }`}
         >
-          <div className="flex items-center justify-center mx-1">
-            <p>Plans</p>
-            <span className="ml-2">
-              <img src={arrowDown} alt="" />{" "}
-            </span>
-          </div>
+          <HoverCard>
+            <HoverCardTrigger>
+              <div className="flex items-center justify-center mx-1">
+                <p>Plans</p>
+                <span className="ml-2">
+                  <img src={arrowDown} alt="" />{" "}
+                </span>
+              </div>
+            </HoverCardTrigger>
+            <HoverCardContent>
+              The React Framework – created and maintained by @vercel.
+            </HoverCardContent>
+          </HoverCard>
+
           <div className="flex items-center justify-center mx-1">
             <p>API</p>
             {/* <span className=' ml-2'><img src={arrowDown} alt="" /> </span> */}
