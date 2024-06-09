@@ -85,7 +85,7 @@ const TopNav = () => {
   return (
     <>
       <div
-        className=" w-full lg:px-12 flex items-center sm:px-5 px-5 justify-between my-0 md:h-[100px] h-[70px] shadow-md  "
+        className=" w-full lg:px-12 flex items-center sm:px-5 px-5 justify-between my-0 md:h-[80px] h-[70px] shadow-md  "
         style={{
           backdropFilter: `blur(${scrollY > 0 ? 5 : 0}px)`,
         }}
