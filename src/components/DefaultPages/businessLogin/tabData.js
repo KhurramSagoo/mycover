@@ -88,6 +88,7 @@ export const tabData = [
     ],
     note: "Important Notice: This plan is exclusively available for individuals below the age of 80",
     unlock: "Unlock waiting Period with ₦2000",
+    value: "₦2,000",
   },
   {
     id: 3,
@@ -118,6 +119,7 @@ export const tabData = [
     ],
     note: "Important Notice: This plan is exclusively available for individuals below the age of 80",
     unlock: "Unlock waiting Period with ₦2000",
+    value: "₦2,000",
   },
   {
     id: 4,
@@ -148,5 +150,6 @@ export const tabData = [
     ],
     note: "Important Notice: This plan is exclusively available for individuals below the age of 80",
     unlock: "Unlock waiting Period with ₦5,000",
+    value: "₦5,000",
   },
 ];

@@ -23,13 +23,14 @@ import { toast } from "react-toastify";
 // console.log(tabData);
 const BusinessBoardingNext = () => {
   const navigate = useNavigate();
-  const [selected, setSelected] = useState("Yes");
+  const [selected, setSelected] = useState("No");
   const [tabId, setTabId] = useState(0);
   const [newIdData, setNewIdData] = useState(0);
   const [getParam, setGetParam] = useState("");
   const [dialogText, setDialogText] = useState("no");
   const [isDialogOpen, setIsDialogOpen] = useState(false);
 
+  // console.log(selected);
   const paramAndId = () => {
     const productParam = localStorage.getItem("productParam");
     const parsedParam = JSON.parse(productParam);
@@ -54,7 +55,9 @@ const BusinessBoardingNext = () => {
     setSelected(choice);
     const text =
       choice === "Yes"
-        ? "Switching to the No-waiting period lets you unlock all the benefits early on. This would cost an extra 5,000 to your plan."
+        ? `Switching to the No-waiting period lets you unlock all the benefits early on. This would cost an extra  ${
+            tabData[newIdData].value && tabData[newIdData].value
+          } to your plan.`
         : "You are switching off the no-waiting period";
     setDialogText(text);
     setTabId(id);
@@ -63,7 +66,12 @@ const BusinessBoardingNext = () => {
   };
   const handleCloseDialog = () => {
     setIsDialogOpen(false);
-    toast.success("Waiting Period Locked, Your Premium Is Now 18,000/Month");
+    selected === "Yes" &&
+      toast.success(
+        `Waiting Period Locked, Your Premium Is Now ${
+          tabData[newIdData].value && tabData[newIdData].value
+        }/Month`
+      );
   };
 
   return (
