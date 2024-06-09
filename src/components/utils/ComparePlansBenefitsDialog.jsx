@@ -11,8 +11,6 @@ import {
 import { DataContext } from "../db/DataProvider";
 
 const ComparePlansBenefitsDialog = ({ note }) => {
-  const { setIdData } = useContext(DataContext);
-
   const navigate = useNavigate();
 
   const careBtnData = [
@@ -89,7 +87,6 @@ const ComparePlansBenefitsDialog = ({ note }) => {
         break;
     }
 
-    setIdData(productId);
     localStorage.setItem("productParam", JSON.stringify(productParam));
 
     localStorage.setItem("productId", JSON.stringify(productId));

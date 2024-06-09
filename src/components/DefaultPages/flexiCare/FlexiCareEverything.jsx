@@ -3,17 +3,48 @@ import { useNavigate } from "react-router-dom";
 import { tabData } from "./flexiCareEveryThingData";
 import ComparePlansBenefitsDialog from "@/components/utils/ComparePlansBenefitsDialog";
 import note from "./assets/note.svg";
+import { toast } from "react-toastify";
 
 const FlexiCareEveryThing = () => {
   const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
 
-  const handleGetCovered = () => {
-    setLoading(true);
-    setTimeout(() => {
-      setLoading(false);
-      navigate("/business-boarding-register");
-    }, 500);
+  const handleGetCovered = (name) => {
+    // alert(name);
+    // toast(name);
+    // setLoading(true);
+    let productId = 0;
+    let productParam;
+    // let productId;
+
+    switch (name) {
+      case "Flexi Care Mini":
+        productParam = "flexicaremini";
+        productId = 0;
+        break;
+      case "Flexi Care":
+        productParam = "flexicare";
+        productId = 1;
+        break;
+      case "ZenCare":
+        productParam = "zencare";
+        productId = 2;
+        break;
+      case "ZenCare Plus":
+        productParam = "zencareplus";
+        productId = 3;
+        break;
+      case "ZenCare Prime":
+        productParam = "zencareprime";
+        productId = 4;
+        break;
+    }
+    localStorage.setItem("productParam", JSON.stringify(productParam));
+
+    localStorage.setItem("productId", JSON.stringify(productId));
+    const url = `/business-boarding-next?p=${productParam}&product_id=${productId}`;
+    navigate(url);
+    // window.open(url, "_blank");
   };
 
   const [selected, setSelected] = useState("Yes");
@@ -79,9 +110,9 @@ const FlexiCareEveryThing = () => {
               <div className="w-full flex items-center justify-center flex-col gap-5">
                 <button
                   className="w-full py-3 px-4 bg-primary text-sm font-bold text-white rounded-md max-w-[565px] h-[46px]"
-                  onClick={handleGetCovered}
+                  onClick={() => handleGetCovered(item.title)}
                 >
-                  {loading ? "Loading... please wait" : item.btn}
+                  {item.btn}
                 </button>
 
                 <span className="cursor-pointer text-sm font-semibold text-[#439687] ml-5">

@@ -48,7 +48,7 @@ const BusinessBoardingNext = () => {
   const handleGetCovered = () => {
     navigate(`/business-boarding-register?p=${getParam}&signup=userinfo-one`);
     // navigate("/business-boarding-register");
-    localStorage.clear();
+    // localStorage.clear();
   };
 
   const handleClick = (choice, id) => {
@@ -113,7 +113,7 @@ const BusinessBoardingNext = () => {
           {/* yes no */}
           {tabData[newIdData].unlock && (
             <div className=" flex items-center justify-center">
-              <div className="mt-6 py-4 px-6 max-w-[565px] w-full flex items-center justify-between bg-[#ebe9fe]">
+              <div className="mt-6 py-4 px-6 max-w-[565px] w-full flex items-center justify-between bg-[#ebe9fe] rounded-md">
                 <div className=" flex items-center justify-between">
                   <p className=" text-sm">{tabData[newIdData].unlock}</p>
                   <ErrorIcon className=" text-green-700 mx-1" />
@@ -188,14 +188,14 @@ const BusinessBoardingNext = () => {
           <div className="  flex items-center justify-center mt-6 ">
             <div className="border rounded-lg bg-[#f6fef9] py-6 px-12  max-w-[551px] w-full ">
               {/* card data */}
-              <div className=" flex items-start justify-start flex-col">
+              <div className=" flex items-start justify-start flex-col gap-3">
                 {tabData[newIdData].detail.map((item, index) => (
                   <div
                     key={index}
-                    className=" flex items-center justify-center py-2 "
+                    className=" flex items-center justify-center gap-2 "
                   >
-                    <img src={item.image} alt="" className=" mr-5" />
-                    <p className=" text-base text-gray-600 font-medium">
+                    <img src={item.image} alt="" className="" />
+                    <p className=" text-sm text-gray-600 font-medium">
                       {item.text}
                     </p>
                   </div>
