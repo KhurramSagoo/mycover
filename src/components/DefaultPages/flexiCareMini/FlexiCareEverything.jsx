@@ -8,12 +8,42 @@ const FlexiCareEveryThing = () => {
   const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
 
-  const handleGetCovered = () => {
-    setLoading(true);
-    setTimeout(() => {
-      setLoading(false);
-      navigate("/business-boarding-register");
-    }, 500);
+  const handleGetCovered = (name) => {
+    // alert(name);
+    // toast(name);
+    // setLoading(true);
+    let productId = 0;
+    let productParam;
+    // let productId;
+
+    switch (name) {
+      case "Flexi Care Mini":
+        productParam = "flexicaremini";
+        productId = 0;
+        break;
+      case "Flexi Care":
+        productParam = "flexicare";
+        productId = 1;
+        break;
+      case "ZenCare":
+        productParam = "zencare";
+        productId = 2;
+        break;
+      case "ZenCare Plus":
+        productParam = "zencareplus";
+        productId = 3;
+        break;
+      case "ZenCare Prime":
+        productParam = "zencareprime";
+        productId = 4;
+        break;
+    }
+    localStorage.setItem("productParam", JSON.stringify(productParam));
+
+    localStorage.setItem("productId", JSON.stringify(productId));
+    const url = `/business-boarding-next?p=${productParam}&product_id=${productId}`;
+    navigate(url);
+    // window.open(url, "_blank");
   };
 
   const [selected, setSelected] = useState("Yes");
@@ -40,7 +70,7 @@ const FlexiCareEveryThing = () => {
           {tabData.map((item, index) => (
             <div
               key={index}
-              className="flex items-start justify-between gap-10 shadow-custom-lg flex-col lg:min-w-[400px] min-w-[300px] lg:min-h-[585px] min-h-[530px] px-5 py-5 rounded-md h-full"
+              className="flex items-start justify-between gap-5 shadow-custom-lg flex-col lg:min-w-[360px] min-w-[300px] lg:min-h-[520px] min-h-[480px] px-5 py-5 rounded-md h-full border"
             >
               <div className=" flex items-start justify-start flex-col">
                 <div className="flex items-start justify-start flex-col w-full gap-2">
@@ -67,7 +97,7 @@ const FlexiCareEveryThing = () => {
                         >
                           <img src={card.image} alt="" className="" />
                         </div>
-                        <p className="lg:text-base text-xs text-gray-700 font-medium">
+                        <p className="lg:text-sm text-xs text-gray-700 font-medium">
                           {card.text}
                         </p>
                       </div>
@@ -79,7 +109,7 @@ const FlexiCareEveryThing = () => {
               <div className="w-full flex items-center justify-center flex-col gap-5">
                 <button
                   className="w-full py-3 px-4 bg-primary text-sm font-bold text-white rounded-md max-w-[565px] h-[46px]"
-                  onClick={handleGetCovered}
+                  onClick={() => handleGetCovered(item.title)}
                 >
                   {loading ? "Loading... please wait" : item.btn}
                 </button>

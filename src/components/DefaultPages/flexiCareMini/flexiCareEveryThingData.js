@@ -3,38 +3,6 @@ import cross from "./assets/cross.svg";
 
 export const tabData = [
   {
-    title: "ZenCare",
-    heading: "₦ 7,000",
-    card: [
-      {
-        image: check,
-        text: "Annual global limit - Up to ₦2.1 million.",
-      },
-      {
-        image: check,
-        text: "Surgeries - Up to ₦200,000 Limit",
-      },
-      {
-        image: check,
-        text: "Access B to D hospitals.",
-      },
-      {
-        image: check,
-        text: "Semi Private Ward",
-      },
-      {
-        image: check,
-        text: "1,200 Hospital list",
-      },
-      {
-        image: check,
-        text: "Chronic condition coverage",
-      },
-    ],
-    btn: "Get Covered",
-    view: "View Benefits",
-  },
-  {
     title: "Flexi Care Mini",
     heading: "₦ 2,000",
     card: [
@@ -82,6 +50,39 @@ export const tabData = [
     btn: "Get Covered",
     view: "View Benefits",
   },
+  {
+    title: "ZenCare",
+    heading: "₦ 7,000",
+    card: [
+      {
+        image: check,
+        text: "Annual global limit - Up to ₦2.1 million.",
+      },
+      {
+        image: check,
+        text: "Surgeries - Up to ₦200,000 Limit",
+      },
+      {
+        image: check,
+        text: "Access B to D hospitals.",
+      },
+      {
+        image: check,
+        text: "Semi Private Ward",
+      },
+      {
+        image: check,
+        text: "1,200 Hospital list",
+      },
+      {
+        image: check,
+        text: "Chronic condition coverage",
+      },
+    ],
+    btn: "Get Covered",
+    view: "View Benefits",
+  },
+
   {
     title: "ZenCare Plus",
     heading: "₦ 9,000",
