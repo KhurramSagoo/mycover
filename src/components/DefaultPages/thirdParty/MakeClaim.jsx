@@ -39,12 +39,16 @@ const MakeClaim = () => {
       {/* heading */}
       <div className="w-full flex items-start justify-start xl:h-[212px]">
         <div className="max-w-[700px] flex items-start justify-start flex-col">
-          <p className="lg:text-5xl md:text-4xl text-3xl px-5 text-secondary font-extrabold py-3">
+          <p className="lg:text-4xl md:text-4xl text-3xl px-5 text-secondary font-extrabold py-3">
             Make claims in
-            <span className="mx-2">15</span>
-            minutes, not 2 months
+            <span className=" w-20 px-1 mx-2 h-20 text-white  bg-[#7a5af8] rounded-full">
+              15
+            </span>
+            minutes,
+            <br />
+            not 2 months
           </p>
-          <p className="md:text-xl text-sm text-gray-600 font-medium px-5 py-3">
+          <p className="md:text-base text-sm text-gray-600 font-medium px-5 py-3">
             We are online! Our self-inspection process lets your staff report
             incidents in real-time to keep your business running non-stop.
           </p>
@@ -55,25 +59,25 @@ const MakeClaim = () => {
       <div
         className="flex items-center justify-start
         md:items-start md:justify-around md:flex-row
-        flex-wrap w-full flex-col lg:flex-row px-5 md:py-10
+        flex-wrap w-full flex-col lg:flex-row px-5 py-5
       lg:justify-between
       "
       >
         {/* left tabs */}
         <div
-          className="md:w-1/3 w-full flex  items-start justify-start 
+          className="lg:w-2/3 w-full flex  items-start justify-start 
         md:flex-col flex-row  
         md:items-end md:justify-end
         "
         >
           <div
             className="flex items-start justify-center
-          cursor-pointer  flex-row md:flex-col flex-wrap"
+          cursor-pointer  flex-row md:flex-col flex-wrap w-full"
           >
             {claimData.map((c, index) => (
               <div
                 key={index}
-                className={`max-w-full min-w-36 md:w-full  md:py-3 py-2 px-2 md:ps-5 md:min-h-24 h-auto flex md:items-start md:justify-start flex-col cursor-pointer md:my-5 my-1 
+                className={`max-w-full min-w-36 md:w-full  md:py-3 py-2 px-2 md:ps-5 md:min-h-20 h-auto flex md:items-start md:justify-start flex-col cursor-pointer  md:my-3 my-1 
                 items-center justify-center border mx-1 flex-wrap md:flex-nowrap
                 ${
                   getBtn === index
@@ -86,13 +90,13 @@ const MakeClaim = () => {
                   className={`cursor-pointer md:text-xl w-full  text-sm md:font-bold transition-colors duration-500 ${
                     getBtn === index
                       ? "md:text-gray-800 text-white font-medium"
-                      : "text-gray-600 h-full "
+                      : "text-gray-400 h-full "
                   }`}
                 >
                   {c.head}
                 </p>
                 {getBtn === index && (
-                  <p className="mt-2 text-gray-600 break-words flex-wrap  text-sm md:text-base font-medium hidden md:flex">
+                  <p className="mt-2 text-gray-700 break-words flex-wrap  text-sm md:text-sm font- hidden md:flex">
                     {c.detail}
                   </p>
                 )}
@@ -103,7 +107,7 @@ const MakeClaim = () => {
 
         {/* right images */}
         <div
-          className="md:w-2/3 w-full flex items-center justify-center 
+          className="md:w-1/3 w-full flex items-center justify-center 
           flex-col
         md:flex-row
         lg:justify-end
@@ -111,7 +115,7 @@ const MakeClaim = () => {
         "
         >
           <div
-            className=" sm:w-[400px] sm:h-[500px]
+            className=" sm:w-[400px] sm:h-[400px]
              w-[300px] h-[300px]
             flex items-center justify-center overflow-hidden
           border bg-[#e6f4f2] rounded-full  
