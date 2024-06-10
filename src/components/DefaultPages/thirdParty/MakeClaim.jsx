@@ -111,7 +111,7 @@ const MakeClaim = () => {
         "
         >
           <div
-            className=" sm:w-[500px] sm:h-[500px]
+            className=" sm:w-[400px] sm:h-[500px]
              w-[300px] h-[300px]
             flex items-center justify-center overflow-hidden
           border bg-[#e6f4f2] rounded-full  
