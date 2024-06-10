@@ -39,14 +39,16 @@ const MakeClaim = () => {
       {/* heading */}
       <div className="w-full flex items-start justify-start xl:h-[212px]">
         <div className="max-w-[700px] flex items-start justify-start flex-col">
-          <p className="lg:text-4xl md:text-4xl text-3xl px-5 text-secondary font-extrabold py-3">
+          <p className="lg:text-4xl md:text-4xl text-3xl px-5 text-secondary font-extrabold py-3 !leading-6">
             Make claims in
             <span className=" w-20 px-1 mx-2 h-20 text-white  bg-[#7a5af8] rounded-full">
               15
             </span>
             minutes,
-            <br />
-            not 2 months
+            <div className=" hidden lg:flex">
+              <br />
+            </div>
+            <span className=" mx-1">not 2 months</span>
           </p>
           <p className="md:text-base text-sm text-gray-600 font-medium px-5 py-3">
             We are online! Our self-inspection process lets your staff report
@@ -65,7 +67,7 @@ const MakeClaim = () => {
       >
         {/* left tabs */}
         <div
-          className="lg:w-2/3 w-full flex  items-start justify-start 
+          className="lg:w-1/2 w-full flex  items-start justify-start 
         md:flex-col flex-row  
         md:items-end md:justify-end
         "
@@ -107,7 +109,7 @@ const MakeClaim = () => {
 
         {/* right images */}
         <div
-          className="md:w-1/3 w-full flex items-center justify-center 
+          className="lg:w-1/2 w-full flex items-center justify-center 
           flex-col
         md:flex-row
         lg:justify-end
